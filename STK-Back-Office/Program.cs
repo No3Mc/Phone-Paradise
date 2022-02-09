@@ -1,4 +1,4 @@
-namespace STK_BackOffice
+namespace STK_Back_Office
 {
     internal static class Program
     {

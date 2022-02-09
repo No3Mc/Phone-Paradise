@@ -1,4 +1,4 @@
-namespace STK_BackOffice
+namespace STK_Back_Office
 {
     public partial class Form1 : Form
     {
