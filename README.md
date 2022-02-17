@@ -1,10 +1,16 @@
 # PMAD-Phone Selling Store  <br>
-# Ethan Frizzell Phones Management
-# Luke Lydiatt Staff Management
-# Aqeel Ahmed Supplier management
-# Mahammad Talha Customer Management
-# Syed Naqvi Stock Management
-# Kye Staples [#f03c15]INACTIVE
+## Ethan Frizzell
+Phones Management
+## Luke Lydiatt 
+Staff Management
+## Mahammad Talha 
+Customer Management
+## Syed Naqvi 
+Stock Management
+## Aqeel Ahmed 
+Supplier management
+## Kye Staples 
+INACTIVE
 
 
 Project Mangement and Development 2nd Term <br>
