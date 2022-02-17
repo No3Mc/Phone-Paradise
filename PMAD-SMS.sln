@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STK-Front-Office", "STK-Front-Office\", "{775AEAA7-3009-4D7A-ABA7-38694DD42027}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -25,11 +25,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STK-Front-Office", "STK-Fro
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STK-Classes", "STK-Classes\STK-Classes.csproj", "{624173F5-1888-4C09-8637-05C1C64D0AD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSS-Classes", "STK-Classes\PSS-Classes.csproj", "{624173F5-1888-4C09-8637-05C1C64D0AD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STK-Testing", "STK-Testing\STK-Testing.csproj", "{39CF5327-24A7-453A-AC53-E9AF2DCEED41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSS-Testing", "STK-Testing\PSS-Testing.csproj", "{39CF5327-24A7-453A-AC53-E9AF2DCEED41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STK-Back-Office", "STK-Back-Office\STK-Back-Office.csproj", "{345095D9-35C6-4BF8-A9EE-FC580B8969F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSS-Back-Office", "STK-Back-Office\PSS-Back-Office.csproj", "{345095D9-35C6-4BF8-A9EE-FC580B8969F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
