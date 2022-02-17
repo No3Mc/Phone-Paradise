@@ -1,8 +1,8 @@
 # Project Mangement and Development 2nd Term <br>
 # PMAD-Phone Selling Store  <br>
-## Main System <br>
+## Main System <br> [Submit Here](https://vle.dmu.ac.uk/webapps/turn-plgnhndl-bb_bb60/links/submit.jsp?course_id=_601351_1&content_id=_5389889_1&tii_assign_id=14486785&orig_id=_5389889_1)
 25-Mar-2022 <br>
-## Final report <br>
+## Final report <br> [Submit Here](https://vle.dmu.ac.uk/webapps/turn-plgnhndl-bb_bb60/links/submit.jsp?course_id=_601351_1&content_id=_5389894_1&tii_assign_id=14486799&orig_id=_5389894_1)
 08-Apr-2022 <br>
 
 
