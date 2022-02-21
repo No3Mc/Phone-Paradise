@@ -1,9 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBackOffice", "PSBackOffice\PSBackOffice.csproj", "{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSBackOffice", "PSBackOffice\PSBackOffice.csproj", "{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PSSFrontOffice", "PSSFrontOffice\", "{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56842"
+		Debug.AspNetCompiler.PhysicalPath = "PSSFrontOffice\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56842\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56842"
+		Release.AspNetCompiler.PhysicalPath = "PSSFrontOffice\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56842\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56842"
+		SlnRelativePath = "PSSFrontOffice\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSClasses", "PSSClasses\PSSClasses.csproj", "{84897773-856F-4855-9CBC-E674633E1456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +39,14 @@ Global
 		{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{84897773-856F-4855-9CBC-E674633E1456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84897773-856F-4855-9CBC-E674633E1456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84897773-856F-4855-9CBC-E674633E1456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84897773-856F-4855-9CBC-E674633E1456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
