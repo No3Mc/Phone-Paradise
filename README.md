@@ -6,7 +6,7 @@
 - [Initial Deliverable - Team ABC](https://docs.google.com/document/d/1nlwmobhwWwfmnKpBaGAGO74DM5R5EIDxT5Hg-S86OZ0/edit)
 
 <details>
-    <summary> 📑 <b>Submissions Dates</b></summary><br/>
+    <summary> 📑 <b>Submission Dates</b></summary><br/>
   
 | Submission | Submission Date | Status |
 | :---         |     :---:      |          ---: |
