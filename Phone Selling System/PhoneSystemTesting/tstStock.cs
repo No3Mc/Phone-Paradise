@@ -19,10 +19,27 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void ActivePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Boolean TestData = true;
+            //assign the data to the property
+            AStock.Active = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.Active, TestData);
+            
+        }
+
+
+
     }
 
     class clsStock
     {
+        public bool Active { get; internal set; }
     }
 }
 
