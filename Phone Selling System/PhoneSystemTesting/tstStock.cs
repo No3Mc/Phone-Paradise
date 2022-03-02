@@ -47,12 +47,87 @@ namespace PhoneSystemTesting
 
         }
 
+        [TestMethod]
+        public void StockIDPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Int32 TestData = 1;
+            //assign the data to the property
+            AStock.StockID = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.StockID, TestData);
+        }
+
+        [TestMethod]
+        public void WarehouseNoPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Int32 TestData = 1;
+            //assign the data to the property
+            AStock.WarehouseNo = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.WarehouseNo, TestData);
+        }
+
+
+        [TestMethod]
+        public void LocationPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Int32 TestData = 1;
+            //assign the data to the property
+            AStock.Location = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.Location, TestData);
+        }
+
+
+        [TestMethod]
+        public void QuantityPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Int32 TestData = 1;
+            //assign the data to the property
+            AStock.Quantity = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.Quantity, TestData);
+        }
+
+
+        [TestMethod]
+        public void BarcodePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            Int32 TestData = 1;
+            //assign the data to the property
+            AStock.Barcode = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.Barcode, TestData);
+        }
+
+
+
     }
 
     class clsStock
     {
         public bool Active { get; internal set; }
         public DateTime DateAdded { get; internal set; }
+        public int StockID { get; internal set; }
+        public int WarehouseNo { get; internal set; }
+        public int Location { get; internal set; }
+        public int Quantity { get; internal set; }
+        public int Barcode { get; internal set; }
     }
 }
 
