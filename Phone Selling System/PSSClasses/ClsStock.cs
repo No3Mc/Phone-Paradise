@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
 
 namespace PSSClasses
 {
-    internal class ClsStock
+    public class clsStock
     {
+        public bool Active;
+        public DateTime DateAdded;
+        public int StockID ;
+        public int WarehouseNo; 
+        public int Location;
+        public int Quantity;
+        public int Barcode;
     }
+
+
+
+
 }

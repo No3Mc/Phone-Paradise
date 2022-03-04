@@ -119,15 +119,6 @@ namespace PhoneSystemTesting
 
     }
 
-    class clsStock
-    {
-        public bool Active { get; internal set; }
-        public DateTime DateAdded { get; internal set; }
-        public int StockID { get; internal set; }
-        public int WarehouseNo { get; internal set; }
-        public int Location { get; internal set; }
-        public int Quantity { get; internal set; }
-        public int Barcode { get; internal set; }
-    }
+
 }
 
