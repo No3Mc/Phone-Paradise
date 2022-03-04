@@ -33,19 +33,6 @@ namespace PhoneSystemTesting
             
         }
 
-        [TestMethod]
-        public void DateAddedPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsStock AStock = new clsStock();
-            //create some test data to assign to the property
-            DateTime TestData = DateTime.Now.Date;
-            //assign the data to the property
-            AStock.DateAdded = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AStock.DateAdded, TestData);
-
-        }
 
         [TestMethod]
         public void StockIDPropertyOK()

@@ -56,8 +56,8 @@
 
         
                 <div>
-                    <asp:Button ID="btnOK" runat="server" Text="Button" />
-                                        <asp:Button ID="btnCancel" runat="server" Text="Button" />
+                    <asp:Button ID="btnOK" runat="server" Text="Okay" />
+                                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         </div>
 
 
