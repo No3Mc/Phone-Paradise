@@ -13,7 +13,9 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-    protected void btnOK_Click(object sender, EventArgs e)
+
+
+    protected void btnOK_Click1(object sender, EventArgs e)
     {
         //create a new instance of clsStock
         clsStock AStock = new clsStock();
@@ -23,5 +25,4 @@ public partial class _Default : System.Web.UI.Page
         //redirect to the viewer page
         Response.Redirect("StockViewer.aspx");
     }
-
 }

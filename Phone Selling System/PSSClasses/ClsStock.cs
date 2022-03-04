@@ -8,11 +8,11 @@ namespace PSSClasses
     {
         public bool Active;
         private int NStockID;
-        private int NStockName;
-        private int NWarehouseNo;
-        private int NLocation;
-        private int NQuantity;
-        private int NBarcode;
+        private string NStockName;
+        private string NWarehouseNo;
+        private string NLocation;
+        private string NQuantity;
+        private string NBarcode;
 
 
         public int StockID
@@ -31,7 +31,7 @@ namespace PSSClasses
         }
 
 
-        public int StockName
+        public string StockName
         {
             get
             {
@@ -47,7 +47,7 @@ namespace PSSClasses
         }
 
 
-        public int WarehouseNo
+        public string WarehouseNo
         {
             get
             {
@@ -63,7 +63,7 @@ namespace PSSClasses
         }
 
 
-        public int Location
+        public string Location
         {
             get
             {
@@ -79,7 +79,7 @@ namespace PSSClasses
         }
 
 
-        public int Quantity
+        public string Quantity
         {
             get
             {
@@ -95,7 +95,7 @@ namespace PSSClasses
         }
 
 
-        public int Barcode
+        public string Barcode
         {
             get
             {

@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSBackOffice", "PSBackOffice\PSBackOffice.csproj", "{85A49AA9-9DFF-4E65-89FF-0FF90CB1F0B4}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PSSFrontOffice", "PSSFrontOffice\", "{F4EC0CB4-27C2-40F3-9BC3-A78E5F68A7D3}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{84897773-856f-4855-9cbc-e674633e1456}|PSSClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_56842"
 		Debug.AspNetCompiler.PhysicalPath = "PSSFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56842\"

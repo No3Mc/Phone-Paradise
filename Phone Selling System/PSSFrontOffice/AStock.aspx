@@ -56,7 +56,7 @@
 
         
                 <div>
-                    <asp:Button ID="btnOK" runat="server" Text="Okay" />
+                    <asp:Button ID="btnOK" runat="server" Text="Okay" OnClick="btnOK_Click1" />
                                         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         </div>
 
