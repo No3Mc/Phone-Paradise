@@ -46,6 +46,11 @@ namespace PSSClasses
 
         }
 
+        public bool Find(Int32 stockID)
+        {
+            //always return true
+            return true;
+        }
 
         public string WarehouseNo
         {
