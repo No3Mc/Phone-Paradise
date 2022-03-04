@@ -32,10 +32,36 @@ namespace PSSClasses
 
         public bool Find(Int32 stockID)
         {
-            //set the private data members to the test data value
-            NStockID = 1;
-            //always return true
-            return true;
+            //create an instance of the data connectin
+            clsDataConnection DB = new clsDataConnection();
+            //add the parametrs for the book to search for it
+            DB.AddParameter("@StockID", StockID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FillterByStockID");
+
+
+            //if one record if found (there should either one or zero)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                NStockID = Convert.ToInt32(DB.DataTable.Rows[0]["StockID"]);
+                NStockName = Convert.ToString(DB.DataTable.Rows[0]["StockName"]);
+                NWarehouseNo = Convert.ToString(DB.DataTable.Rows[0]["StockWarehouseNo"]);
+                NLocation = Convert.ToString(DB.DataTable.Rows[0]["StockLocation"]);
+                NQuantity = Convert.ToString(DB.DataTable.Rows[0]["StockQuantity"]);
+                NBarcode = Convert.ToString(DB.DataTable.Rows[0]["StockBarcode"]);
+
+                //return everyting worked OK
+                return true;
+            }
+
+            //if no records was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+
         }
 
 
