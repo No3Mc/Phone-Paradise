@@ -30,7 +30,7 @@ public partial class _Default : System.Web.UI.Page
         {
             //display the values of the properties in the form
             txtStockname.Text = AStock.StockName;
-            txWarehouseno.Text = AStock.WarehouseNo;
+            txtWarehouseno.Text = AStock.WarehouseNo;
             txtLocation.Text = AStock.Location;
             txtQuantity.Text = AStock.Quantity;
             txtBarcode.Text = AStock.Quantity;

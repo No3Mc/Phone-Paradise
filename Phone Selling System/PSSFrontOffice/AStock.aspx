@@ -21,7 +21,7 @@
                 <div>
                     
                     <asp:Label ID="Label2" runat="server" Text="Stock ID"></asp:Label>
-                    <asp:TextBox ID="txtStockid" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtStockID" runat="server"></asp:TextBox>
 
         </div>
 
