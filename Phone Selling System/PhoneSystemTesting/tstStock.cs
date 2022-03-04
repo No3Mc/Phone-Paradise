@@ -53,7 +53,7 @@ namespace PhoneSystemTesting
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             //create some test data to assign to the property
-            Int32 TestData = 1;
+            String TestData = "ab";
             //assign the data to the property
             AStock.WarehouseNo = TestData;
             //test to see that the two values are the same
@@ -67,7 +67,7 @@ namespace PhoneSystemTesting
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             //create some test data to assign to the property
-            Int32 TestData = 1;
+            String TestData = "ab";
             //assign the data to the property
             AStock.Location = TestData;
             //test to see that the two values are the same
@@ -81,7 +81,7 @@ namespace PhoneSystemTesting
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             //create some test data to assign to the property
-            Int32 TestData = 1;
+            String TestData = "ab";
             //assign the data to the property
             AStock.Quantity = TestData;
             //test to see that the two values are the same
@@ -95,7 +95,7 @@ namespace PhoneSystemTesting
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             //create some test data to assign to the property
-            Int32 TestData = 1;
+            String TestData = "ab";
             //assign the data to the property
             AStock.Barcode = TestData;
             //test to see that the two values are the same
