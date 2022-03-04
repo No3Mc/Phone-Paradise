@@ -35,6 +35,30 @@ namespace PhoneSystemTesting
 
         }
 
+        [TestMethod]
+        public void TestStockIDFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            bool Found = false;
+            //bool variable to record if data is OK (assume it is)
+            bool OK = true;
+            //assign the data to the property
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //checks the stock's ID for validation
+            if (AStock.StockID != 1)
+            {
+                OK = false;
+            }
+            //test to see that the two values are the same
+            Assert.IsTrue(OK);
+
+        }
+
+
 
         [TestMethod]
         public void ActivePropertyOK()

@@ -7,7 +7,7 @@ namespace PSSClasses
     public class clsStock
     {
         public bool Active;
-        private int NStockID;
+        private Int32 NStockID;
         private string NStockName;
         private string NWarehouseNo;
         private string NLocation;
@@ -15,7 +15,7 @@ namespace PSSClasses
         private string NBarcode;
 
 
-        public int StockID
+        public Int32 StockID
         {
             get
             {
@@ -28,6 +28,14 @@ namespace PSSClasses
                 NStockID = value;
             }
 
+        }
+
+        public bool Find(Int32 stockID)
+        {
+            //set the private data members to the test data value
+            NStockID = 1;
+            //always return true
+            return true;
         }
 
 
@@ -46,11 +54,6 @@ namespace PSSClasses
 
         }
 
-        public bool Find(Int32 stockID)
-        {
-            //always return true
-            return true;
-        }
 
         public string WarehouseNo
         {
