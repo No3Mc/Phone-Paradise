@@ -14,6 +14,8 @@
                     <asp:Label ID="Label1" runat="server" Text="Stock Name"></asp:Label>
                     <asp:TextBox ID="txtStockname" runat="server"></asp:TextBox>
 
+                    <asp:Button ID="btnFind" runat="server" Text="Find" />
+
         </div>
 
                 <div>
