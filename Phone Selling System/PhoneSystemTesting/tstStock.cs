@@ -9,12 +9,31 @@ namespace PhoneSystemTesting
     {
         //good test data
         //create some test data to pass to the method
-        string StockID = "";
-        string StockName = "";
-        string WarehouseNo = "";
-        string Location= "";
-        string Quantity= "";
-        string Barcode= "";
+        string StockID = "1";
+        string StockName = "aa";
+        string WarehouseNo = "aa";
+        string Location= "aa";
+        string Quantity= "aa";
+        string Barcode= "aa";
+
+
+        [TestMethod]
+        public void WarehouseNoLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string WarehouseNo = ""; //this should trigger an error
+            //invoke the method
+            Error = AStock.Valid(WarehouseNo, StockID, StockName, Barcode, Location, Quantity);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+
 
         [TestMethod]
         public void InstanceOK()
@@ -44,19 +63,19 @@ namespace PhoneSystemTesting
 
 
 
-        [TestMethod]
-        public void ValidMethodOK()
-        {
-            //create an instance of the class we want to create
-            clsStock AStock = new clsStock();
-            //create some test data to assign to the property
-            String Error = "";
-            //invoke the method
-            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
-            //test to see that the two values are the same
-            Assert.AreEqual(Error, "");
+        //[TestMethod]
+        //public void ValidMethodOK()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStock AStock = new clsStock();
+        //    //create some test data to assign to the property
+        //    String Error = "";
+        //    //invoke the method
+        //    Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(Error, "");
 
-        }
+        //}
 
 
 
