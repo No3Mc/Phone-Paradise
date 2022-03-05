@@ -29,7 +29,7 @@
                 <div>
                     
                     <asp:Label ID="Label3" runat="server" Text="Warehouse No"></asp:Label>
-                    <asp:TextBox ID="txtWarehouseno" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtWarehouseNo" runat="server"></asp:TextBox>
 
         </div>
 
@@ -63,6 +63,9 @@
         </div>
 
 
+        <div>
+            <asp:Label ID="lblError" runat="server" Text="Error"></asp:Label>
+        </div>
 
 
 

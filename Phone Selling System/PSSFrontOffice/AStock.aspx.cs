@@ -13,6 +13,7 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
+
     protected void btnFind_Click1(object sender, EventArgs e)
     {
         //create an instance of the stock class
@@ -30,7 +31,7 @@ public partial class _Default : System.Web.UI.Page
         {
             //display the values of the properties in the form
             txtStockname.Text = AStock.StockName;
-            txtWarehouseno.Text = AStock.WarehouseNo;
+            txtWarehouseNo.Text = AStock.WarehouseNo;
             txtLocation.Text = AStock.Location;
             txtQuantity.Text = AStock.Quantity;
             txtBarcode.Text = AStock.Quantity;
@@ -42,9 +43,32 @@ public partial class _Default : System.Web.UI.Page
         //create a new instance of clsStock
         clsStock AStock = new clsStock();
         //capute the stock name
-        AStock.StockName = txtStockname.Text;
-        Session["AStock"] = AStock;
-        //redirect to the viewer page
-        Response.Redirect("StockViewer.aspx");
+        string WarehouseNo = txtWarehouseNo.Text;
+        string StockName = txtStockname.Text;
+        string Location = txtLocation.Text;
+        string Quantity = txtQuantity.Text;
+        string Barcode = txtBarcode.Text;
+
+
+        String Error = "";
+        Error = AStock.Valid(WarehouseNo, StockName, Location, Quantity, Barcode);
+        if (Error == "")
+        {
+            //capture the house no
+            AStock.WarehouseNo = WarehouseNo;
+            AStock.StockName= StockName;
+            AStock.Location= Location;
+            AStock.Quantity= Quantity;
+            AStock.Barcode= Barcode;
+
+            Session["AStock"] = AStock;
+            //redirect to the viewer page
+            Response.Redirect("StockViewer.aspx");
+        }
+        else
+        {
+            //display the error msg
+            lblError.Text = Error;
+        }
     }
 }
