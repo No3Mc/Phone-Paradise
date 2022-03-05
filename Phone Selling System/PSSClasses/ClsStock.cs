@@ -65,6 +65,11 @@ namespace PSSClasses
         }
 
 
+        public string Valid(string StockID, string StockName, string Location, string Quantity, string Barcode)
+        {
+            return "";
+        }
+
         public string StockName
         {
             get

@@ -7,7 +7,14 @@ namespace PhoneSystemTesting
     [TestClass]
     public class tstStock
     {
-
+        //good test data
+        //create some test data to pass to the method
+        string StockID = "";
+        string StockName = "";
+        string WarehouseNo = "";
+        string Location= "";
+        string Quantity= "";
+        string Barcode= "";
 
         [TestMethod]
         public void InstanceOK()
@@ -34,6 +41,24 @@ namespace PhoneSystemTesting
             Assert.IsTrue(Found);
 
         }
+
+
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            String Error = "";
+            //invoke the method
+            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see that the two values are the same
+            Assert.AreEqual(Error, "");
+
+        }
+
+
 
         [TestMethod]
         public void TestStockIDFound()
