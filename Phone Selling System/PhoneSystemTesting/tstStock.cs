@@ -70,7 +70,7 @@ namespace PhoneSystemTesting
             //bool variable to record if data is OK (assume it is)
             bool OK = true;
             //assign the data to the property
-            Int32 StockID = 1;
+            int StockID = 1;
             //invoke the method
             Found = AStock.Find(StockID);
             //checks the stock's ID for validation
