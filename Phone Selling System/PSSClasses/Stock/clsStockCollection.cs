@@ -13,8 +13,6 @@ namespace PSSClasses
         
         //private data member for the list
         List<clsStock> NStockList = new List<clsStock>();
-
-
         //public List<clsStock> StockList { get; set; }
         public int Counts { get; set; }
         public clsStock ThisStock { get; set; }
