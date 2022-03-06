@@ -57,9 +57,9 @@ namespace PhoneSystemTesting
             //create some test data to assign to the proeprty
             Int32 SomeCount = 0;
             //assign the data to the property
-            AllStocks.Counts = SomeCount;
+            AllStocks.Count = SomeCount;
             //test to see that the two values are the same
-            Assert.AreEqual(AllStocks.Counts, SomeCount);
+            Assert.AreEqual(AllStocks.Count, SomeCount);
         }
 
         [TestMethod]
@@ -83,7 +83,32 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void ListAndCountOK()
+        {
+            //create an instance of the class we want to create
+            clsStockCollection AllStocks = new clsStockCollection();
+            //create some test data to assign to the property
+            //in this case the data needs to be a list of objects
+            List<clsStock> TestList = new List<clsStock>();
+            //add an item to the list
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //set its properties
+            TestItem.StockID = 1;
+            TestItem.StockName = "1";
+            TestItem.Location = "1";
+            TestItem.Quantity = "1";
+            TestItem.WarehouseNo = "1";
+            TestItem.Barcode = "1";
+            //add the item to the test list
+            TestList.Add(TestItem);
+            //assign the data of the property
+            AllStocks.StockList = TestList;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllStocks.Count, TestList.Count);
 
+        }
 
 
 
