@@ -9,5 +9,7 @@ namespace PSSClasses
     public class clsStockCollection
     {
         public List<clsStock> StockList { get; set; }
+        public int Counts { get; set; }
+        public clsStock ThisStock { get; set; }
     }
 }
