@@ -8,6 +8,6 @@ namespace PSSClasses
 {
     public class clsStockCollection
     {
-        
+        public List<clsStock> StockList { get; set; }
     }
 }
