@@ -23,17 +23,17 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-    //void DisplayStocks()
+    //void displaystocks()
     //{
     //    //create an instance of the county collection
-    //    clsStockCollection Stocks = new PSSClasses.clsStockCollection();
-    //    lstStocks.DataSource = Stocks.StockList;
+    //    clsstockcollection stocks = new pssclasses.clsstockcollection();
+    //    lststocks.datasource = stocks.stocklist;
     //    //set the name of the primary key
-    //    lstStocks.DataValueField = "StockID";
+    //    lststocks.datavaluefield = "stockid";
     //    //set the data field to display
-    //    lstStocks.DataTextField = "WarehouseNo";
+    //    lststocks.datatextfield = "warehouseno";
     //    //bind the data to the list
-    //    lstStocks.DataBind();
+    //    lststocks.databind();
     //}
 
 
