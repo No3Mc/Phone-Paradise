@@ -8,6 +8,38 @@ namespace PSSClasses
 {
     public class clsStockCollection
     {
+
+
+        //work
+
+        ////create the item of test data
+        //clsStock TestItem = new clsStock();
+        ////set its properties
+        //TestItem.StockID = 1;
+        //TestItem.StockName = "a";
+        //TestItem.WarehouseNo = "a";
+        //TestItem.Location = "a";
+        //TestItem.Quantity = "a";
+        //TestItem.Barcode = "a";
+        ////add the item to the test list
+        //TestList.Add(TestItem);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //private data member for the list
         List<clsStock> NStockList = new List<clsStock>();
         //public List<clsStock> StockList { get; set; }

@@ -111,6 +111,14 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void TwoRecordsPresent()
+        {
+            //create an instance of the class we want to create
+            clsStockCollection AllStocks = new clsStockCollection();
+            //test to see that the two values are the same
+            Assert.AreEqual(AllStocks.Count, 2);
+        }
 
 
 
@@ -123,8 +131,7 @@ namespace PhoneSystemTesting
 
 
 
-
-    }
+        }
 
 
 }
