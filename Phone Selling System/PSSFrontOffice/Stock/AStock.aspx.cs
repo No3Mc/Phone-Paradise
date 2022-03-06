@@ -8,10 +8,36 @@ using PSSClasses;
 
 public partial class _Default : System.Web.UI.Page
 {
+    
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        //if this is the first time the page is displayed
+        //if (IsPostBack == false)
+        //{
+        //    //update the list box
+        //    DisplayStocks();
+        //}
+
+
 
     }
+
+    //void DisplayStocks()
+    //{
+    //    //create an instance of the county collection
+    //    clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+    //    lstStocks.DataSource = Stocks.StockList;
+    //    //set the name of the primary key
+    //    lstStocks.DataValueField = "StockID";
+    //    //set the data field to display
+    //    lstStocks.DataTextField = "WarehouseNo";
+    //    //bind the data to the list
+    //    lstStocks.DataBind();
+    //}
+
+
+
 
 
     protected void btnFind_Click1(object sender, EventArgs e)
