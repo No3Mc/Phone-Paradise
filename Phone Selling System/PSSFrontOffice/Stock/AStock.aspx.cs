@@ -25,16 +25,16 @@ public partial class _Default : System.Web.UI.Page
 
     void DisplayStocks()
     {
-        ////create an instance of the county collection
-        //PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
-        ////set the data source to the list of warehouse in the collection
-        //lstStocks.DataSource = Stocks.StockList;
-        ////set the name of the primary key
-        //lststocks.datavaluefield = "stockid";
-        ////set the data field to display
-        //lststocks.datatextfield = "warehouseno";
-        ////bind the data to the list
-        //lststocks.databind();
+        //create an instance of the county collection
+        PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstStocks.DataSource = Stocks.StockList;
+        //set the name of the primary key
+        lstStocks.DataValueField = "stockid";
+        //set the data field to display
+        lstStocks.DataTextField = "warehouseno";
+        //bind the data to the list
+        lstStocks.DataBind();
     }
 
 
@@ -98,4 +98,6 @@ public partial class _Default : System.Web.UI.Page
             lblError.Text = Error;
         }
     }
+
+
 }
