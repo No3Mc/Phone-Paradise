@@ -57,62 +57,24 @@ namespace PhoneSystemTesting
         }
 
 
+
         [TestMethod]
-        public void FindMethodOK()
+        public void ValidMethodOK()
         {
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             //create some test data to assign to the property
-            bool Found = false;
-            //assign the data to the property
-            Int32 StockID = 1;
+            String Error = "";
             //invoke the method
-            Found = AStock.Find(StockID);
+            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the two values are the same
-            Assert.IsTrue(Found);
+            Assert.AreEqual(Error, "");
 
         }
 
 
 
-        //[TestMethod]
-        //public void ValidMethodOK()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsStock AStock = new clsStock();
-        //    //create some test data to assign to the property
-        //    String Error = "";
-        //    //invoke the method
-        //    Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(Error, "");
-
-        //}
-
-
-
-        [TestMethod]
-        public void TestStockIDFound()
-        {
-            //create an instance of the class we want to create
-            clsStock AStock = new clsStock();
-            //create some test data to assign to the property
-            bool Found = false;
-            //bool variable to record if data is OK (assume it is)
-            bool OK = true;
-            //assign the data to the property
-            int StockID = 1;
-            //invoke the method
-            Found = AStock.Find(StockID);
-            //checks the stock's ID for validation
-            if (AStock.StockID != 1)
-            {
-                OK = false;
-            }
-            //test to see that the two values are the same
-            Assert.IsTrue(OK);
-
-        }
+      
 
 
 
@@ -197,6 +159,57 @@ namespace PhoneSystemTesting
             AStock.Barcode = TestData;
             //test to see that the two values are the same
             Assert.AreEqual(AStock.Barcode, TestData);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            bool Found = false;
+            //assign the data to the property
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //test to see that the two values are the same
+            Assert.IsTrue(Found);
+
+        }
+
+
+        [TestMethod]
+        public void TestStockIDFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            bool Found = false;
+            //bool variable to record if data is OK (assume it is)
+            bool OK = true;
+            //assign the data to the property
+            int StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //checks the stock's ID for validation
+            if (AStock.StockID != 1)
+            {
+                OK = false;
+            }
+            //test to see that the two values are the same
+            Assert.IsTrue(OK);
+
         }
 
 
