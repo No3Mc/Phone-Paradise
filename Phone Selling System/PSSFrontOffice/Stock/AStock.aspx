@@ -65,10 +65,13 @@
 
         <div>
             <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
-            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>
+        
         </div>
 
-
+                <div>
+                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="517px"></asp:ListBox>
+<%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
+        </div>
 
     </form>
 </body>
