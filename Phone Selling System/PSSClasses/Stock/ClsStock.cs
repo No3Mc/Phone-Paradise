@@ -66,7 +66,7 @@ namespace PSSClasses
 
 
 
-        public string Valid(string WarehouseNo, string stockName, string location, string quantity, string barcode)
+        public string Valid(string WarehouseNo, string stockName, string location, string quantity, string barcode, string quantity1)
         {
             //create a string variable to store the error
             string Error = "";
@@ -79,8 +79,18 @@ namespace PSSClasses
             return Error;
         }
 
-
- 
+        public string Valid(string warehouseNo, string stockName, string location, string quantity, string barcode)
+        {
+            //create a string variable to store the error
+            string Error = "";
+            if (WarehouseNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The warehouse no may not be black";
+            }
+            //return error messages
+            return Error;
+        }
 
         public string StockName
         {
