@@ -15,7 +15,22 @@ namespace PSSClasses
         List<clsStock> NStockList = new List<clsStock>();
         //public List<clsStock> StockList { get; set; }
         public int Counts { get; set; }
-        public clsStock ThisStock { get; set; }
+        clsStock NThisStock = new clsStock();
+
+
+        public clsStock ThisStock
+        {
+            get
+            {
+                //return the private data
+                return NThisStock;
+            }
+            set
+            {
+                //set private data
+                NThisStock = value;
+            }
+        }
 
 
         public List<clsStock> StockList
@@ -45,19 +60,22 @@ namespace PSSClasses
             }
         }
 
-
-
-
-
-
-
-
-
-
+        public int Add()
+        {
+            //adds a new record to the database based on the values
+            //set the primary key value of the new record
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StockName", NThisStock.StockName);
+            DB.AddParameter("@WarehouseNo", NThisStock.WarehouseNo);
+            DB.AddParameter("@Location", NThisStock.Location);
+            DB.AddParameter("@Quantity", NThisStock.Quantity);
+            DB.AddParameter("@Barcode", NThisStock.Barcode);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblStock_Insert");
+            //return the primary key of the new record
+            //return NThisStock.StockID;
+        }
     }
-
-
-
 
 
 }
