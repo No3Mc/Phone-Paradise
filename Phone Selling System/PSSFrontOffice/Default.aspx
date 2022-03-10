@@ -35,7 +35,7 @@
         
                 <div>
                     
-                    <asp:TextBox ID="TextBox1" runat="server" Width="214px"></asp:TextBox>
+                    <asp:TextBox ID="txtWarehouseNo" runat="server" Width="214px"></asp:TextBox>
 
         </div>
 
@@ -57,7 +57,7 @@
 
                 <div>
                                 <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
-                                <asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" />
+                                <asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />
                                 <asp:Button ID="btnEdit" runat="server" Text="Edit" />
                                 <asp:Button ID="btnDelete" runat="server" Text="Delete" />
         </div>
