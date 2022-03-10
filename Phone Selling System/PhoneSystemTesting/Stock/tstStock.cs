@@ -41,7 +41,7 @@ namespace PhoneSystemTesting
             //create some test data to assign to the property
             String Error = "";
             //invoke the method
-            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the two values are the same
             Assert.AreEqual(Error, "");
 
@@ -57,7 +57,7 @@ namespace PhoneSystemTesting
             //create some test data to pass to the method
             string WarehouseNo = ""; //this should trigger an error
             //invoke the method
-            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -170,23 +170,37 @@ namespace PhoneSystemTesting
         //These tests aren't passing
 
 
+        //[TestMethod]
+        //public void FindMethodOK()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStock AStock = new clsStock();
+        //    //create some test data to assign to the property
+        //    bool Found = false;
+        //    //assign the data to the property
+        //    Int32 StockID = 1;
+        //    //invoke the method
+        //    Found = AStock.Find(StockID);
+        //    //test to see that the two values are the same
+        //    Assert.IsTrue(Found);
+
+        //}
+
+
         [TestMethod]
         public void FindMethodOK()
         {
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
-            //create some test data to assign to the property
-            bool Found = false;
-            //assign the data to the property
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
             Int32 StockID = 1;
             //invoke the method
             Found = AStock.Find(StockID);
-            //test to see that the two values are the same
+            //test to see that the result is correct
             Assert.IsTrue(Found);
-
         }
-
-
 
 
 

@@ -64,7 +64,7 @@ namespace PSSClasses
 
         }
 
-        public string Valid(string stockID, string stockName, string warehouseNo, string location, string quantity, string barcode)
+        public string Valid(string stockName, string warehouseNo, string location, string quantity, string barcode)
         {
             //create a string variable to store the error
             string Error = "";
