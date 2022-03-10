@@ -33,4 +33,11 @@ public partial class _Default : System.Web.UI.Page
             //bind the data to the list
             lstStocks.DataBind();
         }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
     }
+
+
+
+}
