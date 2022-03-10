@@ -15,7 +15,7 @@
 
             <asp:Label ID="Label5" runat="server" Text="CustID"></asp:Label>
 
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCustID" runat="server"></asp:TextBox>
 
         </div>
 
@@ -26,22 +26,22 @@
 
                 <div>
                     <asp:Label ID="Label1" runat="server" Text="DOB"></asp:Label>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
         </div>
 
                 <div>
                     <asp:Label ID="Label2" runat="server" Text="Name"></asp:Label>
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
         </div>
 
                 <div>
                     <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
-                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
         </div>
 
                         <div>
                     <asp:Label ID="Label6" runat="server" Text="Phone"></asp:Label>
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
         </div>
 
 
@@ -60,7 +60,7 @@
 
 
         <p>
-            <asp:Button ID="btnOK" runat="server" Text="OK" />
+            <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
 
         </p>
