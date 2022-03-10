@@ -45,7 +45,6 @@
 
         
                 <div>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Apply" />
 
                     <asp:Button ID="btnApply" runat="server" OnClick="Button1_Click" Text="Apply" />
                     <asp:Button ID="btnDisplayAll" runat="server" OnClick="Button1_Click" Text="Display All" />

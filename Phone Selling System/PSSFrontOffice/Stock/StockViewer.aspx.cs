@@ -10,49 +10,49 @@ public partial class StockViewer : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        ////if this is the first time the page is displayed
-        //if (IsPostBack == false)
-        //{
-        //    //update the list box
-        //    DisplayStocks();
-        //}
-
-
-        //void DisplayStocks()
-        //{
-        //    //create an instance of the county collection
-        //    PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
-        //    //set the data source to the list of warehouse in the collection
-        //    lstStocks.DataSource = Stocks.StockList;
-        //    //set the name of the primary key
-        //    lstStocks.DataValueField = "stockid";
-        //    //set the data field to display
-        //    lstStocks.DataTextField = "warehouseno";
-        //    //bind the data to the list
-        //    lstStocks.DataBind();
-        //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //if this is the first time the page is displayed
+        if (IsPostBack == false)
+        {
+            //update the list box
+            DisplayStocks();
+        }
 
     }
+
+    void DisplayStocks()
+        {
+            //create an instance of the county collection
+            PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+            //set the data source to the list of warehouse in the collection
+            lstStocks.DataSource = Stocks.StockList;
+            //set the name of the primary key
+            lstStocks.DataValueField = "StockID";
+            //set the data field to display
+            lstStocks.DataTextField = "WarehouseNo";
+            //bind the data to the list
+            lstStocks.DataBind();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
