@@ -10,7 +10,6 @@ namespace PhoneSystemTesting
     {
         //good test data
         //create some test data to pass to the method
-        string StockID = "1";
         string StockName = "aa";
         string WarehouseNo = "aa";
         string Location= "aa";
@@ -47,33 +46,6 @@ namespace PhoneSystemTesting
 
         }
 
-        [TestMethod]
-        public void WarehouseNoLessOne()
-        {
-            //create an instance of the class we want to create
-            clsStock AStock = new clsStock();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string WarehouseNo = ""; //this should trigger an error
-            //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-
-
-
-
-
-
-
-
-
-
-      
-
 
 
         [TestMethod]
@@ -91,6 +63,10 @@ namespace PhoneSystemTesting
         }
 
 
+
+
+        //Property Tests
+
         [TestMethod]
         public void StockIDPropertyOK()
         {
@@ -102,6 +78,19 @@ namespace PhoneSystemTesting
             AStock.StockID = TestData;
             //test to see that the two values are the same
             Assert.AreEqual(AStock.StockID, TestData);
+        }
+
+        [TestMethod]
+        public void StockNamePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //create some test data to assign to the property
+            string TestData = "aassa";
+            //assign the data to the property
+            AStock.StockName = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AStock.StockName, TestData);
         }
 
         [TestMethod]
@@ -167,25 +156,10 @@ namespace PhoneSystemTesting
 
 
 
-        //These tests aren't passing
 
 
-        //[TestMethod]
-        //public void FindMethodOK()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsStock AStock = new clsStock();
-        //    //create some test data to assign to the property
-        //    bool Found = false;
-        //    //assign the data to the property
-        //    Int32 StockID = 1;
-        //    //invoke the method
-        //    Found = AStock.Find(StockID);
-        //    //test to see that the two values are the same
-        //    Assert.IsTrue(Found);
 
-        //}
-
+        //Found Tests
 
         [TestMethod]
         public void FindMethodOK()
@@ -202,30 +176,189 @@ namespace PhoneSystemTesting
             Assert.IsTrue(Found);
         }
 
-
-
-        //failed tests; needs to be resolved (Week 23)
         [TestMethod]
         public void TestStockIDFound()
         {
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
-            //create some test data to assign to the property
-            bool Found = false;
-            //bool variable to record if data is OK (assume it is)
-            bool OK = true;
-            //assign the data to the property
-            int StockID = 1;
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
             //invoke the method
             Found = AStock.Find(StockID);
-            //checks the stock's ID for validation
+            //check the property
             if (AStock.StockID != 1)
             {
                 OK = false;
             }
-            //test to see that the two values are the same
+            //test to see that the result is correct
             Assert.IsTrue(OK);
+        }
 
+
+
+        [TestMethod]
+        public void TestStockNameFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //check the property
+            if (AStock.StockName != "XXX XXX")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+        [TestMethod]
+        public void TestWarehouseNoFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //check the property
+            if (AStock.WarehouseNo != "XXX XXX")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+
+        [TestMethod]
+        public void TestQuantityFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //check the property
+            if (AStock.Quantity != "XXX XXX")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+
+
+        [TestMethod]
+        public void TestBarcodeFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //check the property
+            if (AStock.Barcode != "XXX XXX")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+
+
+        [TestMethod]
+        public void TestLocationFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 StockID = 1;
+            //invoke the method
+            Found = AStock.Find(StockID);
+            //check the property
+            if (AStock.Location != "XXX XXX")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //TDD Tests
+
+        [TestMethod]
+        public void WarehouseNoLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string WarehouseNo = ""; //this should trigger an error
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
         }
 
 
