@@ -24,30 +24,6 @@ namespace PhoneSystemTesting
 
 
 
-
-
-
-
-
-
-        [TestMethod]
-        public void WarehouseNoLessOne()
-        {
-            //create an instance of the class we want to create
-            clsStock AStock = new clsStock();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string WarehouseNo = ""; //this should trigger an error
-            //invoke the method
-            Error = AStock.Valid(WarehouseNo, StockID, StockName, Barcode, Location, Quantity);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-
-
-
         [TestMethod]
         public void InstanceOK()
         {
@@ -56,8 +32,6 @@ namespace PhoneSystemTesting
             //test to see that it exists
             Assert.IsNotNull(AStock);
         }
-
-
 
         [TestMethod]
         public void ValidMethodOK()
@@ -72,6 +46,29 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
 
         }
+
+        [TestMethod]
+        public void WarehouseNoLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string WarehouseNo = ""; //this should trigger an error
+            //invoke the method
+            Error = AStock.Valid(StockID, StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +167,7 @@ namespace PhoneSystemTesting
 
 
 
-
+        //These tests aren't passing
 
 
         [TestMethod]
