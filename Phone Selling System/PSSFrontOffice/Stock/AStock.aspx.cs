@@ -76,9 +76,8 @@ public partial class _Default : System.Web.UI.Page
         string Quantity = txtQuantity.Text;
         string Barcode = txtBarcode.Text;
 
-
         String Error = "";
-        Error = AStock.Valid(WarehouseNo, StockName, Location, Quantity, Barcode);
+        Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
         if (Error == "")
         {
             //capture the house no
