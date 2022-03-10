@@ -99,16 +99,16 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
-    void Add()
-    {
-        //get the data entered by the user
-        StockBook.ThisStock.Warehouse = txtWarehouseNo.Text;
-        StockBook.ThisStock.StockName = txtStockname.Text;
-        StockBook.ThisStock.Location = txtLocation.Text;
-        StockBook.ThisStock.Quantity = txtQuantity.Text;
-        StockBook.ThisStock.Barcode = txtBarcode.Text;
+    //void Add()
+    //{
+    //    //get the data entered by the user
+    //    StockBook.ThisStock.Warehouse = txtWarehouseNo.Text;
+    //    StockBook.ThisStock.StockName = txtStockname.Text;
+    //    StockBook.ThisStock.Location = txtLocation.Text;
+    //    StockBook.ThisStock.Quantity = txtQuantity.Text;
+    //    StockBook.ThisStock.Barcode = txtBarcode.Text;
 
-    }
+    //}
 
 
 }
