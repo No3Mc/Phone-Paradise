@@ -65,11 +65,11 @@ namespace PSSClasses
             //adds a new record to the database based on the values
             //set the primary key value of the new record
             clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("@StockName", NThisStock.StockName);
-            DB.AddParameter("@WarehouseNo", NThisStock.WarehouseNo);
-            DB.AddParameter("@Location", NThisStock.Location);
-            DB.AddParameter("@Quantity", NThisStock.Quantity);
-            DB.AddParameter("@Barcode", NThisStock.Barcode);
+            DB.AddParameter("@StockName", ThisStock.StockName);
+            DB.AddParameter("@WarehouseNo", ThisStock.WarehouseNo);
+            DB.AddParameter("@Location", ThisStock.Location);
+            DB.AddParameter("@Quantity", ThisStock.Quantity);
+            DB.AddParameter("@Barcode", ThisStock.Barcode);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblStock_Insert");
             //return the primary key of the new record
