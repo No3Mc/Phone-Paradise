@@ -469,6 +469,26 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void BarcodeExtremeMax()
+        {
+            //instance of the class
+            clsStock AStock = new clsStock();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create test data
+            string Barcode = "";
+            Barcode = Barcode.PadRight(200, 'a'); //this should fail
+                                                  //assign test data to property
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see if found
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+
+
+
         //Quantity
 
 
@@ -585,6 +605,21 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void QuantityExtremeMax()
+        {
+            //instance of the class
+            clsStock AStock = new clsStock();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create test data
+            string Quantity = "";
+            Quantity = Quantity.PadRight(200, 'a'); //this should fail
+                                                  //assign test data to property
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see if found
+            Assert.AreNotEqual(Error, "");
+        }
 
         //Location
 
@@ -701,8 +736,253 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void LocationExtremeMax()
+        {
+            //instance of the class
+            clsStock AStock = new clsStock();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create test data
+            string Location = "";
+            Location = Location.PadRight(200, 'a'); //this should fail
+                                                  //assign test data to property
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see if found
+            Assert.AreNotEqual(Error, "");
+        }
 
 
+        //WarehouseNo
+
+
+        [TestMethod]
+        public void WarehouseNoMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string WarehouseNo = "";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void WarehouseNoMin()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string WarehouseNo = "a";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void WarehouseNoMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string WarehouseNo = "aa";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void WarehouseNoMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string WarehouseNo = "";
+            WarehouseNo = WarehouseNo.PadRight(49, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void WarehouseNoMax()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string WarehouseNo = "";
+            WarehouseNo = WarehouseNo.PadRight(50, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void WarehouseNoMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this shold fail
+            string WarehouseNo = "";
+            WarehouseNo = WarehouseNo.PadRight(51, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void WarehouseNoMid()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string WarehouseNo = "";
+            WarehouseNo = WarehouseNo.PadRight(25, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+
+        //StockName
+
+
+
+
+        [TestMethod]
+        public void StockNameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string StockName = "";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StockNameMin()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string StockName = "a";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StockNameMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string StockName = "aa";
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void StockNameMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string StockName = "";
+            StockName = StockName.PadRight(49, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StockNameMax()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string StockName = "";
+            StockName = StockName.PadRight(50, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StockNameMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this shold fail
+            string StockName = "";
+            StockName = StockName.PadRight(51, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void StockNameMid()
+        {
+            //create an instance of the class we want to create
+            clsStock AStock = new clsStock();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string StockName = "";
+            StockName = StockName.PadRight(25, 'a');
+            //invoke the method
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
 
 
