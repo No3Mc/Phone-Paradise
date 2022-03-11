@@ -503,7 +503,7 @@ namespace PhoneSystemTesting
             //this should fail
             string Quantity = "";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -518,7 +518,7 @@ namespace PhoneSystemTesting
             //this should pass
             string Quantity = "a";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -533,7 +533,7 @@ namespace PhoneSystemTesting
             //this should pass
             string Quantity = "aa";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -550,7 +550,7 @@ namespace PhoneSystemTesting
             string Quantity = "";
             Quantity = Quantity.PadRight(49, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -566,7 +566,7 @@ namespace PhoneSystemTesting
             string Quantity = "";
             Quantity = Quantity.PadRight(50, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -582,7 +582,7 @@ namespace PhoneSystemTesting
             string Quantity = "";
             Quantity = Quantity.PadRight(51, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -599,7 +599,7 @@ namespace PhoneSystemTesting
             string Quantity = "";
             Quantity = Quantity.PadRight(25, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Quantity);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -634,7 +634,7 @@ namespace PhoneSystemTesting
             //this should fail
             string Location = "";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -649,7 +649,7 @@ namespace PhoneSystemTesting
             //this should pass
             string Location = "a";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -664,7 +664,7 @@ namespace PhoneSystemTesting
             //this should pass
             string Location = "aa";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -681,7 +681,7 @@ namespace PhoneSystemTesting
             string Location = "";
             Location = Location.PadRight(49, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -697,7 +697,7 @@ namespace PhoneSystemTesting
             string Location = "";
             Location = Location.PadRight(50, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -713,7 +713,7 @@ namespace PhoneSystemTesting
             string Location = "";
             Location = Location.PadRight(51, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -730,7 +730,7 @@ namespace PhoneSystemTesting
             string Location = "";
             Location = Location.PadRight(25, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Location);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -766,7 +766,7 @@ namespace PhoneSystemTesting
             //this should fail
             string WarehouseNo = "";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -781,7 +781,7 @@ namespace PhoneSystemTesting
             //this should pass
             string WarehouseNo = "a";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -796,7 +796,7 @@ namespace PhoneSystemTesting
             //this should pass
             string WarehouseNo = "aa";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -813,7 +813,7 @@ namespace PhoneSystemTesting
             string WarehouseNo = "";
             WarehouseNo = WarehouseNo.PadRight(49, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -829,7 +829,7 @@ namespace PhoneSystemTesting
             string WarehouseNo = "";
             WarehouseNo = WarehouseNo.PadRight(50, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -845,7 +845,7 @@ namespace PhoneSystemTesting
             string WarehouseNo = "";
             WarehouseNo = WarehouseNo.PadRight(51, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -862,11 +862,27 @@ namespace PhoneSystemTesting
             string WarehouseNo = "";
             WarehouseNo = WarehouseNo.PadRight(25, 'a');
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, WarehouseNo);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
+
+        [TestMethod]
+        public void WarehouseNoExtremeMax()
+        {
+            //instance of the class
+            clsStock AStock = new clsStock();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create test data
+            string WarehouseNo = "";
+            WarehouseNo = WarehouseNo.PadRight(200, 'a'); //this should fail
+                                                  //assign test data to property
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see if found
+            Assert.AreNotEqual(Error, "");
+        }
 
         //StockName
 
@@ -883,7 +899,7 @@ namespace PhoneSystemTesting
             //this should fail
             string StockName = "";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -898,7 +914,7 @@ namespace PhoneSystemTesting
             //this should pass
             string StockName = "a";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -913,7 +929,7 @@ namespace PhoneSystemTesting
             //this should pass
             string StockName = "aa";
             //invoke the method
-            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, StockName);
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -985,6 +1001,21 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void StockNameExtremeMax()
+        {
+            //instance of the class
+            clsStock AStock = new clsStock();
+            //create a string variable to store the result of validation
+            string Error = "";
+            //create test data
+            string StockName = "";
+            StockName = StockName.PadRight(200, 'a'); //this should fail
+                                                  //assign test data to property
+            Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+            //test to see if found
+            Assert.AreNotEqual(Error, "");
+        }
 
 
 
