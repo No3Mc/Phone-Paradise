@@ -1,13 +1,17 @@
 ﻿using System;
-
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data;
 
 namespace PSSClasses
 {
     public class clsStock
     {
         public bool Active;
-        private Int32 NStockID;
+        private int NStockID;
         private string NStockName;
         private string NWarehouseNo;
         private string NLocation;
@@ -15,7 +19,7 @@ namespace PSSClasses
         private string NBarcode;
 
 
-        public Int32 StockID
+        public int StockID
         {
             get
             {
@@ -30,14 +34,14 @@ namespace PSSClasses
 
         }
 
-        public bool Find(Int32 stockID)
+        public bool Find(int StockID)
         {
             //create an instance of the data connectin
             clsDataConnection DB = new clsDataConnection();
             //add the parametrs for the book to search for it
             DB.AddParameter("@StockID", StockID);
             //execute the stored procedure
-            DB.Execute("sproc_tblStock_FillterByStockID");
+            DB.Execute("sproc_tblStock_FilterByStockID");
 
 
             //if one record if found (there should either one or zero)
@@ -46,10 +50,10 @@ namespace PSSClasses
                 //copy the data from the database to the private data members
                 NStockID = Convert.ToInt32(DB.DataTable.Rows[0]["StockID"]);
                 NStockName = Convert.ToString(DB.DataTable.Rows[0]["StockName"]);
-                NWarehouseNo = Convert.ToString(DB.DataTable.Rows[0]["StockWarehouseNo"]);
-                NLocation = Convert.ToString(DB.DataTable.Rows[0]["StockLocation"]);
-                NQuantity = Convert.ToString(DB.DataTable.Rows[0]["StockQuantity"]);
-                NBarcode = Convert.ToString(DB.DataTable.Rows[0]["StockBarcode"]);
+                NWarehouseNo = Convert.ToString(DB.DataTable.Rows[0]["WarehouseNo"]);
+                NLocation = Convert.ToString(DB.DataTable.Rows[0]["Location"]);
+                NQuantity = Convert.ToString(DB.DataTable.Rows[0]["Quantity"]);
+                NBarcode = Convert.ToString(DB.DataTable.Rows[0]["Barcode"]);
 
                 //return everyting worked OK
                 return true;

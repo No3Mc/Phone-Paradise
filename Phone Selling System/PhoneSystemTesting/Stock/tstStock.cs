@@ -214,7 +214,7 @@ namespace PhoneSystemTesting
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.StockName != "XXX XXX")
+            if (AStock.StockName != "1")
             {
                 OK = false;
             }
@@ -237,7 +237,7 @@ namespace PhoneSystemTesting
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.WarehouseNo != "XXX XXX")
+            if (AStock.WarehouseNo != "1")
             {
                 OK = false;
             }
@@ -261,7 +261,7 @@ namespace PhoneSystemTesting
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Quantity != "XXX XXX")
+            if (AStock.Quantity != "1")
             {
                 OK = false;
             }
@@ -286,7 +286,7 @@ namespace PhoneSystemTesting
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Barcode != "XXX XXX")
+            if (AStock.Barcode != "1")
             {
                 OK = false;
             }
@@ -311,7 +311,7 @@ namespace PhoneSystemTesting
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Location != "XXX XXX")
+            if (AStock.Location != "1")
             {
                 OK = false;
             }
