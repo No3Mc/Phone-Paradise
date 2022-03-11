@@ -68,49 +68,119 @@ namespace PSSClasses
 
         }
 
+        //public string Valid(string StockName, string WarehouseNo, string Location, string Quantity, string Barcode)
+        //{
+
+
+        //    //if (string.IsNullOrEmpty(StockName))
+        //    //{
+        //    //    throw new ArgumentException($"'{nameof(StockName)}' cannot be null or empty.", nameof(StockName));
+        //    //}
+
+        //    //if (string.IsNullOrEmpty(WarehouseNo))
+        //    //{
+        //    //    throw new ArgumentException($"'{nameof(WarehouseNo)}' cannot be null or empty.", nameof(WarehouseNo));
+        //    //}
+
+        //    //if (string.IsNullOrEmpty(Location))
+        //    //{
+        //    //    throw new ArgumentException($"'{nameof(Location)}' cannot be null or empty.", nameof(Location));
+        //    //}
+
+        //    //if (string.IsNullOrEmpty(Quantity))
+        //    //{
+        //    //    throw new ArgumentException($"'{nameof(Quantity)}' cannot be null or empty.", nameof(Quantity));
+        //    //}
+
+        //    //if (string.IsNullOrEmpty(Barcode))
+        //    //{
+        //    //    throw new ArgumentException($"'{nameof(Barcode)}' cannot be null or empty.", nameof(Barcode));
+        //    //}
+
+
+
+        //    //create a string variable to store the error
+        //    string Error = "";
+        //    if (WarehouseNo.Length == 0)
+        //    {
+        //        //record the error
+        //        Error = Error + "The warehouse no may not be black";
+        //    }
+        //    //return error messages
+        //    return Error;
+        //}
+
+
         public string Valid(string StockName, string WarehouseNo, string Location, string Quantity, string Barcode)
         {
-
-
-            //if (string.IsNullOrEmpty(StockName))
-            //{
-            //    throw new ArgumentException($"'{nameof(StockName)}' cannot be null or empty.", nameof(StockName));
-            //}
-
-            //if (string.IsNullOrEmpty(WarehouseNo))
-            //{
-            //    throw new ArgumentException($"'{nameof(WarehouseNo)}' cannot be null or empty.", nameof(WarehouseNo));
-            //}
-
-            //if (string.IsNullOrEmpty(Location))
-            //{
-            //    throw new ArgumentException($"'{nameof(Location)}' cannot be null or empty.", nameof(Location));
-            //}
-
-            //if (string.IsNullOrEmpty(Quantity))
-            //{
-            //    throw new ArgumentException($"'{nameof(Quantity)}' cannot be null or empty.", nameof(Quantity));
-            //}
-
-            //if (string.IsNullOrEmpty(Barcode))
-            //{
-            //    throw new ArgumentException($"'{nameof(Barcode)}' cannot be null or empty.", nameof(Barcode));
-            //}
-
-
-
             //create a string variable to store the error
-            string Error = "";
+            String Error = "";
+
+            //if the HouseNo is blank
+            if (StockName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The house no may not be blank : ";
+            }
+            //if the house no is greater than 6 characters
+            if (StockName.Length > 50)
+            {
+                //record the error
+                Error = Error + "The house no must be less than 6 characters : ";
+            }
+            //is the post code blank
             if (WarehouseNo.Length == 0)
             {
                 //record the error
-                Error = Error + "The warehouse no may not be black";
+                Error = Error + "The post code may not be blank : ";
             }
-            //return error messages
+            //if the post code is too long
+            if (WarehouseNo.Length > 50)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            //is the street blank
+            if (Location.Length == 0)
+            {
+                //record the error
+                Error = Error + "The street may not be blank : ";
+            }
+            //if the street is too long
+            if (Location.Length > 50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters : ";
+            }
+            //is the town blank
+            if (Quantity.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (Quantity.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+
+
+            //is the town blank
+            if (Barcode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (Barcode.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+            //return any error messages
             return Error;
         }
-
-
 
 
 
