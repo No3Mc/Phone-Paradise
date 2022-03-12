@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Written by Syed || P2652259 || No3Mc(https://github.com/No3Mc)
+//Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store
 
 namespace PSSClasses
 {
@@ -61,7 +63,55 @@ namespace PSSClasses
         }
 
 
+        public clsStockCollection()
+        {
 
+            //objcet for data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_SelectAll");
+            //populate the array list with data table
+            PopulateArray(DB);
+
+        }
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populate the array list based on the data table in the parameter DB
+            //var for the index
+            int Index = 0;
+            //var to store the record count 
+            int RecordsCount = 0;
+            //get the count of records
+            RecordsCount = DB.Count;
+            //clear the private array list
+            NStockList = new List<clsStock>();
+            //while there are records to process
+            while (Index < RecordsCount)
+            {
+                //create a blank book
+                clsStock AStock = new clsStock();
+                //read in the fields from the current records
+                AStock.StockID = Convert.ToInt32(DB.DataTable.Rows[Index]["StockID"]);
+                AStock.StockName = Convert.ToString(DB.DataTable.Rows[Index]["StockName"]);
+                AStock.WarehouseNo = Convert.ToString(DB.DataTable.Rows[Index]["WarehouseNo"]);
+                AStock.Location = Convert.ToString(DB.DataTable.Rows[Index]["Location"]);
+                AStock.Quantity = Convert.ToString(DB.DataTable.Rows[Index]["Quantity"]);
+                AStock.Barcode = Convert.ToString(DB.DataTable.Rows[Index]["Barcode"]);
+
+
+
+
+
+
+                //add the record to the private data member
+                NStockList.Add(AStock);
+                //point at the record
+                Index++;
+            }
+        }
 
 
         public void Del()
