@@ -50,4 +50,12 @@ public partial class Stock_StockMain : System.Web.UI.Page
         Response.Redirect("StockAdd.aspx");
     }
 
+
+    protected void btnEdit_Click(object sender, EventArgs e)
+    {
+        //store -1 into the session object to indicate this is a new record
+        Session["StockID"] = -1;
+        //redirect to the data entry page
+        Response.Redirect("StockEdit.aspx");
+    }
 }
