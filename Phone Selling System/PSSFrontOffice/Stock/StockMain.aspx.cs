@@ -8,6 +8,8 @@ using PSSClasses;
 
 public partial class Stock_StockMain : System.Web.UI.Page
 {
+    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+
     protected void Page_Load(object sender, EventArgs e)
     {
         //if this is the first time the page is displayed
@@ -21,9 +23,9 @@ public partial class Stock_StockMain : System.Web.UI.Page
     void DisplayStocks()
         {
             //create an instance of the county collection
-            PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+            PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
             //set the data source to the list of warehouse in the collection
-            lstStocks.DataSource = Stocks.StockList;
+            lstStocks.DataSource = StockBook.StockList;
             //set the name of the primary key
             lstStocks.DataValueField = "StockID";
             //set the data field to display
@@ -58,4 +60,18 @@ public partial class Stock_StockMain : System.Web.UI.Page
         //redirect to the data entry page
         Response.Redirect("StockEdit.aspx");
     }
+
+
+
+
+
+
+
+    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+
+
+
+
+
+
 }

@@ -68,8 +68,6 @@ namespace PSSClasses
 
         }
 
-        //public string Valid(string StockName, string WarehouseNo, string Location, string Quantity, string Barcode)
-        //{
 
 
         //    //if (string.IsNullOrEmpty(StockName))
@@ -99,16 +97,6 @@ namespace PSSClasses
 
 
 
-        //    //create a string variable to store the error
-        //    string Error = "";
-        //    if (WarehouseNo.Length == 0)
-        //    {
-        //        //record the error
-        //        Error = Error + "The warehouse no may not be black";
-        //    }
-        //    //return error messages
-        //    return Error;
-        //}
 
 
         public string Valid(string StockName, string WarehouseNo, string Location, string Quantity, string Barcode)
@@ -270,7 +258,6 @@ namespace PSSClasses
             //always return true
             return true;
         }
-
 
 
 
