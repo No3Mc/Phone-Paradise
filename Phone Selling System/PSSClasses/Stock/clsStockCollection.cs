@@ -81,11 +81,12 @@ namespace PSSClasses
             //adds a new record to the database based on the values
             //set the primary key value of the new record
             clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("@StockName", ThisStock.StockName);
-            DB.AddParameter("@WarehouseNo", ThisStock.WarehouseNo);
-            DB.AddParameter("@Location", ThisStock.Location);
-            DB.AddParameter("@Quantity", ThisStock.Quantity);
-            DB.AddParameter("@Barcode", ThisStock.Barcode);
+
+            DB.AddParameter("@StockName", NThisStock.StockName);
+            DB.AddParameter("@WarehouseNo", NThisStock.WarehouseNo);
+            DB.AddParameter("@Location", NThisStock.Location);
+            DB.AddParameter("@Quantity", NThisStock.Quantity);
+            DB.AddParameter("@Barcode", NThisStock.Barcode);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblStock_Insert");
             //return the primary key of the new record
@@ -93,6 +94,22 @@ namespace PSSClasses
         }
 
 
+        public void Update()
+        {
+            //adds a new record to the database based on the values
+            //set the primary key value of the new record
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StockID", NThisStock.StockID);
+            DB.AddParameter("@StockName", NThisStock.StockName);
+            DB.AddParameter("@WarehouseNo", NThisStock.WarehouseNo);
+            DB.AddParameter("@Location", NThisStock.Location);
+            DB.AddParameter("@Quantity", NThisStock.Quantity);
+            DB.AddParameter("@Barcode", NThisStock.Barcode);
+            //execute the query returning the primary key value
+            DB.Execute("sproc_tblStock_Update");
+            //return the primary key of the new record
+            //return NThisStock.StockID;
+        }
 
 
 
