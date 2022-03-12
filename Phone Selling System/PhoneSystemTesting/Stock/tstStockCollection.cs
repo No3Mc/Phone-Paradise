@@ -119,6 +119,35 @@ namespace PhoneSystemTesting
 
 
 
+        [TestMethod]
+        public void DelMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStockCollection AllStocks = new clsStockCollection();
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.StockID = 1;
+            TestItem.StockName = "1";
+            TestItem.WarehouseNo = "1";
+            TestItem.Location = "1";
+            TestItem.Quantity = "1";
+            TestItem.Barcode = "1";
+            //set ThisStock to the test data
+            AllStocks.ThisStock = TestItem;
+            //add the record
+            PrimaryKey = AllStocks.Add();
+            //set the primary key of the test data
+            TestItem.StockID = PrimaryKey;
+            //find the record
+            AllStocks.ThisStock.Find(PrimaryKey);
+            //test to see the two values are the same
+            AllStocks.Del();
+            Assert.AreEqual(AllStocks.ThisStock, TestItem);
+
+        }
 
 
 
