@@ -64,10 +64,20 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     }
 
 
-    protected void btnOK_Click1(object sender, EventArgs e)
+    protected void btnOK_Click(object sender, EventArgs e)
     {
-        Add();
-        Response.Redirect("StockMain.aspx");
+        if (StockID == -1)
+        {
+            //add 
+            Add();
+        }
+        else
+        {
+            //Update
+            Update();
+        }
+
+        //Response.Redirect("StockMain.aspx");
     }
 
 
@@ -81,7 +91,7 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         //create an instance of the book list
         clsStockCollection StocksList = new clsStockCollection();
         //validate the data on the web form
-        String Error = StocksList.ThisStock.Valid((txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
+        String Error = StocksList.ThisStock.Valid(txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
         //if the data is OK then add it to the objcet
         if (Error == "")
         {
@@ -95,7 +105,7 @@ public partial class Stock_StockAdd : System.Web.UI.Page
             StocksList.ThisStock.Quantity = txtQuantity.Text;
             StocksList.ThisStock.Barcode = txtBarcode.Text;
             //add the record
-            StockID.Update();
+            StocksList.Update();
             //all done so redirect back to the main page
             Response.Redirect("StockMain.aspx");
         }
