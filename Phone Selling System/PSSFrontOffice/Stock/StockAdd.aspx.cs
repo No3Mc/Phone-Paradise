@@ -40,7 +40,7 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     }
 
 
-    protected void btnOk_Click(object sender, EventArgs e)
+    protected void btnOK_Click1(object sender, EventArgs e)
     {
         Add();
         Response.Redirect("StockMain.aspx");
