@@ -18,7 +18,7 @@ namespace PhoneSystemTesting
 
 
 
-
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
 
 
@@ -58,17 +58,6 @@ namespace PhoneSystemTesting
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         [TestMethod]
         public void ActivePropertyOK()
         {
@@ -84,6 +73,11 @@ namespace PhoneSystemTesting
         }
 
 
+
+
+
+
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
 
         //Property Tests
@@ -178,6 +172,7 @@ namespace PhoneSystemTesting
 
 
 
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
 
         //Found Tests
@@ -349,9 +344,9 @@ namespace PhoneSystemTesting
 
 
 
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
-        //TDD Tests
-        //StockName, WarehouseNo, Location, Quantity, Barcode
+        //TDD Tests of StockName, WarehouseNo, Location, Quantity, Barcode
 
 
         //Barcode Tests
@@ -488,6 +483,7 @@ namespace PhoneSystemTesting
 
 
 
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
         //Quantity
 
@@ -621,6 +617,9 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
+
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+
         //Location
 
 
@@ -752,6 +751,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
         //WarehouseNo
 
@@ -883,6 +883,12 @@ namespace PhoneSystemTesting
             //test to see if found
             Assert.AreNotEqual(Error, "");
         }
+
+
+
+
+
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
         //StockName
 
@@ -1019,6 +1025,7 @@ namespace PhoneSystemTesting
 
 
 
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
 
 
