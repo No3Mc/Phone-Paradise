@@ -40,7 +40,11 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     }
 
 
-
+    protected void btnOk_Click(object sender, EventArgs e)
+    {
+        Add();
+        Response.Redirect("StockMain.aspx");
+    }
 
 
 
@@ -66,32 +70,36 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     //function for adding new record
 
 
-    //void Add()
-    //{
-    //    //create an instance of the book list
-    //    PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
-    //    //validate the data on the web form
-    //    String Error = StockList.ThisStock.Valid(txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
-    //    //if the data is OK then add it to the objcet
-    //    if (Error == "")
-    //    {
-    //        //get the data entered by the user
-    //        StockList.ThisStock.StockName = txtStockName.Text;
-    //        StockList.ThisStock.WarehouseNo = txtWarehouseNo.Text;
-    //        StockList.ThisStock.Location = txtLocation.Text;
-    //        StockList.ThisStock.Quantity = txtQuantity.Text;
-    //        StockList.ThisStock.Barcode = txtBarcode.Text;
-    //        //add the record
-    //        StockList.Add();
-    //        //all done so redirect back to the main page
-    //        Response.Redirect("StockMain.aspx");
-    //    }
-    //    else
-    //    {
-    //        //report an error
-    //        lblError.Text = "problems with entries" + Error;
-    //    }
-    //}
+    void Add()
+    {
+        //create an instance of the book list
+        PSSClasses.clsStockCollection StocksList = new PSSClasses.clsStockCollection();
+        //validate the data on the web form
+        String Error = StocksList.ThisStock.Valid(txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
+        //if the data is OK then add it to the objcet
+        if (Error == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.StockName = txtStockName.Text;
+            StocksList.ThisStock.WarehouseNo = txtWarehouseNo.Text;
+            StocksList.ThisStock.Location = txtLocation.Text;
+            StocksList.ThisStock.Quantity = txtQuantity.Text;
+            StocksList.ThisStock.Barcode = txtBarcode.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+        else
+        {
+            //report an error
+            lblError.Text = "problems with entries" + Error;
+        }
+    }
+
+
+
+
 
 
 }
