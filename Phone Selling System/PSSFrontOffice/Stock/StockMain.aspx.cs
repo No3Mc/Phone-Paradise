@@ -30,6 +30,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
             lstStocks.DataTextField = "WarehouseNo";
             //bind the data to the list
             lstStocks.DataBind();
+
         }
 
 
