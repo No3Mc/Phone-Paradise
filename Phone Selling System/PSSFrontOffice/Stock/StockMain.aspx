@@ -46,8 +46,8 @@
         
                 <div>
 
-                    <asp:Button ID="btnApply" runat="server" OnClick="Button1_Click" Text="Apply" />
-                    <asp:Button ID="btnDisplayAll" runat="server" OnClick="Button1_Click" Text="Display All" />
+                    <asp:Button ID="btnApply" runat="server" Text="Apply" OnClick="btnApply_Click" />
+                    <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" OnClick="btnDisplayAll_Click" />
         </div>
 
 
@@ -59,7 +59,7 @@
                                 <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
                                 <asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />
                                 <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+                                <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
         </div>
     </form>
 </body>
