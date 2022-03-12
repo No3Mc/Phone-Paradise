@@ -60,6 +60,22 @@ namespace PSSClasses
             }
         }
 
+
+
+
+
+        public void Del()
+        {
+            //delete the record pointed by the thisStock
+            //connects database
+            clsDataConnection DB = new clsDataConnection();
+            //parameters for the stored procedure
+            DB.AddParameter("@StockID", NThisStock.StockID);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblStock_Del");
+        }
+
+
         public int Add()
         {
             //adds a new record to the database based on the values
@@ -75,6 +91,39 @@ namespace PSSClasses
             //return the primary key of the new record
             //return NThisStock.StockID;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
