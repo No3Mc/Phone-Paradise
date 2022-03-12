@@ -150,6 +150,81 @@ namespace PhoneSystemTesting
         }
 
 
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create ab instance of teh class we want to create
+            clsStockCollection AllStocks = new clsStockCollection();
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.StockName = "1";
+            TestItem.WarehouseNo = "1";
+            TestItem.Location = "1";
+            TestItem.Quantity = "1";
+            TestItem.Barcode = "1";
+            //set thisstock to the test data
+            AllStocks.ThisStock = TestItem;
+            //add the record
+            PrimaryKey = AllStocks.Add();
+            //set the primary key of the test data
+            TestItem.StockID = PrimaryKey;
+            //modify the test data
+            TestItem.StockName = "1111";
+            TestItem.WarehouseNo = "11111";
+            TestItem.Location = "11111";
+            TestItem.Quantity = "1111";
+            TestItem.Barcode = "11111";
+            //set the record based on the new test data
+            Assert.AreEqual(AllStocks.ThisStock, TestItem);
+        }
+
+
+
+
+
+
+
+            //got rid of these two tests according to the lab 23
+
+            //[TestMethod]
+            //public void ListAndCountOK()
+            //{
+            //    //create an instance of the class we want to create
+            //    clsStockCollection AllStocks = new clsStockCollection();
+            //    //create some test data to assign to the property
+            //    //in this case the data needs to be a list of objects
+            //    List<clsStock> TestList = new List<clsStock>();
+            //    //add an item to the list
+            //    //create the item of test data
+            //    clsStock TestItem = new clsStock();
+            //    //set its properties
+            //    TestItem.StockID = 1;
+            //    TestItem.StockName = "1";
+            //    TestItem.Location = "1";
+            //    TestItem.Quantity = "1";
+            //    TestItem.WarehouseNo = "1";
+            //    TestItem.Barcode = "1";
+            //    //add the item to the test list
+            //    TestList.Add(TestItem);
+            //    //assign the data of the property
+            //    AllStocks.StockList = TestList;
+            //    //test to see that the two values are the same
+            //    Assert.AreEqual(AllStocks.Count, TestList.Count);
+
+            //}
+
+
+            //[TestMethod]
+            //public void TwoRecordsPresent()
+            //{
+            //    //create an instance of the class we want to create
+            //    clsStockCollection AllStocks = new clsStockCollection();
+            //    //test to see that the two values are the same
+            //    Assert.AreEqual(AllStocks.Count, 2);
+            //}
 
 
 
@@ -160,57 +235,9 @@ namespace PhoneSystemTesting
 
 
 
-        //got rid of these two tests according to the lab 23
-
-        //[TestMethod]
-        //public void ListAndCountOK()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsStockCollection AllStocks = new clsStockCollection();
-        //    //create some test data to assign to the property
-        //    //in this case the data needs to be a list of objects
-        //    List<clsStock> TestList = new List<clsStock>();
-        //    //add an item to the list
-        //    //create the item of test data
-        //    clsStock TestItem = new clsStock();
-        //    //set its properties
-        //    TestItem.StockID = 1;
-        //    TestItem.StockName = "1";
-        //    TestItem.Location = "1";
-        //    TestItem.Quantity = "1";
-        //    TestItem.WarehouseNo = "1";
-        //    TestItem.Barcode = "1";
-        //    //add the item to the test list
-        //    TestList.Add(TestItem);
-        //    //assign the data of the property
-        //    AllStocks.StockList = TestList;
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(AllStocks.Count, TestList.Count);
-
-        //}
 
 
-        //[TestMethod]
-        //public void TwoRecordsPresent()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsStockCollection AllStocks = new clsStockCollection();
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(AllStocks.Count, 2);
-        //}
-
-
-
-
-
-
-
-
-
-
+        }
 
 
     }
-
-
-}

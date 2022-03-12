@@ -9,7 +9,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            Are you sure?
         </div>
+
+        <div>
+            <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
+            <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
+        </div>
+
     </form>
 </body>
 </html>
