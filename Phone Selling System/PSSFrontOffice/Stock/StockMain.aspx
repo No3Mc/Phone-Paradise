@@ -112,7 +112,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     </td>
                                         <td class="auto-style12">
 
-            <asp:Label ID="lblError" runat="server" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error"></asp:Label>
+            <asp:Label ID="lblError" runat="server" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error" Width="367px"></asp:Label>
         
                     </td>
                 </tr>
