@@ -161,36 +161,16 @@ namespace PSSClasses
             //return NThisStock.StockID;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public void ReportByLocation(string Location)
+        {
+            //filters the records based on a full or partial location
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the location parameter to the database
+            DB.AddParameter("@Location", Location);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FilterByLocation");
+        }
     }
 
 
