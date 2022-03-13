@@ -28,16 +28,9 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
     void DisplayStocks()
     {
-        //get the number of the book to be proccessed
-        StockID = Convert.ToInt32(Session["BookId"]);
-        if (IsPostBack == false)    
-        {
-            //populate the list of book
-            DisplayStocks();
-
-        }        //craete an instance of the book list
+        //craete an instance of the book list
         clsStockCollection StocksList = new clsStockCollection();
-        //find the record to update
+        //display the data for this record
         StocksList.ThisStock.Find(StockID);
         //display the data for this record
         txtStockName.Text = StocksList.ThisStock.StockName;

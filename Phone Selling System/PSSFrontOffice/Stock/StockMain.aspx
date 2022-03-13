@@ -8,8 +8,8 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 1106px;
-            margin-left: 419px;
+            width: 867px;
+            margin-left: 155px;
             height: 226px;
         }
         .auto-style4 {
@@ -45,15 +45,33 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             height: 45px;
         }
         .auto-style13 {
-            margin-left: 519px;
+            margin-left: 354px;
+        }
+        .auto-style14 {
+            width: 1865px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        
+                <div>
+                    
+        </div>
+        
+                <div>
+                    <table>
+
+                                            <tr>
+                    <td class="auto-style14">&nbsp;</td>
+                    </tr>
+
+                    </table>
+
+        </div>
      <div>
 
-                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="686px" CssClass="auto-style13"></asp:ListBox>
+                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="436px" CssClass="auto-style13"></asp:ListBox>
 
         </div>
 
@@ -94,7 +112,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     </td>
                                         <td class="auto-style12">
 
-            <asp:Label ID="lblError" runat="server" Text="Label" Visible="False"></asp:Label>
+            <asp:Label ID="lblError" runat="server" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error"></asp:Label>
         
                     </td>
                 </tr>
@@ -127,15 +145,15 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     </td>
                     <td class="auto-style7">
 
-                        <asp:Button ID="Button3" runat="server" Text="Add" Width="185px" OnClick="btnAdd_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button3" runat="server" Text="Add" Width="185px" OnClick="btnAdd_Click" ToolTip="Add Stocks" BorderColor="#990000" ForeColor="Red" />
 
-                        <asp:Button ID="Button4" runat="server" Text="Edit" Width="185px" OnClick="btnEdit_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button4" runat="server" Text="Edit" Width="185px" OnClick="btnEdit_Click" ToolTip="Edit Stocks" BorderColor="#990000" ForeColor="Red" />
 
                                                                                 </td>
                                        
                                         <td class="auto-style4">
 
-                        <asp:Button ID="Button5" runat="server" Text="Delete" Width="221px" OnClick="btnDelete_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
+                        <asp:Button ID="Button5" runat="server" Text="Delete" Width="221px" OnClick="btnDelete_Click" ToolTip="Delete Stocks" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
 
                                                                                 </td>
                 </tr>
