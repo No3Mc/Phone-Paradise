@@ -65,6 +65,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
         else //if no record has been selected
         {
             //display an error#
+            lblError.Visible = true;
             lblError.Text = "Please select a record to edit from teh list";
         }
     }
@@ -86,6 +87,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
         else //if no record has been selected
         {
             //display an error#
+            lblError.Visible = true;
             lblError.Text = "Please select a record to delete from teh list";
         }
     }
