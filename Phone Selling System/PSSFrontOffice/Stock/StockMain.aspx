@@ -6,62 +6,167 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1106px;
+            margin-left: 419px;
+            height: 226px;
+        }
+        .auto-style4 {
+            width: 137px;
+        }
+        .auto-style5 {
+            width: 222px;
+        }
+        .auto-style6 {
+            margin-bottom: 0px;
+        }
+        .auto-style7 {
+            width: 384px;
+        }
+        .auto-style8 {
+            width: 222px;
+            height: 41px;
+        }
+        .auto-style9 {
+            width: 384px;
+            height: 41px;
+        }
+        .auto-style10 {
+            width: 222px;
+            height: 6px;
+        }
+        .auto-style11 {
+            width: 384px;
+            height: 6px;
+        }
+        .auto-style12 {
+            width: 222px;
+            height: 45px;
+        }
+        .auto-style13 {
+            margin-left: 519px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
      <div>
 
-                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="517px"></asp:ListBox>
+                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="686px" CssClass="auto-style13"></asp:ListBox>
 
         </div>
 
-                <div>
-                    
-            <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
-        
-        </div>
-
-        
                 <div>
                     
         </div>
 
         
                 <div>
-                    
-                    <asp:Label ID="Label1" runat="server" Text="Please enter a warehouse no"></asp:Label>
-
+                                <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
+                                <%--<asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />--%>
+                                <%--<asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />--%>
+                                <%--<asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />--%>
         </div>
 
-        
-                <div>
-                    
-                    <asp:TextBox ID="txtWarehouseNo" runat="server" Width="214px"></asp:TextBox>
 
-        </div>
 
-                        <div>
-                    
-        </div>
 
-        
-                <div>
 
-                    <asp:Button ID="btnApply" runat="server" Text="Apply" OnClick="btnApply_Click" />
-                    <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" OnClick="btnDisplayAll_Click" />
-        </div>
+
+
+
+
 
 
         <div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style7">Please enter Warehouse No</td>
+                 
+                </tr>
+                <tr>
+                    <td class="auto-style12">
+
+
         
+                    </td>
+                                        <td class="auto-style12">
+
+            <asp:Label ID="lblError" runat="server" Text="Label" Visible="False"></asp:Label>
+        
+                    </td>
+                </tr>
+                <tr>
+
+                    <td class="auto-style8"></td>
+                    <td class="auto-style9">
+
+                        <asp:TextBox ID="txtWarehouseNo" runat="server" TextMode="Password" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style10"></td>
+                    <td class="auto-style11">
+                        <asp:Button ID="Button1" runat="server" Text="Apply" Width="185px" OnClick="btnApply_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button2" runat="server" Text="Display All" Width="185px" OnClick="btnDisplayAll_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+                    </td>
+
+                                     
+
+
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    </tr>
+                <tr>
+                                                                                <td class="auto-style5">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Visible="False">Cancel</asp:HyperLink>
+                    </td>
+                    <td class="auto-style7">
+
+                        <asp:Button ID="Button3" runat="server" Text="Add" Width="185px" OnClick="btnAdd_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+
+                        <asp:Button ID="Button4" runat="server" Text="Edit" Width="185px" OnClick="btnEdit_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+
+                                                                                </td>
+                                       
+                                        <td class="auto-style4">
+
+                        <asp:Button ID="Button5" runat="server" Text="Delete" Width="221px" OnClick="btnDelete_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
+
+                                                                                </td>
+                </tr>
+            </table>
         </div>
 
-                <div>
-                                <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
-                                <asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />
-                                <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </form>
 </body>
 </html>
