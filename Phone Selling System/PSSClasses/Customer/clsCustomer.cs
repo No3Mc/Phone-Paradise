@@ -32,6 +32,92 @@ namespace PSSClasses
 
 
 
+
+        public string Valid(string PhoneNo, string Address, string DOB, string Name, string Email)
+        {
+            //create a string variable to store the error
+            String Error = "";
+
+            //if the HouseNo is blank
+            if (PhoneNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The house no may not be blank : ";
+            }
+            //if the house no is greater than 6 characters
+            if (PhoneNo.Length > 50)
+            {
+                //record the error
+                Error = Error + "The house no must be less than 6 characters : ";
+            }
+            //is the post code blank
+            if (Address.Length == 0)
+            {
+                //record the error
+                Error = Error + "The post code may not be blank : ";
+            }
+            //if the post code is too long
+            if (Address.Length > 50)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            //is the street blank
+            if (DOB.Length == 0)
+            {
+                //record the error
+                Error = Error + "The street may not be blank : ";
+            }
+            //if the street is too long
+            if (DOB.Length > 50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters : ";
+            }
+            //is the town blank
+            if (Name.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (Name.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+
+
+            //is the town blank
+            if (Email.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (Email.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+            //return any error messages
+            return Error;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public string Address
         {
             get
