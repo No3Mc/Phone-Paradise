@@ -26,37 +26,41 @@ public partial class Stock_AdmLogin : System.Web.UI.Page
     //login click
     protected void Button1_Click(object sender, EventArgs e)
 {
-        
-            SqlConnection conn = new SqlConnection(@"Hidden for safety reason");
-            conn.Open();
-            string checkuser = "select count(*) from tblAdmin where User = '" + User + "'";
-            SqlCommand com = new SqlCommand(checkuser, conn);
-            int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
-            conn.Close();
-            if (temp == 1)
-            {
-                conn.Open();
-                string checkpasswordQuery = "select Password from tblAdmin where User = '" + User + "'";
-            SqlCommand passcom = new SqlCommand(checkpasswordQuery, conn);
-                string password= passcom.ExecuteScalar().ToString();
-   
-                if (password == password)
-                {
-                    Session["New"] = User;
-                    Response.Redirect("Home.aspx");
-                    Response.Write("Correct pass");
-                }
-                else
-                {
-                    Response.Write("Pass is incorrect");
-                }
-            }
-            else
-            {
-                Response.Write("user is incorrect");
-            }
-        }
+
+        //SqlConnection conn = new SqlConnection(@"Hidden for safety reason");
+        //conn.Open();
+        //string checkuser = "select count(*) from tblAdmin where User = '" + User + "'";
+        //SqlCommand com = new SqlCommand(checkuser, conn);
+        //int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
+        //conn.Close();
+        //if (temp == 1)
+        //{
+        //    conn.Open();
+        //    string checkpasswordQuery = "select Password from tblAdmin where User = '" + User + "'";
+        //SqlCommand passcom = new SqlCommand(checkpasswordQuery, conn);
+        //    string password= passcom.ExecuteScalar().ToString();
+
+        //    if (password == password)
+        //    {
+        //        Session["New"] = User;
+        //        Response.Redirect("Home.aspx");
+        //        Response.Write("Correct pass");
+        //    }
+        //    else
+        //    {
+        //        Response.Write("Pass is incorrect");
+        //    }
+        //}
+        //else
+        //{
+        //    Response.Write("user is incorrect");
+        //}
+
+        Response.Redirect("StockMain.aspx");
+
+
     }
+}
 
 
 
