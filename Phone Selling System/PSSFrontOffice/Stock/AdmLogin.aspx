@@ -20,7 +20,7 @@
                 <tr>
                     <td class="auto-style6">Username</td>
                     <td class="auto-style4">
-                        <asp:TextBox ID="user" runat="server" AutoCompleteType="Enabled" BorderColor="Blue" ToolTip="Please enter the username" Height="20px" Width="179px"></asp:TextBox>
+                        <asp:TextBox ID="user" runat="server" BorderColor="Blue" ToolTip="Please enter the username" Height="20px" Width="179px"></asp:TextBox>
 
                     </td>
                     <td>&nbsp;</td>
