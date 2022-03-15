@@ -6,6 +6,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href ="~/Stock/Styles/StyStockMain.css" rel ="stylesheet"/>
     <style type="text/css">
         .auto-style1 {
             width: 867px;
