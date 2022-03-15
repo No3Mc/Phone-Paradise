@@ -16,4 +16,10 @@ public partial class AdminPanel : System.Web.UI.Page
         Response.Redirect("~/Stock/StockViewer.aspx");
 
     }
+
+    protected void ImageButton15_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+
+    }
 }

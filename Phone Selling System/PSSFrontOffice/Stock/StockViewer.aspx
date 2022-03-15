@@ -11,6 +11,18 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <form id="form1" runat="server">
  
 
+        <asp:ListBox ID="lstStocks" runat="server" Height="332px" Width="791px"></asp:ListBox>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" Text="Modify" Height="54px" Width="132px" OnClick="Button1_Click" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+ 
+
     </form>
 </body>
 </html>
