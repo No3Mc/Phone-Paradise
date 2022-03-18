@@ -98,7 +98,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
 
 
-        <div>
+        <div class = "StockAdminbox">
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
