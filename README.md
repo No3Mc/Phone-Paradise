@@ -24,7 +24,7 @@
 | [Luke Lydiatt](https://github.com/LLydiatt) | Staff Management |
 | [Mahammad Talha](https://github.com/Talhamemon25) | Customer Management |
 | [Syed Naqvi ](https://github.com/No3Mc) | Stock Management |
-
+| [Aqeel Ahmed](https://github.com/AAhemd) | Supplier management |
   </details>
 
 <details>
@@ -33,7 +33,7 @@
   
 | User | Their DB |
 | --- | --- |
-| Aqeel Ahmed | Supplier management |
+
 | Kye Staples | Order Management |
   
   </details>
