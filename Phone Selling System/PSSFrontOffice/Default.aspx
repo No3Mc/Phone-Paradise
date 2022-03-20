@@ -5,28 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+         <link  rel="stylesheet" type="text/css" href="~/Styles/DefaultStyleSheet.css" />
     <style type="text/css">
-        .auto-style2 {
-            height: 170px;
-        }
-        .auto-style3 {
-            height: 33px;
-        }
-        .auto-style4 {
-            width: 1001px;
-            height: 155px;
-        }
-        .auto-style5 {
-            width: 129px;
-        }
-        .auto-style6 {
-            width: 55px;
-        }
-        .auto-style7 {
-            width: 815px;
-            height: 406px;
+        .auto-style1 {
+            width: 195px;
         }
     </style>
+3
     </head>
 <body>
     <form id="form1" runat="server">
@@ -38,7 +23,7 @@
                 <div>
                     <table class="auto-style4">
                         <tr>
-                            <td>
+                            <td class="auto-style1">
                                 <%--Taken from :https://www.renaultgroup.com/--%>
                                 <asp:ImageButton ID="ImageButton15" runat="server" Height="69px" ImageUrl="~/Images/Logo/Logo.jpg" Width="195px" />
                                                                 </td>
@@ -54,12 +39,11 @@
                                 <asp:Button ID="Button8" runat="server" Text="Shop Phones" />
                                                                 </td>
                             <tr>
-                                <td></td>
+                                <td class="auto-style1"></td>
                             </tr>
-                            <td></td>
+                            <td class="auto-style1"></td>
                             <td class="auto-style6"></td>
                             <td class="auto-style5"></td>
-                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

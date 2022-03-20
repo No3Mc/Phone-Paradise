@@ -9,22 +9,22 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 </head>
 <body>
     <form id="form1" runat="server">
+                        <div>
+                    
+                    <asp:Label ID="Label2" runat="server" Text="Stock ID"></asp:Label>
+                    <asp:TextBox ID="txtStockID" runat="server"></asp:TextBox>
 
+                    <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click" />
+
+        </div>
                 <div>
 
                     <asp:Label ID="Label1" runat="server" Text="Stock Name"></asp:Label>
                     <asp:TextBox ID="txtStockname" runat="server"></asp:TextBox>
 
-                    <asp:Button ID="btnFind" runat="server" Text="Find" />
-
         </div>
 
-                <div>
-                    
-                    <asp:Label ID="Label2" runat="server" Text="Stock ID"></asp:Label>
-                    <asp:TextBox ID="txtStockID" runat="server"></asp:TextBox>
 
-        </div>
 
         
                 <div>
@@ -60,7 +60,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         
                 <div>
                     <asp:Button ID="btnOK" runat="server" Text="Okay" OnClick="btnOK_Click1" />
-                                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
         </div>
 
 

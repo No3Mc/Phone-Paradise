@@ -10,40 +10,126 @@ using PSSClasses;
 
 public partial class _Default : System.Web.UI.Page
 {
-    
+    //variable to store the primary key with page level scope
+    Int32 StockID;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        ////if this is the first time the page is displayed
-        //if (IsPostBack == false)
-        //{
-        //    //update the list box
-        //    DisplayStocks();
-        //}
+        StockID = Convert.ToInt32(Session["StockID"]);
+        //if this is the first time the page is displayed
+        if (IsPostBack == false)
+        {
+            //update the list box
+            DisplayStocks();
+
+        }
 
 
 
     }
 
-    //void DisplayStocks()
-    //{
-    //    //create an instance of the county collection
-    //    PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
-    //    //set the data source to the list of warehouse in the collection
-    //    lstStocks.DataSource = Stocks.StockList;
-    //    //set the name of the primary key
-    //    lstStocks.DataValueField = "stockid";
-    //    //set the data field to display
-    //    lstStocks.DataTextField = "warehouseno";
-    //    //bind the data to the list
-    //    lstStocks.DataBind();
-    //}
+
+
+    void DisplayStocks()
+    {
+        //create an instance of the county collection
+        PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+        //find the record to update
+        Stocks.ThisStock.Find(StockID);
+        //display the data for this record
+        txtStockname.Text = Stocks.ThisStock.StockName;
+        txtLocation.Text = Stocks.ThisStock.Location;
+        txtQuantity.Text = Stocks.ThisStock.Quantity;
+        txtBarcode.Text = Stocks.ThisStock.Barcode;
+        txtWarehouseNo.Text = Stocks.ThisStock.WarehouseNo;
+
+    }
 
 
 
 
 
-    protected void btnFind_Click1(object sender, EventArgs e)
+
+
+    protected void btnOK_Click1(object sender, EventArgs e)
+    {
+        ////create a new instance of clsStock
+        //clsStock AStock = new clsStock();
+        ////capute the stock name
+        //string WarehouseNo = txtWarehouseNo.Text;
+        //string StockName = txtStockname.Text;
+        //string Location = txtLocation.Text;
+        //string Quantity = txtQuantity.Text;
+        //string Barcode = txtBarcode.Text;
+
+        //String Error = "";
+        //Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
+        //if (Error == "")
+        //{
+        //    //capture the warehouse no
+        //    AStock.WarehouseNo = WarehouseNo;
+        //    AStock.StockName= StockName;
+        //    AStock.Location= Location;
+        //    AStock.Quantity= Quantity;
+        //    AStock.Barcode= Barcode;
+
+        //    Session["AStock"] = AStock;
+        //    //redirect to the viewer page
+        //    Response.Redirect("StockViewer.aspx");
+        //}
+        //else
+        //{
+        //    //display the error msg
+        //    lblError.Text = Error;
+        //}
+
+        if (StockID == -1)
+        {
+            //add the new record
+            Add();
+            //all done so redirect back to main page
+            Response.Redirect("StockMain.aspx");
+        }
+        else
+        {
+            //update the record
+            Update();
+        }
+
+    }
+    //function for adding new records
+    void Add()
+    {
+        //create an instance of the holidays
+        PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+
+        //validate the data on the web form
+        String Error = Stocks.ThisStock.Valid(txtStockname.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
+        //if the data is Ok then add it to the object
+        if (Error == "")
+        {
+            //get the data entered by the user
+            Stocks.ThisStock.StockName = txtStockname.Text;
+            Stocks.ThisStock.WarehouseNo = txtWarehouseNo.Text;
+            Stocks.ThisStock.Location = txtLocation.Text;
+            Stocks.ThisStock.Quantity = txtQuantity.Text;
+            Stocks.ThisStock.Barcode = txtBarcode.Text;
+            //add the record
+            Stocks.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+        else
+        {
+            //report an error
+            lblError.Text = "There were problems " + Error;
+        }
+    }
+
+
+
+
+    protected void btnFind_Click(object sender, EventArgs e)
     {
         //create an instance of the stock class
         clsStock AStock = new clsStock();
@@ -63,53 +149,65 @@ public partial class _Default : System.Web.UI.Page
             txtWarehouseNo.Text = AStock.WarehouseNo;
             txtLocation.Text = AStock.Location;
             txtQuantity.Text = AStock.Quantity;
-            txtBarcode.Text = AStock.Quantity;
-        }
-    }
+            txtBarcode.Text = AStock.Barcode;
 
-    protected void btnOK_Click1(object sender, EventArgs e)
-    {
-        //create a new instance of clsStock
-        clsStock AStock = new clsStock();
-        //capute the stock name
-        string WarehouseNo = txtWarehouseNo.Text;
-        string StockName = txtStockname.Text;
-        string Location = txtLocation.Text;
-        string Quantity = txtQuantity.Text;
-        string Barcode = txtBarcode.Text;
-
-        String Error = "";
-        Error = AStock.Valid(StockName, WarehouseNo, Location, Quantity, Barcode);
-        if (Error == "")
-        {
-            //capture the house no
-            AStock.WarehouseNo = WarehouseNo;
-            AStock.StockName= StockName;
-            AStock.Location= Location;
-            AStock.Quantity= Quantity;
-            AStock.Barcode= Barcode;
-
-            Session["AStock"] = AStock;
-            //redirect to the viewer page
-            Response.Redirect("StockViewer.aspx");
+            lblError.Text = " found";
         }
         else
         {
             //display the error msg
-            lblError.Text = Error;
+            lblError.Text = "Not found";
         }
     }
 
-    //void Add()
-    //{
-    //    //get the data entered by the user
-    //    StockBook.ThisStock.Warehouse = txtWarehouseNo.Text;
-    //    StockBook.ThisStock.StockName = txtStockname.Text;
-    //    StockBook.ThisStock.Location = txtLocation.Text;
-    //    StockBook.ThisStock.Quantity = txtQuantity.Text;
-    //    StockBook.ThisStock.Barcode = txtBarcode.Text;
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("StockMain.aspx");
+    }
 
-    //}
+    void Update()
+    {
+        //create an instance of the holiday book
+        PSSClasses.clsStockCollection Stocks = new PSSClasses.clsStockCollection();
+
+        //validate the data on the web form
+        String Error = Stocks.ThisStock.Valid(txtStockname.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
+        //if the data is OK then add it to the object
+        if (Error == "")
+        {
+            //find the record to update
+            Stocks.ThisStock.Find(StockID);
+            //get the data entered by the user
+            Stocks.ThisStock.StockName = txtStockname.Text;
+            Stocks.ThisStock.WarehouseNo = txtWarehouseNo.Text;
+            Stocks.ThisStock.Location = txtLocation.Text;
+            Stocks.ThisStock.Quantity = (txtQuantity.Text);
+            Stocks.ThisStock.Barcode = (txtBarcode.Text);
+            //update the record
+            Stocks.Update();
+            //all done so redirect back to main page
+            Response.Redirect("StockMain.aspx");
+        }
+        else
+        {
+            //report an error
+            lblError.Text = "There were problems" + Error;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
