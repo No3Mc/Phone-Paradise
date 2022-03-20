@@ -18,25 +18,88 @@ public partial class Stock_StockMain : System.Web.UI.Page
         if (IsPostBack == false)
         {
             //update the list box
-            DisplayStocks();
+            DisplayStockName();
+            DisplayWarehouseNo();
+            DisplayLocation();
+            DisplayQuantity();
+            DisplayBarcode();
         }
 
     }
-    void DisplayStocks()
+
+    void DisplayBarcode()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstBarcode.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstBarcode.DataValueField = "StockID";
+        //set the data field to display
+        lstBarcode.DataTextField = "Barcode";
+        //bind the data to the list
+        lstBarcode.DataBind();
+    }
+
+    void DisplayQuantity()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstQuantity.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstQuantity.DataValueField = "StockID";
+        //set the data field to display
+        lstQuantity.DataTextField = "Quantity";
+        //bind the data to the list
+        lstQuantity.DataBind();
+    }
+
+    void DisplayStockName()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstStockName.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstStockName.DataValueField = "StockID";
+        //set the data field to display
+        lstStockName.DataTextField = "StockName";
+        //bind the data to the list
+        lstStockName.DataBind();
+    }
+
+
+    void DisplayLocation()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstLocation.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstLocation.DataValueField = "StockID";
+        //set the data field to display
+        lstLocation.DataTextField = "Location";
+        //bind the data to the list
+        lstLocation.DataBind();
+    }
+
+
+
+    void DisplayWarehouseNo()
         {
-            //create an instance of the county collection
+            //create an instance of the Stock collection
             PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
-            //set the data source to the list of warehouse in the collection
-            lstStocks.DataSource = StockBook.StockList;
-            //set the name of the primary key
-            lstStocks.DataValueField = "StockID";
-            //set the data field to display
-            lstStocks.DataTextField = "WarehouseNo";
-            //bind the data to the list
-            lstStocks.DataBind();
+        //set the data source to the list of warehouse in the collection
+        lstWarehouseNo.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstWarehouseNo.DataValueField = "StockID";
+        //set the data field to display
+        lstWarehouseNo.DataTextField = "WarehouseNo";
+        //bind the data to the list
+        lstWarehouseNo.DataBind();
 
         }
-
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
@@ -53,15 +116,72 @@ public partial class Stock_StockMain : System.Web.UI.Page
         //var to store the primary key value of the record to be deleted
         Int32 StockID;
         //if a record has been selected from the list
-        if (lstStocks.SelectedIndex != -1)
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+        //StockName
+        if (lstStockName.SelectedIndex != -1)
         {
             //get the primary key value of the record to edit
-            StockID = Convert.ToInt32(lstStocks.SelectedValue);
+            StockID = Convert.ToInt32(lstStockName.SelectedValue);
             //Store the data in the session object
             Session["StockID"] = StockID;
             //redirects to the delete page
             Response.Redirect("AStock.aspx");
         }
+        //WarehouseNo
+
+        if (lstWarehouseNo.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit
+            StockID = Convert.ToInt32(lstWarehouseNo.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("AStock.aspx");
+        }
+        //Location
+        if (lstLocation.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit
+            StockID = Convert.ToInt32(lstLocation.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("AStock.aspx");
+        }
+
+        //Quantity
+        if (lstBarcode.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit
+            StockID = Convert.ToInt32(lstBarcode.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("AStock.aspx");
+        }
+        //Barcode
+        if (lstQuantity.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit
+            StockID = Convert.ToInt32(lstWarehouseNo.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("AStock.aspx");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         else //if no record has been selected
         {
             //display an error#
@@ -75,15 +195,78 @@ public partial class Stock_StockMain : System.Web.UI.Page
         //var to store the primary key value of the record to be deleted
         Int32 StockID;
         //if a record has been selected from the list
-        if (lstStocks.SelectedIndex != -1)
+        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
+
+
+
+
+        if (lstStockName.SelectedIndex != -1)
         {
             //get the primary key value of the record to delete
-            StockID = Convert.ToInt32(lstStocks.SelectedValue);
+            StockID = Convert.ToInt32(lstStockName.SelectedValue);
             //Store the data in the session object
             Session["StockID"] = StockID;
             //redirects to the delete page
             Response.Redirect("StockDel.aspx");
         }
+
+        if (lstWarehouseNo.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            StockID = Convert.ToInt32(lstWarehouseNo.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("StockDel.aspx");
+        }
+
+        if (lstLocation.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            StockID = Convert.ToInt32(lstLocation.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("StockDel.aspx");
+        }
+
+        if (lstQuantity.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            StockID = Convert.ToInt32(lstQuantity.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("StockDel.aspx");
+        }
+
+
+        
+        if (lstBarcode.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            StockID = Convert.ToInt32(lstBarcode.SelectedValue);
+            //Store the data in the session object
+            Session["StockID"] = StockID;
+            //redirects to the delete page
+            Response.Redirect("StockDel.aspx");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         else //if no record has been selected
         {
             //display an error#
@@ -112,6 +295,9 @@ public partial class Stock_StockMain : System.Web.UI.Page
     {
 
     }
+
+
+
 
 
 

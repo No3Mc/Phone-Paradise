@@ -7,6 +7,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <head runat="server">
     <title></title>
     <link href ="~/Stock/Styles/StyStockMain.css" rel ="stylesheet"/>
+
     <style type="text/css">
         .auto-style1 {
             width: 867px;
@@ -71,8 +72,13 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
         </div>
      <div>
+         <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
+                                <asp:ListBox ID="lstStockName" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
+                                <asp:ListBox ID="lstWarehouseNo" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
+                                <asp:ListBox ID="lstLocation" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
+                                <asp:ListBox ID="lstQuantity" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
+                                <asp:ListBox ID="lstBarcode" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
 
-                                <asp:ListBox ID="lstStocks" runat="server" Height="300px" Width="436px" CssClass="auto-style13"></asp:ListBox>
 
         </div>
 
@@ -119,7 +125,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                 </tr>
                 <tr>
 
-                    <td class="auto-style8"></td>
+                    <td class="auto-style8">&nbsp;</td>
                     <td class="auto-style9">
 
                         <asp:TextBox ID="txtWarehouseNo" runat="server" TextMode="Password" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
