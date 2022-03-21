@@ -9,49 +9,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <link href ="~/Stock/Styles/StyStockMain.css" rel ="stylesheet"/>
 
     <style type="text/css">
-        .auto-style1 {
-            width: 867px;
-            margin-left: 155px;
-            height: 226px;
-        }
-        .auto-style4 {
-            width: 137px;
-        }
-        .auto-style5 {
-            width: 222px;
-        }
-        .auto-style6 {
-            margin-bottom: 0px;
-        }
-        .auto-style7 {
-            width: 384px;
-        }
-        .auto-style8 {
-            width: 222px;
-            height: 41px;
-        }
-        .auto-style9 {
-            width: 384px;
-            height: 41px;
-        }
-        .auto-style10 {
-            width: 222px;
-            height: 6px;
-        }
-        .auto-style11 {
-            width: 384px;
-            height: 6px;
-        }
-        .auto-style12 {
-            width: 222px;
-            height: 45px;
-        }
-        .auto-style13 {
-            margin-left: 354px;
-        }
-        .auto-style14 {
-            width: 1865px;
-        }
+
     </style>
 </head>
 <body>
@@ -65,22 +23,24 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <table>
 
                                             <tr>
-                    <td class="auto-style14">&nbsp;</td>
+
                     </tr>
 
                     </table>
 
         </div>
-     <div>
+
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
-                                <asp:ListBox ID="lstStockName" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
-                                <asp:ListBox ID="lstWarehouseNo" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
-                                <asp:ListBox ID="lstLocation" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
-                                <asp:ListBox ID="lstQuantity" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
-                                <asp:ListBox ID="lstBarcode" runat="server" Height="300px" Width="436px" CssClass="auto-style13" ></asp:ListBox>
+         <div class="auto-style1"> 
+
+                                <asp:ListBox ID="lstStockName" runat="server" CssClass="labels" ></asp:ListBox>
+                                <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="labels" ></asp:ListBox>
+                                <asp:ListBox ID="lstLocation" runat="server" CssClass="labels" ></asp:ListBox>
+                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="labels" ></asp:ListBox>
+                                <asp:ListBox ID="lstBarcode" runat="server" CssClass="labels" ></asp:ListBox>
+             </div>
 
 
-        </div>
 
                 <div>
                     
