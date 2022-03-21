@@ -33,11 +33,11 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
          <div class="auto-style1"> 
 
-                                <asp:ListBox ID="lstStockName" runat="server" CssClass="labels" ></asp:ListBox>
-                                <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="labels" ></asp:ListBox>
-                                <asp:ListBox ID="lstLocation" runat="server" CssClass="labels" ></asp:ListBox>
-                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="labels" ></asp:ListBox>
-                                <asp:ListBox ID="lstBarcode" runat="server" CssClass="labels" ></asp:ListBox>
+                                <asp:ListBox ID="lstStockName" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                <asp:ListBox ID="lstLocation" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                <asp:ListBox ID="lstBarcode" runat="server" CssClass="listboxes" ></asp:ListBox>
              </div>
 
 
@@ -67,19 +67,19 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         <div class = "StockAdminbox">
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td class="auto-style7">Please enter Warehouse No</td>
+                    <td >&nbsp;</td>
+                    <td >Please enter Warehouse No</td>
                  
                 </tr>
                 <tr>
-                    <td class="auto-style12">
+                    <td >
 
 
         
                     </td>
-                                        <td class="auto-style12">
+                                        <td>
 
-            <asp:Label ID="lblError" runat="server" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error" Width="367px"></asp:Label>
+            <asp:Label ID="lblError" runat="server" class="labels" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error" ></asp:Label>
         
                     </td>
                 </tr>
@@ -104,10 +104,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
                 </tr>
                 <tr>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="tablebody">&nbsp;</td>
                     </tr>
                 <tr>
-                                                                                <td class="auto-style5">
+                                                                                <td class="tablebody">
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Visible="False">Cancel</asp:HyperLink>
                     </td>
                     <td class="auto-style7">
