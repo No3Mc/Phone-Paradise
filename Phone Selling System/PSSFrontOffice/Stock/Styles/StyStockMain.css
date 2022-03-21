@@ -13,15 +13,16 @@ section {
 
 
 
-.auto-style5 {
+.tablebody {
     width: 222px;
 }
-.labels {
+.listboxes {
     width: 270px;
     Height: 200px;
-
 }
-
+.labels {
+    Width: 367px;
+}
 
 
 
