@@ -83,10 +83,17 @@ namespace PhoneSystemTesting
 
         }
 
+   
 
 
-
-
+        [TestMethod]
+        public void TwoRecordsPresent()
+        {
+            //create an instance of the class we want to create
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //test to see that two values are the same
+            Assert.AreEqual(AllCustomers.Count, 5);
+        }
 
 
         [TestMethod]
@@ -100,8 +107,8 @@ namespace PhoneSystemTesting
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.CustID = 1;
-            TestItem.Address = "abracadabra";
+            TestItem.CustID = 111;
+            TestItem.Address = "abracadabraa";
             TestItem.DOB = "abracadabra";
             TestItem.Name = "abracadabra";
             TestItem.Email = "abracadabra";
@@ -122,7 +129,7 @@ namespace PhoneSystemTesting
 
 
         [TestMethod]
-        public void DelMethodOK()
+        public void DeleteMethodOK()
         {
             //create an instance of the class we want to create
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
@@ -151,7 +158,36 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AllCustomers.ThisCust, TestItem);
 
         }
-
+        [TestMethod]
+        public void ReportByNameTestDataFound()
+        {
+            //create an instance of the filtered data
+            clsCustomerCollection FilteredCustomers = new clsCustomerCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //apply a title that doesn't exist
+            FilteredCustomers.ReportByName("ItDoesNotExist");
+            //check that the correct number of records found
+            if (FilteredCustomers.Count == 2)
+            {
+                //check that the first record is ID 1
+                if (FilteredCustomers.CustList[0].CustID != 1)
+                {
+                    OK = false;
+                }
+                //check that the second record is ID 2
+                if (FilteredCustomers.CustList[1].CustID != 2)
+                {
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+            //test to see that there are no records
+            Assert.IsTrue(OK);
+            }
 
         [TestMethod]
         public void ListAndCountOK()
@@ -181,7 +217,19 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AllCustomers.Count, TestList.Count);
         }
 
+            [TestMethod]
+            public void CountPropertyOK()
+            {
+            //create an instance of the class we want to create
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
 
+            //craete some test data to assign to the property
+            Int32 SomeCount = 2;
+            //assign the data to the property
+            AllCustomers.Count = SomeCount;
+            //test to see that two values are the same
+            Assert.AreEqual(AllCustomers.Count, SomeCount);
+            }
 
         [TestMethod]
         public void UpdateMethodOK()
@@ -194,6 +242,7 @@ namespace PhoneSystemTesting
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
+            TestItem.CustID = 1;
             TestItem.Address = "abracadabra";
             TestItem.DOB = "abracadabra";
             TestItem.Name = "abracadabra";
