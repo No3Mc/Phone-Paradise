@@ -33,20 +33,17 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
          <div class="auto-style1"> 
 
-                                <asp:ListBox ID="lstStockName" runat="server" CssClass="listboxes" ></asp:ListBox>
-                                <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="listboxes" ></asp:ListBox>
-                                <asp:ListBox ID="lstLocation" runat="server" CssClass="listboxes" ></asp:ListBox>
-                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="listboxes" ></asp:ListBox>
-                                <asp:ListBox ID="lstBarcode" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                <asp:Panel ID="Panel1" runat="server">
+                                    <asp:ListBox ID="lstStockName" runat="server" CssClass="listboxes" ></asp:ListBox>
+                                    <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="listboxes"></asp:ListBox>
+                                    <asp:ListBox ID="lstQuantity" runat="server" CssClass="listboxes"></asp:ListBox>
+                                    <asp:ListBox ID="lstBarcode" runat="server" CssClass="listboxes"></asp:ListBox>
+                                    <asp:ListBox ID="lstLocation" runat="server" CssClass="listboxes"></asp:ListBox>
+                                </asp:Panel>
              </div>
 
 
 
-                <div>
-                    
-        </div>
-
-        
                 <div>
                                 <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
                                 <%--<asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />--%>
