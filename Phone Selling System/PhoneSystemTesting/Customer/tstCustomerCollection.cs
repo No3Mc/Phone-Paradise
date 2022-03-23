@@ -170,13 +170,13 @@ namespace PhoneSystemTesting
             //check that the correct number of records found
             if (FilteredCustomers.Count == 2)
             {
-                //check that the first record is ID 1
-                if (FilteredCustomers.CustList[0].CustID != 1)
+                //check that the first record is ID 0
+                if (FilteredCustomers.CustList[0].CustID != 0)
                 {
                     OK = false;
                 }
-                //check that the second record is ID 2
-                if (FilteredCustomers.CustList[1].CustID != 2)
+                //check that the second record is ID 1
+                if (FilteredCustomers.CustList[1].CustID != 1)
                 {
                     OK = false;
                 }
@@ -224,7 +224,7 @@ namespace PhoneSystemTesting
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
 
             //craete some test data to assign to the property
-            Int32 SomeCount = 2;
+            Int32 SomeCount = 5;
             //assign the data to the property
             AllCustomers.Count = SomeCount;
             //test to see that two values are the same
