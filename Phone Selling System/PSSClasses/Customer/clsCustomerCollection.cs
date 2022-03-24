@@ -136,9 +136,15 @@ namespace PSSClasses
                 }
             }
 
-        public void ReportByLocation(string locationFilter)
+        public void ReportByLocation(string Name)
         {
-            throw new NotImplementedException();
+            //filters the records based on a full or partial location
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the location parameter to the database
+            DB.AddParameter("@Name", Name);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FilterByName");
         }
 
         public void Delete()
