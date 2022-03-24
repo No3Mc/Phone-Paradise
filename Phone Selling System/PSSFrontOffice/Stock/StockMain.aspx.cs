@@ -186,7 +186,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
         {
             //display an error#
             lblError.Visible = true;
-            lblError.Text = "Please select a record to edit from teh list";
+            lblError.Text = "Please select a record to edit from the list";
         }
     }
 
