@@ -7,131 +7,143 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href ="~/Stock/Styles/StyStockAdd.css" rel ="stylesheet"/>
+
+    <style type="text/css">
+
+        .auto-style14 {
+            position: absolute;
+            left: 302px;
+            top: 111px;
+            bottom: 655px;
+        }
+        
+        .auto-style15 {
+            position: absolute;
+            left: 303px;
+            top: 173px;
+        }
+        .auto-style16 {
+            position: absolute;
+            left: 284px;
+            top: 370px;
+        }
+        .auto-style17 {
+            position: absolute;
+            left: 307px;
+            top: 234px;
+        }
+        .auto-style18 {
+            position: absolute;
+            left: 307px;
+            top: 297px;
+        }
+        .auto-style19 {
+            position: absolute;
+            Height: 34px;
+            Width: 369px;
+            border-block-color: Blue;
+            left: 455px;
+            top: 110px;
+        }
+        .auto-style20 {
+            position: absolute;
+            Height: 34px;
+            Width: 369px;
+            border-block-color: Blue;
+            left: 456px;
+            top: 172px;
+        }
+        .auto-style21 {
+            position: absolute;
+            Height: 34px;
+            Width: 369px;
+            border-block-color: Blue;
+            left: 458px;
+            top: 298px;
+        }
+        .auto-style22 {
+            position: absolute;
+            Height: 34px;
+            Width: 369px;
+            border-block-color: Blue;
+            left: 458px;
+            top: 369px;
+        }
+        .auto-style23 {
+            position: absolute;
+            background-color: Red;
+            border-color: Red;
+            border-style: Solid;
+            Width: 542px;
+            left: 856px;
+            top: 110px;
+            height: 92px;
+        }
+        .auto-style24 {
+            position: absolute;
+            Height: 34px;
+            Width: 369px;
+            border-block-color: Blue;
+            left: 456px;
+            top: 237px;
+        }
+        .auto-style25 {
+            position: absolute;
+            border-block-color: #990000;
+            color: Red;
+            Width: 185px;
+            left: 452px;
+            top: 438px;
+        }
+        .auto-style26 {
+            position: absolute;
+            border-block-color: #990000;
+            color: Red;
+            Width: 185px;
+            left: 647px;
+            top: 438px;
+        }
+        
+        .auto-style27 {
+            position: absolute;
+            left: 858px;
+            top: 237px;
+        }
+        
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-  <div>
+
 
 <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
-        <div>
-            <%--<asp:TextBox ID="txtStockName" runat="server"></asp:TextBox>--%>
-        </div>
-        <div>
-            <%--<asp:TextBox ID="txtWarehouseNo" runat="server"></asp:TextBox>--%>
-        </div>
-        <div>
-            <%--<asp:TextBox ID="txtLocation" runat="server"></asp:TextBox>--%>
-        </div>
-        <div>
-            <%--<asp:TextBox ID="txtQuantity" runat="server"></asp:TextBox>--%>
-        </div>
-        <div>
-            <%--<asp:TextBox ID="txtBarcode" runat="server"></asp:TextBox>--%>
-        </div>
-        
-        <div>
-            <%--<asp:Label ID="lblError" runat="server" Text=""></asp:Label>--%>
-        </div>
-        <div>
-            <%--<asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />--%>
-            <%--<asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />--%>
-        </div>
-
-
-
-
-
-
       
 
-        <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td class="auto-style7">
 
-            <asp:Label ID="lblError" runat="server" Text="Error Label" Visible="False" BackColor="Red" BorderColor="Red" BorderStyle="Solid" Font-Names="Goudy Old Style" Font-Strikeout="False" Font-Underline="False" ToolTip="Error" Width="367px"></asp:Label>
-        
-                    </td>
-                 
-                </tr>
-                <tr>
-                    <td class="auto-style12">
+
 
 
         
-            <asp:Label ID="lblStockName" runat="server" Text="StockName"></asp:Label>
+                        <asp:Label ID="lblStockName" runat="server" Text="StockName" CssClass ="lblStockName"></asp:Label>
+                        <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo" CssClass ="lblWarehouseNo"></asp:Label>
+                        <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass ="lblLocation"></asp:Label>
+                        <asp:Label ID="lblQuantity" runat="server" Text="Quantity" CssClass ="lblQuantity"></asp:Label>
+                        <asp:Label ID="lblBarcode" runat="server" Text="Barcode" CssClass ="lblBarcode"></asp:Label>
 
+                        <asp:TextBox ID="txtStockName" runat="server"   CssClass ="txtStockName" ToolTip="Enter Stock Name" ></asp:TextBox>
+                        <asp:TextBox ID="txtWarehouseNo" runat="server"  CssClass ="txtWarehouseNo" ToolTip="Enter Warehouse No" ></asp:TextBox>
+                        <asp:TextBox ID="txtLocation" runat="server" CssClass ="txtLocation"  ToolTip="Enter Location" ></asp:TextBox>
+                        <asp:TextBox ID="txtQuantity" runat="server" CssClass ="txtQuantity"  ToolTip="Enter Quantity"></asp:TextBox>
+                        <asp:TextBox ID="txtBarcode" runat="server" CssClass ="txtBarcode" ToolTip="Enter Barcode" ></asp:TextBox>
 
-        
-                    </td>
-                                        <td class="auto-style12">
+                        <asp:Button ID="btnCancel" runat="server" CssClass ="btnCancel"  OnClick="btnCancel_Click" Text="Cancel" ToolTip="Proceed back to StockMain Page" />
+                        <asp:Button ID="btnOK" runat="server"  CssClass ="btnOK" OnClick="btnOK_Click" Text="OK" ToolTip="Adds Stock to database" />
 
-                        <asp:TextBox ID="txtStockName" runat="server" TextMode="Password" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
+                        <asp:Label ID="lblError" runat="server" CssClass="lblError" Text="Error Label" ToolTip="Error" Visible="False"></asp:Label>
 
-                    </td>
-                </tr>
-                <tr>
-
-                    <td class="auto-style8">
-            <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo"></asp:Label>
-                    </td>
-                    <td class="auto-style9">
-
-                        <asp:TextBox ID="txtWarehouseNo" runat="server" BorderColor="Blue" Height="34px" TextMode="Password" ToolTip="Enter your pass" Width="369px"></asp:TextBox>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style10">
-            <asp:Label ID="lblLocation" runat="server" Text="Location"></asp:Label>
-                    </td>
-                    <td class="auto-style11">
-                        <asp:TextBox ID="txtLocation" runat="server" BorderColor="Blue" Height="34px" TextMode="Password" ToolTip="Enter your pass" Width="369px"></asp:TextBox>
-                    </td>
-
-                                     
-
-
-                </tr>
-                <tr>
-                    <td class="auto-style5">
-            <asp:Label ID="lblQuantity" runat="server" Text="Quantity"></asp:Label>
-                    </td>
-                                        <td class="auto-style11">
-                        <asp:TextBox ID="txtQuantity" runat="server" BorderColor="Blue" Height="34px" TextMode="Password" ToolTip="Enter your pass" Width="369px"></asp:TextBox>
-                    </td>
-                    </tr>
-
-                                <tr>
-                    <td class="auto-style5">
-            <asp:Label ID="lblBarcode" runat="server" Text="Barcode"></asp:Label>
-                                    </td>
-                                                        <td class="auto-style11">
-                        <asp:TextBox ID="txtBarcode" runat="server" BorderColor="Blue" Height="34px" TextMode="Password" ToolTip="Enter your pass" Width="369px"></asp:TextBox>
-                    </td>
-                    </tr>
-                <tr>
-                    <td class="auto-style5">&nbsp;</td>
-                                        <td class="auto-style5">
-                                            <asp:Button ID="btnOK" runat="server" BorderColor="#990000" ForeColor="Red" OnClick="btnOK_Click" Text="OK" ToolTip="Adds Stock to database" Width="185px" />
-                                                                                        <asp:Button ID="btnCancel" runat="server" BorderColor="#990000" ForeColor="Red" OnClick="btnCancel_Click" Text="Cancel" ToolTip="Proceed back to StockMain Page" Width="185px" />
-                    </td>
-                    </tr>
-                <tr>
-                                                                                <td class="auto-style5">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Visible="False">Cancel</asp:HyperLink>
-                    </td>
-                    <td class="auto-style7">
-
-                        &nbsp;</td>
-                                       
-                                        <td class="auto-style4">
-
-                                            &nbsp;</td>
-                </tr>
-            </table>
-        </div>
+                        <asp:HyperLink ID="HyperLinkCancel" runat="server" NavigateUrl="~/Default.aspx" CssClass="HyperLinkCancel" >Main Page</asp:HyperLink>
 
 
 
