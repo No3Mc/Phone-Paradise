@@ -212,8 +212,9 @@ section {
     height: 26px;
     margin-top: 3px;
     border-radius: 16px;
-    text-align:center;
-    background-color:wheat;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -228,6 +229,7 @@ section {
     border-radius: 16px;
     text-align: center;
     background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblQuantity {
@@ -241,6 +243,7 @@ section {
     border-radius: 16px;
     text-align: center;
     background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -255,6 +258,7 @@ section {
     border-radius: 16px;
     text-align: center;
     background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblLocation {
@@ -268,20 +272,27 @@ section {
     border-radius: 16px;
     text-align: center;
     background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 /*Please enter Warehouse No*/
 .lblEnter {
     position: center;
-    border-radius: 16px;
     text-align: center;
     background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
 
 
-
+.btnLogout {
+    position: absolute;
+    left: 7px;
+    top: 61px;
+    height: 40px;
+    width: 80px;
+}
 
 
 
