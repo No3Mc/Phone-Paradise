@@ -280,7 +280,73 @@ public partial class Stock_StockMain : System.Web.UI.Page
 
     //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
+    Int32 DisplayStocks(string LocationFilter)
+    {
+        ///this function accepts one parameter - the post code to filter the list on
+        ///it populates the list box with data from the middle layer class
+        ///it returns a single value, the number of records found
 
+        //create a new instance of the clsAddress
+        clsStockCollection StockList = new clsStockCollection();
+        //var to store the count of records
+        Int32 RecordCount;
+
+        //var to store the house no
+        string StockID;
+        string StockName;
+        //var to store the street name
+        string WarehouseNo;
+        //var to store the primary key value
+        string Location;
+        string Quantity;
+        string Barcode;
+
+        //var to store the index
+        // string StockID;
+        Int32 Index = 0;
+        //clear the list of any existing items
+        lstStockName.Items.Clear();
+        lstWarehouseNo.Items.Clear();
+        lstLocation.Items.Clear();
+        lstQuantity.Items.Clear();
+        lstBarcode.Items.Clear();
+
+        //call the filter by LocationFilter method
+        StockList.ReportByLocation(LocationFilter);
+        //get the count of records found
+        RecordCount = StockList.Count;
+        //loop through each record found using the index to point to each record in the data table
+        while (Index < RecordCount)
+        {
+            StockID = Convert.ToString(StockList.StockList[Index].StockID);
+            //get the house no from the query results
+            StockName = Convert.ToString(StockList.StockList[Index].StockName);
+            //get the street from the query results
+            WarehouseNo = Convert.ToString(StockList.StockList[Index].WarehouseNo);
+            Location = Convert.ToString(StockList.StockList[Index].Location);
+            Quantity = Convert.ToString(StockList.StockList[Index].Quantity);
+            Barcode = Convert.ToString(StockList.StockList[Index].Barcode);
+
+
+            //set up a new object of class list item 
+
+            ListItem NewItem = new ListItem(StockID + " : StockID" + " | " + "WarehouseNo: " + WarehouseNo + " |" + " StockName: " + StockName + " |" + " Location: " + Location + " |" + " Quantity: " + Quantity + " |" + " Barcode: " + Barcode);
+
+            //add the new item to the list
+
+            lstStockName.Items.Add(NewItem);
+
+
+
+
+
+
+            //increment the index
+            Index++;
+        }
+        //return the number of records found
+        return RecordCount;
+    }
 
 
 
@@ -288,7 +354,12 @@ public partial class Stock_StockMain : System.Web.UI.Page
 
     protected void btnApply_Click(object sender, EventArgs e)
     {
-
+        //declare var to store the record count
+        Int32 RecordCount;
+        //assign the results of the DisplayAddresses function to the record count var
+        RecordCount = DisplayStocks(txtWarehouseNo.Text);
+        //display the number of records found
+        lblError.Text = RecordCount + " records found";
     }
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
