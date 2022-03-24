@@ -1,0 +1,135 @@
+﻿/*Written by Syed || P2652259 || No3Mc(https://github.com/No3Mc)
+Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store*/
+
+
+
+
+body {
+}
+.moveable {
+    position: absolute;
+}
+
+
+/*textboxes*/
+
+.txtStockname {
+    position: absolute;
+    left: 734px;
+    top: 119px;
+}
+
+.txtStockID {
+    position: absolute;
+    left: 735px;
+    top: 73px;
+}
+
+.txtLocation {
+    position: absolute;
+    left: 734px;
+    top: 198px;
+}
+
+.txtQuantity {
+    position: absolute;
+    left: 732px;
+    top: 237px;
+}
+
+.txtWarehouseNo {
+    position: absolute;
+    left: 734px;
+    top: 159px;
+}
+
+.txtBarcode {
+    position: absolute;
+    left: 732px;
+    top: 278px;
+}
+
+
+
+
+/*lists*/
+
+.lblStockID {
+    position: absolute;
+    left: 587px;
+    top: 76px;
+}
+.lblStockName {
+    position: absolute;
+    left: 574px;
+    top: 114px;
+}
+.lblWarehouseNo {
+    position: absolute;
+    left: 564px;
+    top: 152px;
+}
+.lblLocation {
+    position: absolute;
+    left: 590px;
+    top: 192px;
+    right: 1159px;
+}
+.lblQuantity {
+    position: absolute;
+    left: 592px;
+    top: 231px;
+}
+.lblBarcode {
+    position: absolute;
+    left: 592px;
+    top: 271px;
+}
+
+/*label error*/
+
+.lblError {
+    position: absolute;
+    left: 934px;
+    top: 232px;
+}
+
+
+/*buttons*/
+
+.btnCancel {
+    position: absolute;
+    left: 930px;
+    top: 149px;
+}
+.btnOK {
+    position: absolute;
+    left: 788px;
+    top: 320px;
+}
+.btnFind {
+    position: absolute;
+    left: 728px;
+    top: 320px;
+}
+
+
+
+/*list*/
+
+.lstStocks {
+    position: absolute;
+    left: 29px;
+    top: 50px;
+    width: 303px;
+    height: 157px;
+}
+
+
+
+
+
+
+
+
+

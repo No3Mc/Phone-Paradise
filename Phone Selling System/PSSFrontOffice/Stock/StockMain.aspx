@@ -17,25 +17,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
   background-image: url('/Images/Backgrounds/Stock/1.jpg');
 }
 
-
-
-
-
-
-
         </style>
         
         
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
-
-
-                                                                                 
-
-
-
-
-
-
 
 
 
@@ -63,15 +48,15 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <td ></td>
                     <td >
 
-                        <asp:TextBox ID="txtWarehouseNo" runat="server" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
+                        <asp:TextBox ID="txtWarehouseNo" runat="server" ToolTip="Enter warehouse no" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
 
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Apply" Width="185px" OnClick="btnApply_Click" ToolTip="Filters requested Stocks" BorderColor="#990000" ForeColor="Red" />
-                        <asp:Button ID="Button2" runat="server" Text="Display All" Width="185px" OnClick="btnDisplayAll_Click" ToolTip="Displays All Stocks" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button1" runat="server" Text="Display Details" Width="185px" OnClick="btnApply_Click" ToolTip="Displays Stock Details" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button2" runat="server" Text="Search" Width="185px" OnClick="btnDisplayAll_Click" ToolTip="Finds requests stock" BorderColor="#990000" ForeColor="Red" />
 
                         <asp:Button ID="Button5" runat="server" Text="Delete" Width="186px" OnClick="btnDelete_Click" ToolTip="Delete Stocks" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
 

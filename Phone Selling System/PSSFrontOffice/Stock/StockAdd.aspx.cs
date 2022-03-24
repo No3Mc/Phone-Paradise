@@ -104,7 +104,8 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         }
         else
         {
-            //report an erro
+            //report an error
+            lblError.Visible = true;
             lblError.Text = "There were problems with the data entered " + Error;
         }
     }
@@ -135,11 +136,28 @@ public partial class Stock_StockAdd : System.Web.UI.Page
             //all done so redirect back to the main page
             Response.Redirect("StockMain.aspx");
         }
+
+
+
         else
         {
             //report an error
+            lblError.Visible = true;
             lblError.Text = "problems with entries" + Error;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
