@@ -7,12 +7,7 @@ using System.Collections.Generic;
 
 
 //Dbo.tblCustomer Values
-//[CustID]
-//[Address]
-//[DOB]     
-//[Name]  
-//[Email] 
-//[PhoneNo]
+
 namespace PhoneSystemTesting
 {
     [TestClass]
