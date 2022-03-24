@@ -20,6 +20,7 @@
             left: 323px;
             z-index: 1;
             width: 70px;
+            right: 1117px;
         }
         .auto-style3 {
             position: absolute;
@@ -27,8 +28,7 @@
             left: 430px;
             z-index: 1;
             width: 70px;
-            right: 979px;
-        }
+            }
         .auto-style4 {
             position: absolute;
             top: 430px;

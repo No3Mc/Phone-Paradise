@@ -380,4 +380,9 @@ public partial class Stock_StockMain : System.Web.UI.Page
     {
         Response.Redirect("Default.aspx");
     }
+
+    protected void txtWarehouseNo_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

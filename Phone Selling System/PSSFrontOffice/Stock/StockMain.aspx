@@ -60,7 +60,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <td ></td>
                     <td >
 
-                        <asp:TextBox ID="txtWarehouseNo" runat="server" ToolTip="Enter warehouse no" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
+                        <asp:TextBox ID="txtWarehouseNo" runat="server" ToolTip="Enter warehouse no" BorderColor="Blue" Height="34px" Width="369px" OnTextChanged="txtWarehouseNo_TextChanged"></asp:TextBox>
 
                     </td>
                 </tr>

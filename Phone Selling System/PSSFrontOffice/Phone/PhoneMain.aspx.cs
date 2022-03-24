@@ -58,7 +58,7 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
 
     protected void btnFind_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("PhoneMain.aspx");
     }
 
     protected void btnFilter_Click(object sender, EventArgs e)
