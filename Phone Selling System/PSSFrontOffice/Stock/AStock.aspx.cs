@@ -224,4 +224,9 @@ public partial class _Default : System.Web.UI.Page
 
 
 
+
+    protected void lstStocks_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

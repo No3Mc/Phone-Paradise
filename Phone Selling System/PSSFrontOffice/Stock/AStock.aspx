@@ -41,7 +41,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" CssClass ="btnCancel"/>
                     <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click" CssClass ="btnFind"/>
         <%--list--%>
-                    <asp:ListBox ID="lstStocks" runat="server" CssClass ="lstStocks"></asp:ListBox>
+                    <asp:ListBox ID="lstStocks" runat="server" CssClass ="lstStocks" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged"></asp:ListBox>
 
 
     </form>

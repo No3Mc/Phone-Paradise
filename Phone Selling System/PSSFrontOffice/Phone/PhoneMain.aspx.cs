@@ -19,20 +19,25 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
     }
     protected void btnAdd_Click(object sender, EventArgs e)
     {
+        //indicate this is a new record in the database
         Session["PhoneID"] = -1;
-
-        Response.Redirect("PhoneAdd.aspx?PhoneID=-1");
+        //redirect to the phone page to add data
+        Response.Redirect("APhone.aspx?PhoneID=-1");
     }
 
     protected void btnEdit_Click(object sender, EventArgs e)
     {
+        //variable to store the PK of the record to be edited
         Int32 PhoneID;
-
+        //if a record has been selected from the list
         if (lstPhone.SelectedIndex != -1)
         {
-            PhoneID = Convert.ToInt32(lstPhone.SelectedValue); //get the primary key of the item
-
-            Response.Redirect("APhone.aspx"); // redirect to the add page
+            //get the primary key of the record
+            PhoneID = Convert.ToInt32(lstPhone.SelectedValue); 
+            //store the data in the session object
+            Session["PhoneID"] = PhoneID;
+            // redirect to the add page
+            Response.Redirect("APhone.aspx"); 
         }
         else //if not
         {
@@ -44,7 +49,7 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
     {
         Int32 PhoneID;
 
-        if (lstPhone.SelectedIndex != -1)
+        if (lstPhone.SelectedIndex != -1)//if a record has been selected
         {
             PhoneID = Convert.ToInt32(lstPhone.SelectedValue); //get the primary key of the item
 
@@ -52,7 +57,7 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
         }
         else //if not
         {
-            lblError.Text = "You need to select an item"; //display an error message
+            lblError.Text = "You need to select an item from the list"; //display an error message
         }
     }
 
@@ -68,12 +73,12 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
 
     protected void btnDisplay_Click(object sender, EventArgs e)
     {
-        DisplayPhones("");
+        DisplayPhones(""); //use the display phones functions to show data in the list
     }
 
     protected void btnApply_Click(object sender, EventArgs e)
     {
-        DisplayPhones(txtPhoneName.Text);
+        DisplayPhones(txtPhoneName.Text); //display the phone based on data entered into the text box
     }
 
     Int32 DisplayPhones(string PhoneNameFilter)
