@@ -180,11 +180,11 @@ namespace PhoneSystemTesting.Phone
 
             Boolean OK = true;
 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 2;
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.PhoneName != "1")
+            if (APhone.PhoneName != "iPhone 6")
             {
                 OK = false;
             }
@@ -202,11 +202,11 @@ namespace PhoneSystemTesting.Phone
 
             Boolean OK = true;
 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 2;
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.PhoneManufacturer != "1")
+            if (APhone.PhoneManufacturer != "Apple")
             {
                 OK = false;
             }
@@ -228,7 +228,7 @@ namespace PhoneSystemTesting.Phone
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.BatteryCapacity != "1")
+            if (APhone.BatteryCapacity != "TestData")
             {
                 OK = false;
             }
@@ -250,7 +250,7 @@ namespace PhoneSystemTesting.Phone
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.CameraQuality != "1")
+            if (APhone.CameraQuality != "Test")
             {
                 OK = false;
             }
@@ -272,7 +272,7 @@ namespace PhoneSystemTesting.Phone
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.StorageCapacity != "1")
+            if (APhone.StorageCapacity != "Test")
             {
                 OK = false;
             }
@@ -294,7 +294,7 @@ namespace PhoneSystemTesting.Phone
 
             Found = APhone.Find(PhoneID);
 
-            if (APhone.DisplaySize != "1")
+            if (APhone.DisplaySize != "Test")
             {
                 OK = false;
             }

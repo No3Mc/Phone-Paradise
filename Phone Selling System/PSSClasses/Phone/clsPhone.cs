@@ -45,6 +45,7 @@ namespace PSSClasses
                 mPhoneID = Convert.ToInt32(DB.DataTable.Rows[0]["PhoneID"]);
                 mPhoneName = Convert.ToString(DB.DataTable.Rows[0]["PhoneName"]);
                 mBatteryCapacity = Convert.ToString(DB.DataTable.Rows[0]["BatteryCapacity"]);
+                mPhoneManufacturer = Convert.ToString(DB.DataTable.Rows[0]["PhoneManufacturer"]);
                 mCameraQuality = Convert.ToString(DB.DataTable.Rows[0]["CameraQuality"]);
                 mStorageCapacity = Convert.ToString(DB.DataTable.Rows[0]["StorageCapacity"]);
                 mDisplaySize = Convert.ToString(DB.DataTable.Rows[0]["DisplaySize"]);
