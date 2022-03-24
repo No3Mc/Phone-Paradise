@@ -136,8 +136,12 @@ namespace PSSClasses
                 }
             }
 
+        public void ReportByLocation(string locationFilter)
+        {
+            throw new NotImplementedException();
+        }
 
-            public void Delete()
+        public void Delete()
             {
                 //delete the record pointed by the thisStock
                 //connects database
