@@ -70,6 +70,8 @@ namespace PSSClasses.Phone
                 APhone.CameraQuality = Convert.ToString(DB.DataTable.Rows[Index]["CameraQuality"]);
                 APhone.StorageCapacity = Convert.ToString(DB.DataTable.Rows[Index]["StorageCapacity"]);
                 APhone.DisplaySize = Convert.ToString(DB.DataTable.Rows[Index]["DisplaySize"]);
+                APhone.DateReleased = Convert.ToDateTime(DB.DataTable.Rows[Index]["Datereleased"]);
+
 
                 mPhoneList.Add(APhone);
 
