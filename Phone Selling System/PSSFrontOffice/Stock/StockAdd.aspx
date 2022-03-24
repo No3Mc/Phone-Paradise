@@ -11,105 +11,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
     <style type="text/css">
 
-        .auto-style14 {
-            position: absolute;
-            left: 302px;
-            top: 111px;
-            bottom: 655px;
-        }
-        
-        .auto-style15 {
-            position: absolute;
-            left: 303px;
-            top: 173px;
-        }
-        .auto-style16 {
-            position: absolute;
-            left: 284px;
-            top: 370px;
-        }
-        .auto-style17 {
-            position: absolute;
-            left: 307px;
-            top: 234px;
-        }
-        .auto-style18 {
-            position: absolute;
-            left: 307px;
-            top: 297px;
-        }
-        .auto-style19 {
-            position: absolute;
-            Height: 34px;
-            Width: 369px;
-            border-block-color: Blue;
-            left: 455px;
-            top: 110px;
-        }
-        .auto-style20 {
-            position: absolute;
-            Height: 34px;
-            Width: 369px;
-            border-block-color: Blue;
-            left: 456px;
-            top: 172px;
-        }
-        .auto-style21 {
-            position: absolute;
-            Height: 34px;
-            Width: 369px;
-            border-block-color: Blue;
-            left: 458px;
-            top: 298px;
-        }
-        .auto-style22 {
-            position: absolute;
-            Height: 34px;
-            Width: 369px;
-            border-block-color: Blue;
-            left: 458px;
-            top: 369px;
-        }
-        .auto-style23 {
-            position: absolute;
-            background-color: Red;
-            border-color: Red;
-            border-style: Solid;
-            Width: 542px;
-            left: 856px;
-            top: 110px;
-            height: 92px;
-        }
-        .auto-style24 {
-            position: absolute;
-            Height: 34px;
-            Width: 369px;
-            border-block-color: Blue;
-            left: 456px;
-            top: 237px;
-        }
-        .auto-style25 {
-            position: absolute;
-            border-block-color: #990000;
-            color: Red;
-            Width: 185px;
-            left: 452px;
-            top: 438px;
-        }
-        .auto-style26 {
-            position: absolute;
-            border-block-color: #990000;
-            color: Red;
-            Width: 185px;
-            left: 647px;
-            top: 438px;
-        }
-        
-        .auto-style27 {
-            position: absolute;
-            left: 858px;
-            top: 237px;
-        }
+
         
     </style>
 
@@ -117,14 +19,8 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <body>
     <form id="form1" runat="server">
 
-
 <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
       
-
-
-
-
-
         
                         <asp:Label ID="lblStockName" runat="server" Text="StockName" CssClass ="lblStockName"></asp:Label>
                         <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo" CssClass ="lblWarehouseNo"></asp:Label>
@@ -144,13 +40,6 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                         <asp:Label ID="lblError" runat="server" CssClass="lblError" Text="Error Label" ToolTip="Error" Visible="False"></asp:Label>
 
                         <asp:HyperLink ID="HyperLinkCancel" runat="server" NavigateUrl="~/Default.aspx" CssClass="HyperLinkCancel" >Main Page</asp:HyperLink>
-
-
-
-
-
-
-
 
 
 
