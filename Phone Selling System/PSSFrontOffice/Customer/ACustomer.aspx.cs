@@ -87,7 +87,7 @@ public partial class ACustomer : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("CustMain.aspx");
+        Response.Redirect("Custpg.aspx");
 
     }
 
