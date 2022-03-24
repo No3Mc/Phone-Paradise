@@ -364,6 +364,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
     {
+        Response.Redirect("AStock.aspx");
 
     }
 
