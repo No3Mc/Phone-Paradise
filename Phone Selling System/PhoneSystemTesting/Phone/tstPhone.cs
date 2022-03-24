@@ -127,7 +127,7 @@ namespace PhoneSystemTesting.Phone
         {
             clsPhone APhone = new clsPhone();
 
-            string TestData = "6.8";
+            string TestData = "aaa";
 
             APhone.DisplaySize = TestData;
 

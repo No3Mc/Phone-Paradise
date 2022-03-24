@@ -154,4 +154,9 @@ public partial class Phone_APhone : System.Web.UI.Page
             lblError.Text = "The follwoing issues occurred..." + Error;
         }
     }
+
+    protected void lstPhones_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

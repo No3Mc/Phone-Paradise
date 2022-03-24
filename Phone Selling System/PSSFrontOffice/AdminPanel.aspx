@@ -31,9 +31,9 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     </td>
                     <td class="auto-style1" Height="20px" Width="302px"></td>
                     <td>
-        <asp:Button ID="Button2" runat="server" Text="Edit Sales" />
-        <asp:Button ID="Button3" runat="server" Text="Edit Location" />
-        <asp:Button ID="Button4" runat="server" Text="Edit Phones" />
+        <asp:Button ID="Button2" runat="server" Text="Edit Sales" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Edit Location" OnClick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="Edit Phones" OnClick="Button4_Click" />
                     </td>
                 </tr>
             </table>
@@ -68,7 +68,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                         </tr>
                     </table>
                         <div>
-        <asp:Button ID="Button7" runat="server" Text="Product Management" Width="175px" />
+        <asp:Button ID="Button7" runat="server" Text="Phone Management" Width="175px" OnClick="Button7_Click" />
         </div>
                             <table>
                         <tr>

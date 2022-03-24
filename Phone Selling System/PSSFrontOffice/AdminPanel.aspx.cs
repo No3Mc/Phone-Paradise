@@ -31,4 +31,24 @@ public partial class AdminPanel : System.Web.UI.Page
         Response.Redirect("Default.aspx");
 
     }
+
+    protected void Button7_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("PhoneMain.aspx");
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("APhone.aspx");
+    }
 }

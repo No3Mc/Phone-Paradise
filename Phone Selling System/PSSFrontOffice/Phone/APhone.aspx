@@ -154,7 +154,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:ListBox ID="lstPhones" runat="server" CssClass="auto-style1"></asp:ListBox>
+        <asp:ListBox ID="lstPhones" runat="server" CssClass="auto-style1" OnSelectedIndexChanged="lstPhones_SelectedIndexChanged"></asp:ListBox>
         <asp:Label ID="lblPhoneID" runat="server" CssClass="auto-style2" Text="Phone ID"></asp:Label>
         <asp:Label ID="lblPhoneName" runat="server" CssClass="auto-style3" Text="Phone Name"></asp:Label>
         <asp:Label ID="Label1" runat="server" CssClass="auto-style4" Text="Phone Manufacturer"></asp:Label>
