@@ -105,19 +105,10 @@ namespace PSSClasses
             return Error;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public string Valid(string text1, string text2, string text3, string text4, string text5)
+        {
+            throw new NotImplementedException();
+        }
 
         public string Address
         {
