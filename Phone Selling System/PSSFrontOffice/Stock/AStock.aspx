@@ -9,13 +9,20 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         <link href ="~/Stock/Styles/StyAStock.css" rel ="stylesheet"/>
     <style type="text/css">
         
+        .auto-style1 {
+            position: absolute;
+            left: 587px;
+            top: 76px;
+            right: 286px;
+        }
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
 
         <%--labels--%>
-                    <asp:Label ID="lblStockID" runat="server" Text="Stock ID"  CssClass ="lblStockID"></asp:Label>
+                    <asp:Label ID="lblStockID" runat="server" Text="Stock ID"  CssClass ="auto-style1"></asp:Label>
                     <asp:Label ID="lblWarehouseNo" runat="server" Text="Warehouse No" CssClass ="lblWarehouseNo" ></asp:Label>
                     <asp:Label ID="lblStockName" runat="server" Text="Stock Name" CssClass ="lblStockName"></asp:Label>
                     <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass ="lblLocation"></asp:Label>

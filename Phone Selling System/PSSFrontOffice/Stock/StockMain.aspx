@@ -17,6 +17,18 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
   background-image: url('/Images/Backgrounds/Stock/1.jpg');
 }
 
+            .auto-style1 {
+                position: absolute;
+                top: 343px;
+                left: 1245px;
+                z-index: 1;
+                width: 190px;
+                height: 185px;
+                margin-top: 3px;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+
         </style>
         
         
@@ -115,7 +127,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
                                 <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="lstWarehouseNo" ></asp:ListBox>
                                 <asp:ListBox ID="lstStockName" runat="server" CssClass="lstStockName"></asp:ListBox>
-                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="lstQuantity"></asp:ListBox>
+                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="auto-style1"></asp:ListBox>
                                 <asp:ListBox ID="lstBarcode" runat="server" CssClass="lstBarcode"></asp:ListBox>
                                 <asp:ListBox ID="lstLocation" runat="server" CssClass="lstLocation"></asp:ListBox>
 

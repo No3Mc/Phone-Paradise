@@ -83,7 +83,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:ListBox ID="lstPhone" runat="server" CssClass="auto-style1"></asp:ListBox>
+        <asp:ListBox ID="lstPhone" runat="server" CssClass="auto-style1" OnSelectedIndexChanged="lstPhone_SelectedIndexChanged"></asp:ListBox>
         <asp:Button ID="btnAdd" runat="server" CssClass="auto-style2" Text="Add" OnClick="btnAdd_Click" />
         <asp:Button ID="btnEdit" runat="server" CssClass="auto-style3" Text="Edit" OnClick="btnEdit_Click" />
         <asp:Button ID="btnDelete" runat="server" CssClass="auto-style4" Text="Delete" OnClick="btnDelete_Click" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PSSClasses.Phone;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -75,7 +76,7 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
         DisplayPhones(txtPhoneName.Text);
     }
 
-    Int32 DisplayPhones(string PhoneManufacturerFilter)
+    Int32 DisplayPhones(string PhoneNameFilter)
     {
         //declare variables
         Int32 PhoneID;
@@ -83,7 +84,7 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
         string PhoneManufacturer;
         //create instance of collection class
         clsPhoneCollection PhoneList = new clsPhoneCollection();
-        PhoneList.FilterByManufacturer(PhoneManufacturerFilter);
+        PhoneList.FilterByName(PhoneNameFilter);
 
         Int32 RecordCount;
         Int32 Index = 0;
@@ -102,5 +103,10 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
         }
 
         return RecordCount;
+    }
+
+    protected void lstPhone_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }

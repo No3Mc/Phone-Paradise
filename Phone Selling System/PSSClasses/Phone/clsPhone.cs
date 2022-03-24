@@ -125,6 +125,8 @@ namespace PSSClasses
             Error = Error + "The Display Size can't be more than 5 characters";
         }
 
+
+
             //test to see if date value is valid
             try
 
@@ -137,7 +139,7 @@ namespace PSSClasses
             catch //if fails
             {
                 //set the error messsage
-                Error = Error + "Date added is not valid. ";
+                Error = "Date added is not valid. ";
             }
 
             if (Error == "")
