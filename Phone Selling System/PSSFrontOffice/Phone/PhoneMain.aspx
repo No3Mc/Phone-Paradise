@@ -64,6 +64,19 @@
             z-index: 1;
             width: 70px;
         }
+        .auto-style9 {
+            position: absolute;
+            top: 509px;
+            left: 328px;
+            z-index: 1;
+        }
+        .auto-style10 {
+            position: absolute;
+            top: 500px;
+            left: 479px;
+            z-index: 1;
+            width: 399px;
+        }
     </style>
 </head>
 <body>
@@ -71,13 +84,15 @@
         <div>
         </div>
         <asp:ListBox ID="lstPhone" runat="server" CssClass="auto-style1"></asp:ListBox>
-        <asp:Button ID="btnAdd" runat="server" CssClass="auto-style2" Text="Add" />
-        <asp:Button ID="btnEdit" runat="server" CssClass="auto-style3" Text="Edit" />
-        <asp:Button ID="btnDelete" runat="server" CssClass="auto-style4" Text="Delete" />
-        <asp:Button ID="btnFind" runat="server" CssClass="auto-style5" Text="Find" />
-        <asp:Button ID="btnFilter" runat="server" CssClass="auto-style6" Text="Filter" />
-        <asp:Button ID="btnDisplay" runat="server" CssClass="auto-style7" Text="Display" />
-        <asp:Button ID="btnApply" runat="server" CssClass="auto-style8" Text="Apply" />
+        <asp:Button ID="btnAdd" runat="server" CssClass="auto-style2" Text="Add" OnClick="btnAdd_Click" />
+        <asp:Button ID="btnEdit" runat="server" CssClass="auto-style3" Text="Edit" OnClick="btnEdit_Click" />
+        <asp:Button ID="btnDelete" runat="server" CssClass="auto-style4" Text="Delete" OnClick="btnDelete_Click" />
+        <asp:Button ID="btnFind" runat="server" CssClass="auto-style5" Text="Find" OnClick="btnFind_Click" />
+        <asp:Button ID="btnFilter" runat="server" CssClass="auto-style6" Text="Filter" OnClick="btnFilter_Click" />
+        <asp:Button ID="btnDisplay" runat="server" CssClass="auto-style7" Text="Display" OnClick="btnDisplay_Click" />
+        <asp:Button ID="btnApply" runat="server" CssClass="auto-style8" Text="Apply" OnClick="btnApply_Click" />
+        <asp:Label ID="lblError" runat="server" CssClass="auto-style9"></asp:Label>
+        <asp:TextBox ID="txtPhoneName" runat="server" CssClass="auto-style10"></asp:TextBox>
     </form>
 </body>
 </html>

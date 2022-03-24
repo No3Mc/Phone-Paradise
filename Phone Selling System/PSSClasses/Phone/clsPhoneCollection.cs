@@ -96,7 +96,8 @@ namespace PSSClasses.Phone
             DB.AddParameter("@CameraQuality", mThisPhone.CameraQuality);
             DB.AddParameter("@StorageCapacity", mThisPhone.StorageCapacity);
             DB.AddParameter("@DisplaySize", mThisPhone.DisplaySize);
-            
+            DB.AddParameter("@DateReleased", mThisPhone.DateReleased);
+
             return DB.Execute("sproc_tblPhone_Add");
             
         }
@@ -112,6 +113,7 @@ namespace PSSClasses.Phone
             DB.AddParameter("@CameraQuality", mThisPhone.CameraQuality);
             DB.AddParameter("@StorageCapacity", mThisPhone.StorageCapacity);
             DB.AddParameter("@DisplaySize", mThisPhone.DisplaySize);
+            DB.AddParameter("@DateReleased", mThisPhone.DateReleased);
 
             DB.Execute("sproc_tblStock_Update");
 

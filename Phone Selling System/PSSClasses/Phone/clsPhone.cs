@@ -229,6 +229,20 @@ namespace PSSClasses
             {
                 mDisplaySize = value;
             }
+
+            
+        }
+
+        public DateTime DateReleased
+        { 
+            get
+            {
+                return mDateReleased;
+            }
+            set
+            {
+                mDateReleased = value;
+            }
         }
     }
 }
