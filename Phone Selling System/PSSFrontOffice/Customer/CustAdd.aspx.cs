@@ -38,7 +38,7 @@ public partial class Customer_CustAdd : System.Web.UI.Page
     }
     protected void btnNo_Click(object sender, EventArgs e)
     {
-        Response.Redirect("StockMain.aspx");
+        Response.Redirect("Custpg.aspx");
     }
 
 
@@ -75,7 +75,7 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             //add the record
             CustList.Add();
             //all done so redirect back to the main page
-            Response.Redirect("CustMain.aspx");
+            Response.Redirect("Custpg.aspx");
         }
 
 
@@ -112,7 +112,7 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             //add the record
             CustList.Update();
             //all done so redirect back to the main page
-            Response.Redirect("CustDefault.aspx");
+            Response.Redirect("Custpg.aspx");
 
 
         }

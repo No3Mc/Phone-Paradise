@@ -62,7 +62,7 @@
         <p>
             <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-            <asp:Button ID="btnFind" runat="server" Text="Cancel" OnClick="btnFind_Click" />
+            <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click" />
 
         </p>
 

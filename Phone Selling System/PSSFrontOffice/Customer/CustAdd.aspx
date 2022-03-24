@@ -8,29 +8,41 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
-        <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
 
         <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
 
         <div>
 
+            CustomerID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
             <asp:TextBox ID="txtCustID" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+
+        </div>
+        <p>
+            Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p>
+            Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+            </p>
+        <p>
+            DOB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
+            </p>
+        <p>
+&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            </p>
+        <p>
+&nbsp; PhoneNo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
 
 
-<%--            //[txtCustID]
-            //[txtAddress]
-            //[txtDOB]     
-            //[txtName]  
-            //[txtEmail] 
-            //[txtPhoneNo]--%>
+        </p>
+        <p>
+        <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
+        <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
 
-        </div>
+        </p>
     </form>
 </body>
 </html>
