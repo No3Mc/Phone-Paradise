@@ -17,7 +17,13 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
   background-image: url('/Images/Backgrounds/Stock/1.jpg');
 }
 
-</style>
+
+
+
+
+
+
+        </style>
         
         
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
@@ -181,6 +187,81 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                 <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo" CssClass="lblWarehouseNo"></asp:Label>
                 <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass="lblLocation"></asp:Label>
                 <asp:Label ID="lblBarcode" runat="server" Text="Barcode" CssClass="lblBarcode"></asp:Label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <asp:Button ID="btnLogout" runat="server" Text="Logout"  CssClass="btnLogout" OnClick="btnLogout_Click"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </p>
 
 
 

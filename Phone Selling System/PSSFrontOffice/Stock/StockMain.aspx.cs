@@ -271,7 +271,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
         {
             //display an error#
             lblError.Visible = true;
-            lblError.Text = "Please select a record to delete from teh list";
+            lblError.Text = "Please select a record to delete from the lists";
         }
     }
 
@@ -303,4 +303,9 @@ public partial class Stock_StockMain : System.Web.UI.Page
 
 
 
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
 }
