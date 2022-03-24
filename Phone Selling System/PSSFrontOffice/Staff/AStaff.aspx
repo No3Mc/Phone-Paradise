@@ -9,7 +9,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
+                         <div>
 
+            <asp:Label ID="Label4" runat="server" Text="Staff No"></asp:Label>
+
+            <asp:TextBox ID="txtStaffNo" runat="server"></asp:TextBox>
+
+        </div>
              <div>
 
             <asp:Label ID="Label5" runat="server" Text="Staff Name"></asp:Label>
@@ -55,6 +61,8 @@
         <p>
             <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+
+            <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click" />
 
         </p>
         </div>
