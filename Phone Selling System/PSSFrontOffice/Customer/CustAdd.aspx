@@ -8,8 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:Button ID="btnYes" runat="server" Text="Yes" />
-        <asp:Button ID="btnNo" runat="server" Text="No" />
+        <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
+        <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
 
         <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
 
