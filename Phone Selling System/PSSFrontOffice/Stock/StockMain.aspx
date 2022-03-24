@@ -8,48 +8,22 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <title></title>
     <link href ="~/Stock/Styles/StyStockMain.css" rel ="stylesheet"/>
 
-    <style type="text/css">
-
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         
-                <div>
-                    
-        </div>
+        <style>
+            body {
+  background-image: url('/Images/Backgrounds/Stock/1.jpg');
+}
+
+</style>
         
-                <div>
-                    <table>
-
-                                            <tr>
-
-                    </tr>
-
-                    </table>
-
-        </div>
-
+        
          <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
-         <div class="auto-style1"> 
-
-                                <asp:Panel ID="Panel1" runat="server">
-                                    <asp:ListBox ID="lstStockName" runat="server" CssClass="listboxes" ></asp:ListBox>
-                                    <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="listboxes"></asp:ListBox>
-                                    <asp:ListBox ID="lstQuantity" runat="server" CssClass="listboxes"></asp:ListBox>
-                                    <asp:ListBox ID="lstBarcode" runat="server" CssClass="listboxes"></asp:ListBox>
-                                    <asp:ListBox ID="lstLocation" runat="server" CssClass="listboxes"></asp:ListBox>
-                                </asp:Panel>
-             </div>
 
 
-
-                <div>
-                                <%--            <asp:ListBox ID="lstStocks" runat="server" Height="300px" OnSelectedIndexChanged="lstStocks_SelectedIndexChanged" Width="517px"></asp:ListBox>--%>
-                                <%--<asp:Button ID="btnAdd" runat="server" Text="Add" Width="44px" OnClick="btnAdd_Click" />--%>
-                                <%--<asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />--%>
-                                <%--<asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />--%>
-        </div>
+                                                                                 
 
 
 
@@ -59,13 +33,11 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
 
 
-
-
-        <div class = "StockAdminbox">
-            <table class="auto-style1">
+            <table class="table">
                 <tr>
                     <td >&nbsp;</td>
-                    <td >Please enter Warehouse No</td>
+                    <td ><asp:Label ID="lblEnter" runat="server" Text="Please enter Warehouse No" CssClass ="lblEnter"></asp:Label>
+                    </td>
                  
                 </tr>
                 <tr>
@@ -82,18 +54,21 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                 </tr>
                 <tr>
 
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style9">
+                    <td ></td>
+                    <td >
 
-                        <asp:TextBox ID="txtWarehouseNo" runat="server" TextMode="Password" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
+                        <asp:TextBox ID="txtWarehouseNo" runat="server" ToolTip="Enter your pass" BorderColor="Blue" Height="34px" Width="369px"></asp:TextBox>
 
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style10"></td>
-                    <td class="auto-style11">
-                        <asp:Button ID="Button1" runat="server" Text="Apply" Width="185px" OnClick="btnApply_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
-                        <asp:Button ID="Button2" runat="server" Text="Display All" Width="185px" OnClick="btnDisplayAll_Click" ToolTip="Logs into your account" BorderColor="#990000" ForeColor="Red" />
+                    <td></td>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" Text="Apply" Width="185px" OnClick="btnApply_Click" ToolTip="Filters requested Stocks" BorderColor="#990000" ForeColor="Red" />
+                        <asp:Button ID="Button2" runat="server" Text="Display All" Width="185px" OnClick="btnDisplayAll_Click" ToolTip="Displays All Stocks" BorderColor="#990000" ForeColor="Red" />
+
+                        <asp:Button ID="Button5" runat="server" Text="Delete" Width="186px" OnClick="btnDelete_Click" ToolTip="Delete Stocks" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
+
                     </td>
 
                                      
@@ -101,13 +76,13 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
                 </tr>
                 <tr>
-                    <td class="tablebody">&nbsp;</td>
+                    <td>&nbsp;</td>
                     </tr>
                 <tr>
-                                                                                <td class="tablebody">
+                                                                                <td>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Visible="False">Cancel</asp:HyperLink>
                     </td>
-                    <td class="auto-style7">
+                    <td >
 
                         <asp:Button ID="Button3" runat="server" Text="Add" Width="185px" OnClick="btnAdd_Click" ToolTip="Add Stocks" BorderColor="#990000" ForeColor="Red" />
 
@@ -115,16 +90,97 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
                                                                                 </td>
                                        
-                                        <td class="auto-style4">
-
-                        <asp:Button ID="Button5" runat="server" Text="Delete" Width="221px" OnClick="btnDelete_Click" ToolTip="Delete Stocks" BorderColor="#990000" ForeColor="Red" CssClass="auto-style6" />
+                                        <td>
 
                                                                                 </td>
                 </tr>
             </table>
-        </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <asp:ListBox ID="lstWarehouseNo" runat="server" CssClass="lstWarehouseNo" ></asp:ListBox>
+                                <asp:ListBox ID="lstStockName" runat="server" CssClass="lstStockName"></asp:ListBox>
+                                <asp:ListBox ID="lstQuantity" runat="server" CssClass="lstQuantity"></asp:ListBox>
+                                <asp:ListBox ID="lstBarcode" runat="server" CssClass="lstBarcode"></asp:ListBox>
+                                <asp:ListBox ID="lstLocation" runat="server" CssClass="lstLocation"></asp:ListBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <asp:Label ID="lblStockName" runat="server" Text="StockName" CssClass="lblStockName"></asp:Label>
+                <asp:Label ID="lblQuantity" runat="server" Text="Quantity" CssClass="lblQuantity"></asp:Label>
+                <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo" CssClass="lblWarehouseNo"></asp:Label>
+                <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass="lblLocation"></asp:Label>
+                <asp:Label ID="lblBarcode" runat="server" Text="Barcode" CssClass="lblBarcode"></asp:Label>
 
 
 
