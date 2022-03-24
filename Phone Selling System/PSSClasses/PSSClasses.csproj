@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Phone\clsPhone.cs" />
+    <Compile Include="Phone\clsPhoneCollection.cs" />
     <Compile Include="Customer\clsCustomerCollection.cs" />
     <Compile Include="Customer\clsCustomer.cs" />
     <Compile Include="clsDataConnection.cs" />
