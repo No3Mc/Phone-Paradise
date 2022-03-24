@@ -30,13 +30,13 @@ public partial class Customer_CustDel : System.Web.UI.Page
     {
         //del the record
         DeleteCustomer();
-        Response.Redirect("StockMain.aspx");
+        Response.Redirect("Custpg.aspx");
 
     }
 
     protected void btnNo_Click(object sender, EventArgs e)
     {
-        Response.Redirect("CustMain.aspx");
+        Response.Redirect("Custpg.aspx");
     }
 
 
