@@ -78,7 +78,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                         </tr>
                     </table>
                         <div>
-        <asp:Button ID="Button8" runat="server" Text="Staff Management" Width="175px" />
+        <asp:Button ID="Button8" runat="server" Text="Staff Management" Width="175px" OnClick="Button8_Click" />
         </div>
                             <table>
                         <tr>
@@ -88,7 +88,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                         </tr>
                     </table>
                         <div>
-        <asp:Button ID="Button9" runat="server" Text="Customer Management"  Width="175px" />
+        <asp:Button ID="Button9" runat="server" Text="Customer Management"  Width="175px" OnClick="Button9_Click" />
         </div>
                             <table>
                         <tr>
@@ -97,11 +97,16 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                             </td>
                         </tr>
                     </table>
+
+                        <div>
+        <asp:Button ID="Button10" runat="server" Text="Supplier Management" Width="175px" OnClick="Button10_Click"  />
+
                         <div style="height: 27px">
         <asp:Button ID="Button10" runat="server" Text="Order Management" Width="175px"  />
                             <br />
         </div>
                             <div style="height: 21px; width: 301px">
+
         </div>
         <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="Supplier Managment" Width="174px" />
     </form>

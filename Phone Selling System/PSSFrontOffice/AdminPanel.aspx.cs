@@ -22,6 +22,7 @@ public partial class AdminPanel : System.Web.UI.Page
     }
     protected void Button6_Click(object sender, EventArgs e)
     {
+        //Stock Management by Syed Naqvi
         Response.Redirect("~/Stock/StockViewer.aspx");
 
     }
@@ -43,7 +44,7 @@ public partial class AdminPanel : System.Web.UI.Page
 =======
     protected void Button7_Click(object sender, EventArgs e)
     {
-        Response.Redirect("PhoneMain.aspx");
+        Response.Redirect("/Phone/PhoneMain.aspx");
     }
 
     protected void Button3_Click(object sender, EventArgs e)
@@ -58,7 +59,29 @@ public partial class AdminPanel : System.Web.UI.Page
 
     protected void Button4_Click(object sender, EventArgs e)
     {
+        //Phones Management by Ethan Frizzell
         Response.Redirect("APhone.aspx");
 
     }
+
+    protected void Button9_Click(object sender, EventArgs e)
+    {
+        //Customer Management by Mahammad Talha
+        Response.Redirect("/Customer/Custpg.aspx");
+
+    }
+
+    protected void Button8_Click(object sender, EventArgs e)
+    {
+        //Staff Management by Luke Lydiatt
+        Response.Redirect("/Staff/AStaff.aspx");
+
+    }
+
+    protected void Button10_Click(object sender, EventArgs e)
+    {
+        //Supplier management by Aqeel Ahmed	
+
+    }
 }
+
