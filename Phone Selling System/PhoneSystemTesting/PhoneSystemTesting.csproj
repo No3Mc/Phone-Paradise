@@ -58,6 +58,8 @@
     <Compile Include="Stock\tstStock.cs" />
     <Compile Include="Stock\tstStockCollection.cs" />
     <Compile Include="Customer\tstCustomer.cs" />
+    <Compile Include="Supplier\tstSupplier.cs" />
+    <Compile Include="Supplier\tstSupplierCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

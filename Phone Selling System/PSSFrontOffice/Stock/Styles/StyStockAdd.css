@@ -46,6 +46,11 @@ body {
     border-style: Solid;
     Font: Goudy Old Style;
     Width: 367px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -57,12 +62,22 @@ body {
     position: absolute;
     left: 690px;
     top: 60px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .LabelBarcodeError {
     position: absolute;
     left: 692px;
     top: 288px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblQuantityError {
@@ -70,6 +85,11 @@ body {
     left: 691px;
     top: 231px;
     bottom: 147px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -77,6 +97,11 @@ body {
     position: absolute;
     left: 690px;
     bottom: 205px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -85,6 +110,11 @@ body {
     left: 689px;
     top: 117px;
     bottom: 261px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -102,6 +132,11 @@ body {
     left: 856px;
     top: 110px;
     height: 92px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -111,33 +146,58 @@ body {
 
 .lblStockName {
     position: absolute;
-    left: 302px;
-    top: 111px;
+    left: 303px;
+    top: 173px;
     bottom: 655px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblLocation {
     position: absolute;
     left: 303px;
     top: 173px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblWarehouseNo {
     position: absolute;
     left: 284px;
     top: 370px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblQuantity {
     position: absolute;
     left: 307px;
     top: 234px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 .lblBarcode {
     position: absolute;
     left: 307px;
     top: 297px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 

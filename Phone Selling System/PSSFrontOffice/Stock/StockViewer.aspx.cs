@@ -20,7 +20,7 @@ public partial class StockViewer : System.Web.UI.Page
         }
 
     }
-
+    //It displays the WarehouseNo in the stock list
     void DisplayStocks()
     {
         //create an instance of the county collection
@@ -37,33 +37,18 @@ public partial class StockViewer : System.Web.UI.Page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     protected void Button1_Click(object sender, EventArgs e)
     {
+        //it redirects to admlogin page
         Response.Redirect("AdmLogin.aspx");
 
     }
 
 
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        //it redirects to admpanel
+        Response.Redirect("/AdminPanel.aspx");
+    }
 }

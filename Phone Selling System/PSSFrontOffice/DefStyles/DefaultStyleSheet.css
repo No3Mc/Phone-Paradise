@@ -39,3 +39,6 @@ body {
     height: 406px;
 }
 
+.moveable {
+    position: absolute;
+}
