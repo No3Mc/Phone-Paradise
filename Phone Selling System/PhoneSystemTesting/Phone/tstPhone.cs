@@ -17,8 +17,8 @@ namespace PhoneSystemTesting.Phone
         string CameraQuality = "aaa";
         string StorageCapacity = "aaa";
         string DisplaySize = "aaa";
-        string DateReleased = "23/03/2020";
 
+        DateTime DateReleased = Convert.ToDateTime("2022, 02, 1");
         [TestMethod]
 
         public void InstanceOK()
@@ -34,7 +34,7 @@ namespace PhoneSystemTesting.Phone
         {
             clsPhone APhone = new clsPhone();
             String Error = "";
-            Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, DisplaySize, DateReleased, StorageCapacity);
+            Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
 
             Assert.AreEqual(Error, "");
         }

@@ -62,7 +62,7 @@ namespace PSSClasses
     
 
     public string Valid(string PhoneName, string PhoneManufacturer, string BatteryCapacity,
-        string CameraQuality, string StorageCapacity, string DisplaySize, string DateReleased)
+        string CameraQuality, string StorageCapacity, string DisplaySize, DateTime DateReleased)
     {
         String Error = "";
 
