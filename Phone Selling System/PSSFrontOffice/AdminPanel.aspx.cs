@@ -36,12 +36,12 @@ public partial class AdminPanel : System.Web.UI.Page
 
 
 
-    
+
 
     protected void Button11_Click(object sender, EventArgs e)
     {
         Response.Redirect("SupplierMain.aspx");
-=======
+    }
     protected void Button7_Click(object sender, EventArgs e)
     {
         Response.Redirect("/Phone/PhoneMain.aspx");
@@ -81,6 +81,7 @@ public partial class AdminPanel : System.Web.UI.Page
     protected void Button10_Click(object sender, EventArgs e)
     {
         //Supplier management by Aqeel Ahmed	
+        Response.Redirect("/Supplier/SupplierMain.aspx");
 
     }
 }
