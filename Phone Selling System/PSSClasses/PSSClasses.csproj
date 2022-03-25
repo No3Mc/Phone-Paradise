@@ -51,6 +51,8 @@
     <Compile Include="Stock\clsStockCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock\clsStock.cs" />
+    <Compile Include="Supplier\clsSupplierCollection.cs" />
+    <Compile Include="Supplier\clsSuppplier.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

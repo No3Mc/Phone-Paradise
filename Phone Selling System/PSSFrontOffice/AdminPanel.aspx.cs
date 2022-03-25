@@ -32,6 +32,15 @@ public partial class AdminPanel : System.Web.UI.Page
 
     }
 
+
+
+
+    
+
+    protected void Button11_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SupplierMain.aspx");
+=======
     protected void Button7_Click(object sender, EventArgs e)
     {
         Response.Redirect("PhoneMain.aspx");
@@ -50,5 +59,6 @@ public partial class AdminPanel : System.Web.UI.Page
     protected void Button4_Click(object sender, EventArgs e)
     {
         Response.Redirect("APhone.aspx");
+
     }
 }

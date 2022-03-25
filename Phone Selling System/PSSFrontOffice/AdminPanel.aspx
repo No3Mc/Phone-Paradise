@@ -20,7 +20,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="height: 510px">
     <form id="form1" runat="server">
         <div>
             <table>
@@ -97,9 +97,13 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                             </td>
                         </tr>
                     </table>
-                        <div>
+                        <div style="height: 27px">
         <asp:Button ID="Button10" runat="server" Text="Order Management" Width="175px"  />
+                            <br />
         </div>
+                            <div style="height: 21px; width: 301px">
+        </div>
+        <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="Supplier Managment" Width="174px" />
     </form>
 </body>
 </html>
