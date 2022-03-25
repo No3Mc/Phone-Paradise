@@ -149,8 +149,6 @@ namespace PSSClasses
             DB.AddParameter("@StaffTelephoneNo", mThisStaff.StaffTelephoneNo);
             //execute the query returning the primary key value
             DB.Execute("sproc_tblStaff_Update");
-            //return the primary key of the new record
-            //return NThisStock.StockID;
         }
     }
 }
