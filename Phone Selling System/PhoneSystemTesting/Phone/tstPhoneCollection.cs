@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Written by Ethan Frizzell P2596393
 
 namespace PhoneSystemTesting.Phone
 {
@@ -86,7 +87,7 @@ namespace PhoneSystemTesting.Phone
             TestItem.CameraQuality = "a";
             TestItem.StorageCapacity = "a";
             TestItem.DisplaySize = "a";
-            //set ThisStock to the test data
+            //set ThisPhone to the test data
             AllPhones.ThisPhone = TestItem;
             //add the record
             PrimaryKey = AllPhones.Add();
@@ -116,7 +117,7 @@ namespace PhoneSystemTesting.Phone
             TestItem.CameraQuality = "a";
             TestItem.StorageCapacity = "a";
             TestItem.DisplaySize = "a";
-            //set ThisStock to the test data
+            //set ThisPhone to the test data
             AllPhones.ThisPhone = TestItem;
             //add the record
             PrimaryKey = AllPhones.Add();
@@ -175,7 +176,7 @@ namespace PhoneSystemTesting.Phone
             TestItem.CameraQuality = "a";
             TestItem.StorageCapacity = "a";
             TestItem.DisplaySize = "a";
-            //set thisstock to the test data
+            //set ThisPhone to the test data
             AllPhones.ThisPhone = TestItem;
             //add the record
             PrimaryKey = AllPhones.Add();
@@ -201,7 +202,7 @@ namespace PhoneSystemTesting.Phone
             clsPhoneCollection FilteredPhones = new clsPhoneCollection();
             //apply a blank string (should return all records)
             FilteredPhones.FilterByName("Apple");
-            //test to see ThisBook mathces the test data
+            //test to see ThisPhone mathces the test data
             Assert.AreEqual(AllPhones.Count, FilteredPhones.Count);
         }
     }

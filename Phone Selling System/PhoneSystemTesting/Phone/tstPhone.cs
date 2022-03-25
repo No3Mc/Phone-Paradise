@@ -5,12 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Written by Ethan Frizzell P2596393
 
 namespace PhoneSystemTesting.Phone
 {
     [TestClass]
     public class tstPhone
     {
+        //test data
         string PhoneName = "aaa";
         string PhoneManufacturer = "aaa";
         string BatteryCapacity = "aaa";
@@ -23,19 +25,23 @@ namespace PhoneSystemTesting.Phone
 
         public void InstanceOK()
         {
+            //create an instance of the phone class
             clsPhone APhone = new clsPhone();
-
+            //test to see that it exists
             Assert.IsNotNull(APhone);
         }
 
         [TestMethod]
 
-        public void ValidMethodOK()
+        public void ValidMethodOK() //testing valid method
         {
+            //create an instance of the phone class
             clsPhone APhone = new clsPhone();
+            //create test data
             String Error = "";
+            //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
-
+            //test to see that the two values are equal
             Assert.AreEqual(Error, "");
         }
 
@@ -43,33 +49,41 @@ namespace PhoneSystemTesting.Phone
 
         public void FindOK()
         {
+            //create an instance of the phone class
             clsPhone APhone = new clsPhone();
+            //create a boolean variable
             Boolean Found = false;
             int TestData = 1;
             Found = APhone.Find(TestData);
+            //test that a record is found
             Assert.IsTrue(Found);
         }
 
         [TestMethod]
         public void PhoneIDOK()
         {
+            //create a new instance of the phone class
             clsPhone APhone = new clsPhone();
-
+            //create some test data
             Int32 TestData = 1;
-
+            //invoke the method
             APhone.PhoneID = TestData;
-
+            //test to see that the values are equal
             Assert.AreEqual(APhone.PhoneID, TestData);
         }
 
         [TestMethod]
         public void PhoneNameOK()
         {
+            //create a new instance of the phone class
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "iPhone 6";
+            //invoke the method
 
             APhone.PhoneName = TestData;
+            //test to see that the values are equal
 
             Assert.AreEqual(APhone.PhoneName, TestData);
         }
@@ -77,11 +91,16 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void PhoneManufacturerOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "Apple";
+            //invoke the method
 
             APhone.PhoneManufacturer = TestData;
+            //test to see that the values are equal
 
             Assert.AreEqual(APhone.PhoneManufacturer, TestData);
         }
@@ -89,11 +108,16 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void BatteryCapacityOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "3000mah";
+            //invoke the method
 
             APhone.BatteryCapacity = TestData;
+            //test to see that the values are equal
 
             Assert.AreEqual(APhone.BatteryCapacity, TestData);
         }
@@ -101,11 +125,16 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void CameraQualityOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "24mp";
+            //invoke the method
 
             APhone.CameraQuality = TestData;
+            //test to see that the values are equal
 
             Assert.AreEqual(APhone.CameraQuality, TestData);
         }
@@ -113,11 +142,17 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void StorageCapacityOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "64gb";
+            //invoke the method
 
             APhone.StorageCapacity = TestData;
+            //test to see that the values are equal
+
 
             Assert.AreEqual(APhone.StorageCapacity, TestData);
         }
@@ -125,11 +160,15 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void DisplaySizeOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
+            //create some test data
 
             string TestData = "aaa";
 
             APhone.DisplaySize = TestData;
+            //test to see that the values are equal
 
             Assert.AreEqual(APhone.DisplaySize, TestData);
         }
@@ -137,36 +176,39 @@ namespace PhoneSystemTesting.Phone
         [TestMethod]
         public void FindMethodOK()
         {
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
 
             Boolean Found = false;
-
+            //create some test data
             Int32 PhoneID = 1;
-
+            //invoke the method
             Found = APhone.Find(PhoneID);
-
+            //test to see if record is found
             Assert.IsTrue(Found);
         }
 
         [TestMethod]
         public void TestPhoneIDFound()
         {
-            
+            //create a new instance of the phone class
+
             clsPhone APhone = new clsPhone();
-            
+            //create boolean variable to store result
             Boolean Found = false;
-            
+            //test that data is OK
             Boolean OK = true;
-            
+            //create test data
             Int32 PhoneID = 1;
-            
+            //invoke the method
             Found = APhone.Find(PhoneID);
-           
+           //check the result
             if (APhone.PhoneID != 1)
             {
                 OK = false;
             }
-            
+            //test to see that result is correct
             Assert.IsTrue(OK);
         }
 
@@ -311,7 +353,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should fail as it is blank
             string PhoneName = "";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -326,7 +368,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string PhoneName = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -341,7 +383,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string PhoneName = "aa";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -388,7 +430,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string PhoneName = "";
             PhoneName = PhoneName.PadRight(41, 'a');
             //invoke the method
@@ -420,7 +462,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string PhoneName = "";
             PhoneName = PhoneName.PadRight(200, 'a');
             //invoke the method
@@ -455,7 +497,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string PhoneManufacturer = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -517,7 +559,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string PhoneManufacturer = "";
             PhoneManufacturer = PhoneManufacturer.PadRight(41, 'a');
             //invoke the method
@@ -549,7 +591,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string PhoneManufacturer = "";
             PhoneManufacturer = PhoneManufacturer.PadRight(200, 'a');
             //invoke the method
@@ -585,7 +627,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string BatteryCapacity = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -647,7 +689,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string BatteryCapacity = "";
             BatteryCapacity = BatteryCapacity.PadRight(8, 'a');
             //invoke the method
@@ -679,7 +721,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string BatteryCapacity = "";
             BatteryCapacity = BatteryCapacity.PadRight(200, 'a');
             //invoke the method
@@ -715,7 +757,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string CameraQuality = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -776,7 +818,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string CameraQuality = "aaaaaa";
             
             //invoke the method
@@ -808,7 +850,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string CameraQuality = "";
             CameraQuality = CameraQuality.PadRight(200, 'a');
             //invoke the method
@@ -845,7 +887,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string StorageCapacity = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -906,7 +948,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string StorageCapacity = "aaaaaa";
 
             //invoke the method
@@ -938,7 +980,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string StorageCapacity = "";
             StorageCapacity = StorageCapacity.PadRight(200, 'a');
             //invoke the method
@@ -976,7 +1018,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should fail
+            //this should pass
             string DisplaySize = "a";
             //invoke the method
             Error = APhone.Valid(PhoneName, PhoneManufacturer, BatteryCapacity, CameraQuality, StorageCapacity, DisplaySize, DateReleased);
@@ -1037,7 +1079,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string DisplaySize = "aaaaaa";
 
             //invoke the method
@@ -1069,7 +1111,7 @@ namespace PhoneSystemTesting.Phone
             clsPhone APhone = new clsPhone();
             //string variable to store any error message
             String Error = "";
-            //this should pass
+            //this should fail
             string DisplaySize = "";
             DisplaySize = DisplaySize.PadRight(200, 'a');
             //invoke the method

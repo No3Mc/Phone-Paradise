@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Written by Ethan Frizzell P2596393
 
 namespace PSSClasses
 {
@@ -24,24 +25,28 @@ namespace PSSClasses
         {
             get
             {
+                //sends datas out
                 return mPhoneID;
             }
             set
             {
+                //allows data in
                 mPhoneID = value;
             }
         }
 
         public bool Find(Int32 PhoneID)
         {
+            //create an instance of the data collection class
             clsDataConnection DB = new clsDataConnection();
-
+            //add parameters
             DB.AddParameter("@PhoneID", PhoneID);
-
+            //execute stored procdedure
             DB.Execute("sproc_tblPhone_FilterByPhoneID");
-
+            //if record is found
             if (DB.Count == 1)
             {
+                //copy data from database into rows
                 mPhoneID = Convert.ToInt32(DB.DataTable.Rows[0]["PhoneID"]);
                 mPhoneName = Convert.ToString(DB.DataTable.Rows[0]["PhoneName"]);
                 mBatteryCapacity = Convert.ToString(DB.DataTable.Rows[0]["BatteryCapacity"]);
@@ -50,13 +55,13 @@ namespace PSSClasses
                 mStorageCapacity = Convert.ToString(DB.DataTable.Rows[0]["StorageCapacity"]);
                 mDisplaySize = Convert.ToString(DB.DataTable.Rows[0]["DisplaySize"]);
                 mDateReleased = Convert.ToDateTime(DB.DataTable.Rows[0]["DateReleased"]);
-
+                //return everything
                 return true;
             }
 
-            else
+            else //if no records found
             {
-                return false;
+                return false; //indicate an error
             }
         }
     
@@ -64,18 +69,20 @@ namespace PSSClasses
     public string Valid(string PhoneName, string PhoneManufacturer, string BatteryCapacity,
         string CameraQuality, string StorageCapacity, string DisplaySize, DateTime DateReleased)
     {
+            //create string to store error messages
         String Error = "";
 
-        if (PhoneName.Length == 0)
+        if (PhoneName.Length == 0) //if blank
         {
-            Error = Error + "The Phone Name may not be blank";
+            Error = Error + "The Phone Name may not be blank"; //display error message
         }
 
-        if (PhoneName.Length > 40)
+        if (PhoneName.Length > 40) //if more than 40
         {
-            Error = Error + "The Phone Name can't be more than 40 characters";
+            Error = Error + "The Phone Name can't be more than 40 characters"; //display error message
         }
 
+        //all validation follows this same method to check if it is blank or over a certain amount of characters
         if (PhoneManufacturer.Length == 0)
         {
             Error = Error + "The Phone Manufacturer may not be blank";
@@ -155,7 +162,7 @@ namespace PSSClasses
             }
             
     }
-
+        //get and set methods same as above
         public string PhoneName
     {
         get

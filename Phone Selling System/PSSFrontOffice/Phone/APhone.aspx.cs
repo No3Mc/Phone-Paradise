@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+//Written by Ethan Frizzell P2596393
 public partial class Phone_APhone : System.Web.UI.Page
 {
     Int32 PhoneID;
@@ -151,7 +151,7 @@ public partial class Phone_APhone : System.Web.UI.Page
         else //if not
         {
             //inform the user of the occurring errors
-            lblError.Text = "The follwoing issues occurred..." + Error;
+            lblError.Text = "The following issues occurred..." + Error;
         }
     }
 
