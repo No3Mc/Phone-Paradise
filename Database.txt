@@ -1,2 +1,16 @@
+Databases
+
+Ethan, Luke and Syed :
+
 Username = p2652259
 Password = p2652259
+
+Talha :
+
+Username = p2629099
+Password = p2629099
+
+Aqeel :
+
+Username = p17245070
+Password = Love4all
