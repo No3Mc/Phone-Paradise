@@ -11,71 +11,64 @@ namespace PSSClasses
 {
     public class clsStaff
     {
-        //staffNo private member variable 
-        private Int32 mStaffNo;
-        public Int32 StaffNo 
+        private int mStaffNo;
+        private string mStaffName;
+        private string mStaffEmail;
+        private string mStaffPassword;
+        private string mStaffTelephoneNo;
+        private string mStaffPosition;
+
+
+        public int StaffNo
         {
             get
             {
+                //this line of code send data out of the property
                 return mStaffNo;
             }
             set
             {
+                //this line of code allows data into the property
                 mStaffNo = value;
             }
+
         }
 
-        //staffName private member variable
-        private string mStaffName;
-        public string StaffName { get { return mStaffName; } set { mStaffName = value; } }
-
-        //staffEmail private member variable
-        private string mStaffEmailAddress;
-        public string StaffEmailAddress { get { return mStaffEmailAddress; } set { mStaffEmailAddress = value; } }
-
-        //staff password private member variable
-        private string mStaffPassword;
-        public string StaffPassword { get { return mStaffPassword; } set { mStaffPassword = value; } }
-
-        //staffPosition private member vaule
-        private string mStaffPosition;
-        public string StaffPosition { get { return mStaffPosition; } set { mStaffPosition = value; } }
-
-        //staff telephone private member variable
-        private string mStaffTelephoneNo;
-        public string StaffTelephoneNo { get { return mStaffTelephoneNo; } set { mStaffTelephoneNo = value; } }
-
-        public bool Find(int staffNo)
+        public bool Find(int StaffNo)
         {
+            //create an instance of the data connectin
             clsDataConnection DB = new clsDataConnection();
-
+            //add the parametrs for the book to search for it
             DB.AddParameter("@StaffNo", StaffNo);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStaff_FilterByStaffNo");
 
-            DB.Execute("sproc_tblStaff_FilterbyStaffNo");
 
+            //if one record if found (there should either one or zero)
             if (DB.Count == 1)
             {
-                mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
+                //copy the data from the database to the private data members
+                mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffNo"]);
                 mStaffName = Convert.ToString(DB.DataTable.Rows[0]["StaffName"]);
-                mStaffEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["StaffEmail"]);
+                mStaffEmail = Convert.ToString(DB.DataTable.Rows[0]["StaffEmail"]);
                 mStaffPassword = Convert.ToString(DB.DataTable.Rows[0]["StaffPassword"]);
                 mStaffPosition = Convert.ToString(DB.DataTable.Rows[0]["StaffPosition"]);
                 mStaffTelephoneNo = Convert.ToString(DB.DataTable.Rows[0]["StaffTelephoneNo"]);
 
+                //return everyting worked OK
                 return true;
             }
 
+            //if no records was found
             else
             {
+                //return false indicating a problem
                 return false;
             }
+
         }
 
-        public bool Find(string staffName)
-        {
-            //always return true
-            return true;
-        }
+        
 
         public string Valid(string StaffName, string StaffEmailAddress, string StaffPassword, string StaffTelephoneNo, string StaffPosition)
         {
@@ -132,7 +125,7 @@ namespace PSSClasses
             }
 
 
-            //is the StaffPosition blank
+            //is the Staff Position blank
             if (StaffPosition.Length == 0)
             {
                 //record the error
@@ -141,6 +134,87 @@ namespace PSSClasses
             //return any error messages
             return Error;
         }
+
+        public string StaffName
+        {
+            get
+            {
+                //this line of code send data out of the property
+                return mStaffName;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                mStaffName = value;
+            }
+
+        }
+
+
+        public string StaffEmail
+        {
+            get
+            {
+                //this line of code send data out of the property
+                return mStaffEmail;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                mStaffEmail = value;
+            }
+
+        }
+
+
+        public string StaffPassword
+        {
+            get
+            {
+                //this line of code send data out of the property
+                return mStaffPassword;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                mStaffPassword = value;
+            }
+
+        }
+
+
+        public string StaffPosition
+        {
+            get
+            {
+                //this line of code send data out of the property
+                return mStaffPosition;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                mStaffPosition = value;
+            }
+
+        }
+
+
+        public string StaffTelephoneNo
+        {
+            get
+            {
+                //this line of code send data out of the property
+                return mStaffTelephoneNo;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                mStaffTelephoneNo = value;
+            }
+
+        }
+
+
 
         public bool List()
         {
