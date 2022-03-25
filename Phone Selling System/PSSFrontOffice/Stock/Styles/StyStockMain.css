@@ -1,11 +1,18 @@
-﻿body {
-    margin:0;
-    padding:0;
+﻿/*Written by Syed || P2652259 || No3Mc(https://github.com/No3Mc)
+Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store*/
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("~/Images/Backgrounds/Stock/1.jpg");
 }
 section {
     width: 100vw;
     height: 100vh;
-    background-image: url("~/Images/Backgrounds/Stock/1.jpg");
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,16 +20,244 @@ section {
 
 
 
-.tablebody {
-    width: 222px;
+.table {
+    position: absolute;
+    left: 825px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    top: 19px;
 }
-.listboxes {
+
+
+
+.auto {
+    position: absolute;
+    top: 331px;
+    left: 826px;
+    z-index: 1;
     width: 270px;
-    Height: 200px;
+    height: 270px;
+    margin-top: 3px;
+    border-radius: 16px;
 }
-.labels {
-    Width: 367px;
+
+
+
+
+
+
+
+
+
+
+/*              <asp:Label ID="Label1" runat="server" Text="lstStockName" CssClass="auto-style28"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="lstQuantity" CssClass="auto-style30"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="lstWarehouseNo" CssClass="auto-style31"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Text="lstLocation" CssClass="auto-style32"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="lstBarcode" CssClass="auto-style29"></asp:Label>*/
+
+
+
+
+
+
+
+.table {
+    position: absolute;
+    left: 574px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    top: 51px;
 }
+
+
+/*lists*/
+
+.lstWarehouseNo {
+    position: absolute;
+    top: 125px;
+    left: 165px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    right: 1463px;
+    overflow: hidden;
+}
+
+.lstLocation {
+    position: absolute;
+    top: 345px;
+    left: 164px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+
+.lstStockName {
+    position: absolute;
+    top: 402px;
+    left: 580px;
+    z-index: 1;
+    width: 447px;
+    height: 138px;
+    border-radius: 16px;
+    margin-top: 3px;
+    overflow: scroll;
+}
+
+.lstBarcode {
+    position: absolute;
+    top: 125px;
+    left: 1246px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.lstQuantity {
+    position: absolute;
+    top: 344px;
+    left: 1245px;
+    z-index: 1;
+    width: 190px;
+    height: 185px;
+    margin-top: 3px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+
+/*labels*/
+
+.lblStockName {
+    position: absolute;
+    top: 366px;
+    left: 720px;
+    z-index: 1;
+    width: 180px;
+    height: 26px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+
+.lblBarcode {
+    position: absolute;
+    top: 83px;
+    left: 1250px;
+    z-index: 1;
+    width: 180px;
+    height: 26px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+.lblQuantity {
+    position: absolute;
+    top: 546px;
+    left: 1249px;
+    z-index: 1;
+    width: 180px;
+    height: 26px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+
+.lblWarehouseNo {
+    position: absolute;
+    top: 82px;
+    left: 172px;
+    z-index: 1;
+    width: 180px;
+    height: 26px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+.lblLocation {
+    position: absolute;
+    top: 545px;
+    left: 168px;
+    z-index: 1;
+    width: 180px;
+    height: 26px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+/*Please enter Warehouse No*/
+.lblEnter {
+    position: center;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
+}
+
+
+
+
+.btnLogout {
+    position: absolute;
+    left: 7px;
+    top: 61px;
+    height: 40px;
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

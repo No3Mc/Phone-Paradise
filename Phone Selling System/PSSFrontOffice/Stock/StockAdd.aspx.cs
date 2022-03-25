@@ -14,11 +14,11 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     Int32 StockID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //get the number of the book to be proccessed
+        //get the number of the Stock to be proccessed
         StockID = Convert.ToInt32(Session["StockID"]);
         if (IsPostBack == false)
         {
-            //populate the list of book
+            //populate the list of Stock
             DisplayStocks();
 
         }
@@ -28,7 +28,7 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
     void DisplayStocks()
     {
-        //craete an instance of the book list
+        //craete an instance of the stock list
         clsStockCollection StocksList = new clsStockCollection();
         //display the data for this record
         StocksList.ThisStock.Find(StockID);
@@ -81,7 +81,7 @@ public partial class Stock_StockAdd : System.Web.UI.Page
     //function for updating new record
     void Update()
     {
-        //create an instance of the book list
+        //create an instance of the stock list
         clsStockCollection StocksList = new clsStockCollection();
         //validate the data on the web form
         String Error = StocksList.ThisStock.Valid(txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
@@ -104,7 +104,8 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         }
         else
         {
-            //report an erro
+            //report an error
+            lblError.Visible = true;
             lblError.Text = "There were problems with the data entered " + Error;
         }
     }
@@ -117,11 +118,11 @@ public partial class Stock_StockAdd : System.Web.UI.Page
 
     void Add()
     {
-        //create an instance of the book list
+        //create an instance of the Stock list
         PSSClasses.clsStockCollection StocksList = new PSSClasses.clsStockCollection();
         //validate the data on the web form
         String Error = StocksList.ThisStock.Valid(txtStockName.Text, txtWarehouseNo.Text, txtLocation.Text, txtQuantity.Text, txtBarcode.Text);
-        //if the data is OK then add it to the objcet
+        //if the data is OK then add it to the object
         if (Error == "")
         {
             //get the data entered by the user
@@ -135,11 +136,28 @@ public partial class Stock_StockAdd : System.Web.UI.Page
             //all done so redirect back to the main page
             Response.Redirect("StockMain.aspx");
         }
+
+
+
         else
         {
             //report an error
+            lblError.Visible = true;
             lblError.Text = "problems with entries" + Error;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

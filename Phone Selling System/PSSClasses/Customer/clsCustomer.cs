@@ -33,54 +33,55 @@ namespace PSSClasses
 
 
 
-        public string Valid(string PhoneNo, string Address, string DOB, string Name, string Email)
+        public string Valid(int CustID, string PhoneNo, string Address, string DOB, string Name, string Email)
         {
             //create a string variable to store the error
             String Error = "";
 
-            //if the HouseNo is blank
+
+            //if the PhoneNo is blank
             if (PhoneNo.Length == 0)
             {
                 //record the error
                 Error = Error + "The house no may not be blank : ";
             }
-            //if the house no is greater than 6 characters
+            //if the PhoneNo is greater than 6 characters
             if (PhoneNo.Length > 50)
             {
                 //record the error
                 Error = Error + "The house no must be less than 6 characters : ";
             }
-            //is the post code blank
+            //is the Address blank
             if (Address.Length == 0)
             {
                 //record the error
                 Error = Error + "The post code may not be blank : ";
             }
-            //if the post code is too long
+            //if the Address is too long
             if (Address.Length > 50)
             {
                 //record the error
                 Error = Error + "The post code must be less than 9 characters : ";
             }
-            //is the street blank
+            //is the DOB blank
             if (DOB.Length == 0)
             {
                 //record the error
                 Error = Error + "The street may not be blank : ";
             }
-            //if the street is too long
+            //if the DOB is too long
             if (DOB.Length > 50)
             {
                 //record the error
                 Error = Error + "The street must be less than 50 characters : ";
             }
-            //is the town blank
+            //is the Name blank
             if (Name.Length == 0)
             {
                 //record the error
                 Error = Error + "The town may not be blank : ";
             }
-            //if the town is too long
+            //if the Name is too long
             if (Name.Length > 50)
             {
                 //record the error
@@ -88,13 +89,13 @@ namespace PSSClasses
             }
 
 
-            //is the town blank
+            //is the Email blank
             if (Email.Length == 0)
             {
                 //record the error
                 Error = Error + "The town may not be blank : ";
             }
-            //if the town is too long
+            //if the Email is too long
             if (Email.Length > 50)
             {
                 //record the error
@@ -104,19 +105,78 @@ namespace PSSClasses
             return Error;
         }
 
+        public string Valid(string text1, string text2, string text3, string text4, string text5)
+        {
+            //create a string variable to store the error
+            String Error = "";
 
 
+            //if the PhoneNo is blank
+            if (PhoneNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The house no may not be blank : ";
+            }
+            //if the PhoneNo is greater than 6 characters
+            if (PhoneNo.Length > 50)
+            {
+                //record the error
+                Error = Error + "The house no must be less than 6 characters : ";
+            }
+            //is the Address blank
+            if (Address.Length == 0)
+            {
+                //record the error
+                Error = Error + "The post code may not be blank : ";
+            }
+            //if the Address is too long
+            if (Address.Length > 50)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            //is the DOB blank
+            if (DOB.Length == 0)
+            {
+                //record the error
+                Error = Error + "The street may not be blank : ";
+            }
+            //if the DOB is too long
+            if (DOB.Length > 50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters : ";
+            }
+            //is the Name blank
+            if (Name.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the Name is too long
+            if (Name.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
 
 
-
-
-
-
-
-
-
-
-
+            //is the Email blank
+            if (Email.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the Email is too long
+            if (Email.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+            //return any error messages
+            return Error;
+        
+    }
 
         public string Address
         {
@@ -215,10 +275,10 @@ namespace PSSClasses
         {
             //create an instance of the data connectin
             clsDataConnection DB = new clsDataConnection();
-            //add the parametrs for the book to search for it
+            //add the parametrs for the customer to search for it
             DB.AddParameter("@CustID", CustID);
             //execute the stored procedure
-            DB.Execute("sproc_tblStock_FilterByCustID");
+            DB.Execute("sproc_tblCust_FilterByCustID");
 
 
             //if one record if found (there should either one or zero)

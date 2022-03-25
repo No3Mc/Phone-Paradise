@@ -18,13 +18,6 @@ namespace PhoneSystemTesting
         string Quantity= "aa";
         string Barcode= "aa";
 
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
-
-
         [TestMethod]
         public void InstanceOK()
         {
@@ -33,7 +26,7 @@ namespace PhoneSystemTesting
             //test to see that it exists
             Assert.IsNotNull(AStock);
         }
-
+        //ValidMethodOK
         [TestMethod]
         public void ValidMethodOK()
         {
@@ -47,7 +40,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
 
         }
-
+        //findok
         [TestMethod]
         public void FindOK()
         {
@@ -59,7 +52,7 @@ namespace PhoneSystemTesting
             Assert.IsTrue(Found);
         }
 
-
+        //ActivePropertyOK
         [TestMethod]
         public void ActivePropertyOK()
         {
@@ -76,14 +69,8 @@ namespace PhoneSystemTesting
 
 
 
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
         //Property Tests
-
+        //StockIDPropertyOK
         [TestMethod]
         public void StockIDPropertyOK()
         {
@@ -96,7 +83,7 @@ namespace PhoneSystemTesting
             //test to see that the two values are the same
             Assert.AreEqual(AStock.StockID, TestData);
         }
-
+        //StockNamePropertyOK
         [TestMethod]
         public void StockNamePropertyOK()
         {
@@ -109,7 +96,7 @@ namespace PhoneSystemTesting
             //test to see that the two values are the same
             Assert.AreEqual(AStock.StockName, TestData);
         }
-
+        //WarehouseNoPropertyOK
         [TestMethod]
         public void WarehouseNoPropertyOK()
         {
@@ -123,7 +110,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AStock.WarehouseNo, TestData);
         }
 
-
+        //LocationPropertyOK
         [TestMethod]
         public void LocationPropertyOK()
         {
@@ -137,7 +124,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AStock.Location, TestData);
         }
 
-
+        //QuantityPropertyOK
         [TestMethod]
         public void QuantityPropertyOK()
         {
@@ -151,7 +138,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AStock.Quantity, TestData);
         }
 
-
+        //BarcodePropertyOK
         [TestMethod]
         public void BarcodePropertyOK()
         {
@@ -165,20 +152,8 @@ namespace PhoneSystemTesting
             Assert.AreEqual(AStock.Barcode, TestData);
         }
 
-
-
-
-
-
-
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
         //Found Tests
-
+        //FindMethodOK
 
         [TestMethod]
         public void FindMethodOK()
@@ -194,7 +169,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.IsTrue(Found);
         }
-
+        //TestStockIDFound
         [TestMethod]
         public void TestStockIDFound()
         {
@@ -218,7 +193,7 @@ namespace PhoneSystemTesting
         }
 
 
-
+        //TestStockNameFound
         [TestMethod]
         public void TestStockNameFound()
         {
@@ -241,7 +216,7 @@ namespace PhoneSystemTesting
             Assert.IsTrue(OK);
         }
 
-
+        //TestWarehouseNoFound
         [TestMethod]
         public void TestWarehouseNoFound()
         {
@@ -265,7 +240,7 @@ namespace PhoneSystemTesting
         }
 
 
-
+        //TestQuantityFound
         [TestMethod]
         public void TestQuantityFound()
         {
@@ -290,7 +265,7 @@ namespace PhoneSystemTesting
 
 
 
-
+        //TestBarcodeFound
         [TestMethod]
         public void TestBarcodeFound()
         {
@@ -315,7 +290,7 @@ namespace PhoneSystemTesting
 
 
 
-
+        //TestLocationFound
         [TestMethod]
         public void TestLocationFound()
         {
@@ -338,22 +313,12 @@ namespace PhoneSystemTesting
             Assert.IsTrue(OK);
         }
 
-
-
-
-
-
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
         //TDD Tests of StockName, WarehouseNo, Location, Quantity, Barcode
 
 
         //Barcode Tests
 
-
+        //BarcodeMinLessOne
         [TestMethod]
         public void BarcodeMinLessOne()
         {
@@ -368,7 +333,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
-
+        //BarcodeMin
         [TestMethod]
         public void BarcodeMin()
         {
@@ -383,7 +348,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //BarcodeMinPlusOne
         [TestMethod]
         public void BarcodeMinPlusOne()
         {
@@ -399,7 +364,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //BarcodeMaxLessOne
         [TestMethod]
         public void BarcodeMaxLessOne()
         {
@@ -415,7 +380,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //BarcodeMax
         [TestMethod]
         public void BarcodeMax()
         {
@@ -431,7 +396,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //BarcodeMaxPlusOne
         [TestMethod]
         public void BarcodeMaxPlusOne()
         {
@@ -448,7 +413,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
+        //BarcodeMid
         [TestMethod]
         public void BarcodeMid()
         {
@@ -465,7 +430,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //BarcodeExtremeMax
         [TestMethod]
         public void BarcodeExtremeMax()
         {
@@ -482,13 +447,8 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
         //Quantity
-
+        //QuantityMinLessOne
 
 
         [TestMethod]
@@ -505,7 +465,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
-
+        //QuantityMin
         [TestMethod]
         public void QuantityMin()
         {
@@ -520,7 +480,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //QuantityMinPlusOne
         [TestMethod]
         public void QuantityMinPlusOne()
         {
@@ -536,7 +496,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //QuantityMaxLessOne
         [TestMethod]
         public void QuantityMaxLessOne()
         {
@@ -552,7 +512,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //QuantityMax
         [TestMethod]
         public void QuantityMax()
         {
@@ -568,7 +528,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //QuantityMaxPlusOne
         [TestMethod]
         public void QuantityMaxPlusOne()
         {
@@ -585,7 +545,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
+        //QuantityMid
         [TestMethod]
         public void QuantityMid()
         {
@@ -602,7 +562,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //QuantityExtremeMax
         [TestMethod]
         public void QuantityExtremeMax()
         {
@@ -619,11 +579,8 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
         //Location
-
+        //LocationMinLessOne
 
         [TestMethod]
         public void LocationMinLessOne()
@@ -639,7 +596,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
-
+        //LocationMin
         [TestMethod]
         public void LocationMin()
         {
@@ -654,7 +611,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //LocationMinPlusOne
         [TestMethod]
         public void LocationMinPlusOne()
         {
@@ -670,7 +627,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //LocationMaxLessOne
         [TestMethod]
         public void LocationMaxLessOne()
         {
@@ -686,7 +643,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //LocationMax
         [TestMethod]
         public void LocationMax()
         {
@@ -702,7 +659,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //LocationMaxPlusOne
         [TestMethod]
         public void LocationMaxPlusOne()
         {
@@ -719,7 +676,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
+        //LocationMid
         [TestMethod]
         public void LocationMid()
         {
@@ -736,7 +693,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //LocationExtremeMax
         [TestMethod]
         public void LocationExtremeMax()
         {
@@ -753,11 +710,9 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
         //WarehouseNo
-
-
+        //WarehouseNoMinLessOne
         [TestMethod]
         public void WarehouseNoMinLessOne()
         {
@@ -772,7 +727,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
-
+        //WarehouseNoMin
         [TestMethod]
         public void WarehouseNoMin()
         {
@@ -787,7 +742,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //WarehouseNoMinPlusOne
         [TestMethod]
         public void WarehouseNoMinPlusOne()
         {
@@ -803,7 +758,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //WarehouseNoMaxLessOne
         [TestMethod]
         public void WarehouseNoMaxLessOne()
         {
@@ -819,7 +774,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //WarehouseNoMax
         [TestMethod]
         public void WarehouseNoMax()
         {
@@ -835,7 +790,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //WarehouseNoMaxPlusOne
         [TestMethod]
         public void WarehouseNoMaxPlusOne()
         {
@@ -852,7 +807,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
+        //WarehouseNoMid
         [TestMethod]
         public void WarehouseNoMid()
         {
@@ -869,7 +824,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //WarehouseNoExtremeMax
         [TestMethod]
         public void WarehouseNoExtremeMax()
         {
@@ -886,14 +841,8 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
         //StockName
-
+        //StockNameMinLessOne
 
 
 
@@ -911,7 +860,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
-
+        //StockNameMin
         [TestMethod]
         public void StockNameMin()
         {
@@ -926,7 +875,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //StockNameMinPlusOne
         [TestMethod]
         public void StockNameMinPlusOne()
         {
@@ -942,7 +891,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //StockNameMaxLessOne
         [TestMethod]
         public void StockNameMaxLessOne()
         {
@@ -958,7 +907,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //StockNameMax
         [TestMethod]
         public void StockNameMax()
         {
@@ -974,7 +923,7 @@ namespace PhoneSystemTesting
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
+        //StockNameMaxPlusOne
         [TestMethod]
         public void StockNameMaxPlusOne()
         {
@@ -991,7 +940,7 @@ namespace PhoneSystemTesting
             Assert.AreNotEqual(Error, "");
         }
 
-
+        //StockNameMid
         [TestMethod]
         public void StockNameMid()
         {
@@ -1008,7 +957,7 @@ namespace PhoneSystemTesting
             Assert.AreEqual(Error, "");
         }
 
-
+        //StockNameExtremeMax
         [TestMethod]
         public void StockNameExtremeMax()
         {
@@ -1024,16 +973,6 @@ namespace PhoneSystemTesting
             //test to see if found
             Assert.AreNotEqual(Error, "");
         }
-
-
-
-        //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
-
-
-
-
 
 
     }

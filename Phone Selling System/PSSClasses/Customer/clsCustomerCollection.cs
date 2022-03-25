@@ -22,8 +22,8 @@ namespace PSSClasses
                 //adds a new record to the database based on the values
                 //set the primary key value of the new record
                 clsDataConnection DB = new clsDataConnection();
-
-                DB.AddParameter("@PhoneNo", mThisCust.PhoneNo);
+            DB.AddParameter("@CustID", mThisCust.CustID);
+            DB.AddParameter("@PhoneNo", mThisCust.PhoneNo);
                 DB.AddParameter("@Address", mThisCust.Address);
                 DB.AddParameter("@DOB", mThisCust.DOB);
                 DB.AddParameter("@Name", mThisCust.Name);
@@ -136,8 +136,18 @@ namespace PSSClasses
                 }
             }
 
+        public void ReportByLocation(string Name)
+        {
+            //filters the records based on a full or partial location
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the location parameter to the database
+            DB.AddParameter("@Name", Name);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FilterByName");
+        }
 
-            public void Delete()
+        public void Delete()
             {
                 //delete the record pointed by the thisStock
                 //connects database
@@ -145,10 +155,21 @@ namespace PSSClasses
                 //parameters for the stored procedure
                 DB.AddParameter("@CustID", mThisCust.CustID);
                 //execute the stored procedure 
-                DB.Execute("sproc_tblCust_Del");
+                DB.Execute("sproc_tblCust_Delete");
             }
 
-
+            public void ReportByName(string Name)
+            {
+                //filter the records based on a full or partial title
+                //connect to the DB
+                clsDataConnection DB = new clsDataConnection();
+                //send the title parameter to the DB
+                DB.AddParameter("@Name", Name);
+                //execute the stored procedure
+                DB.Execute("sproc_tblCust_FilterByName");
+                //populate the array list with the data table
+                PopulateArray(DB);
+            }
 
 
 

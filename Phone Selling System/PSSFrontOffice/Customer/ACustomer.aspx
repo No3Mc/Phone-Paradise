@@ -21,7 +21,7 @@
 
                 <div>
                     <asp:Label ID="Label4" runat="server" Text="Address"></asp:Label>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
         </div>
 
                 <div>
@@ -41,7 +41,7 @@
 
                         <div>
                     <asp:Label ID="Label6" runat="server" Text="Phone"></asp:Label>
-                            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtPhoneNo" runat="server"></asp:TextBox>
         </div>
 
 
@@ -61,7 +61,8 @@
 
         <p>
             <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+            <asp:Button ID="btnFind" runat="server" Text="Find" OnClick="btnFind_Click" />
 
         </p>
 

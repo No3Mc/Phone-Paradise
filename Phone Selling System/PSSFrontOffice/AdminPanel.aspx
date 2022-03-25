@@ -1,4 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.aspx.cs" Inherits="AdminPanel" %>
+﻿<%--Written by Syed, Ethan, Talha, Luke, and Aqeel || P2652259|| Syed/No3Mc(https://github.com/No3Mc),  P2596393 || Ethan/Frizzle15(https://github.com/Frizzle15), 
+    P2629099 || Talha(https://github.com/Talhamemon25), P2606530 || Luke/LLydiatt(https://github.com/LLydiatt)and Aqeel(https://github.com/AqeelAhmed12))
+
+Stock Management by Syed Naqvi
+Staff Management by Luke Lydiatt
+Phones Management by Ethan Frizzell
+Customer Management by Mahammad Talha
+Supplier management by Aqeel Ahmed	
+
+
+Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
+
+
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.aspx.cs" Inherits="AdminPanel" %>
 
 <!DOCTYPE html>
 
@@ -17,9 +31,9 @@
                     </td>
                     <td class="auto-style1" Height="20px" Width="302px"></td>
                     <td>
-        <asp:Button ID="Button2" runat="server" Text="Edit Sales" />
-        <asp:Button ID="Button3" runat="server" Text="Edit Location" />
-        <asp:Button ID="Button4" runat="server" Text="Edit Phones" />
+        <asp:Button ID="Button2" runat="server" Text="Edit Sales" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Edit Location" OnClick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="Edit Phones" OnClick="Button4_Click" />
                     </td>
                 </tr>
             </table>
@@ -54,7 +68,7 @@
                         </tr>
                     </table>
                         <div>
-        <asp:Button ID="Button7" runat="server" Text="Product Management" Width="175px" />
+        <asp:Button ID="Button7" runat="server" Text="Phone Management" Width="175px" OnClick="Button7_Click" />
         </div>
                             <table>
                         <tr>

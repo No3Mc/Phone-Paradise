@@ -21,13 +21,27 @@ public partial class _Default : System.Web.UI.Page
         {
             //update the list box
             DisplayStocks();
-
+            DisplaylstStocks();
         }
 
 
 
     }
 
+
+    void DisplaylstStocks()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStockCollection StockBook = new PSSClasses.clsStockCollection();
+        //set the data source to the list of warehouse in the collection
+        lstStocks.DataSource = StockBook.StockList;
+        //set the name of the primary key
+        lstStocks.DataValueField = "StockID";
+        //set the data field to display
+        lstStocks.DataTextField = "StockID";
+        //bind the data to the list
+        lstStocks.DataBind();
+    }
 
 
     void DisplayStocks()
@@ -210,4 +224,9 @@ public partial class _Default : System.Web.UI.Page
 
 
 
+
+    protected void lstStocks_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -106,67 +106,67 @@ namespace PSSClasses
             //create a string variable to store the error
             String Error = "";
 
-            //if the HouseNo is blank
+            //if the StockName is blank
             if (StockName.Length == 0)
             {
                 //record the error
-                Error = Error + "The house no may not be blank : ";
+                Error = Error + "The StockName may not be blank : ";
             }
-            //if the house no is greater than 6 characters
+            //if the StockName is greater than 6 characters
             if (StockName.Length > 50)
             {
                 //record the error
-                Error = Error + "The house no must be less than 6 characters : ";
+                Error = Error + "The StockName must be less than 6 characters : ";
             }
-            //is the post code blank
+            //is the WarehouseNo blank
             if (WarehouseNo.Length == 0)
             {
                 //record the error
-                Error = Error + "The post code may not be blank : ";
+                Error = Error + "The WarehouseNo may not be blank : ";
             }
-            //if the post code is too long
+            //if the WarehouseNo is too long
             if (WarehouseNo.Length > 50)
             {
                 //record the error
-                Error = Error + "The post code must be less than 9 characters : ";
+                Error = Error + "The WarehouseNo must be less than 9 characters : ";
             }
-            //is the street blank
+            //is the Location blank
             if (Location.Length == 0)
             {
                 //record the error
-                Error = Error + "The street may not be blank : ";
+                Error = Error + "The Location may not be blank : ";
             }
-            //if the street is too long
+            //if the Location is too long
             if (Location.Length > 50)
             {
                 //record the error
-                Error = Error + "The street must be less than 50 characters : ";
+                Error = Error + "The Location must be less than 50 characters : ";
             }
-            //is the town blank
+            //is the Quantity blank
             if (Quantity.Length == 0)
             {
                 //record the error
-                Error = Error + "The town may not be blank : ";
+                Error = Error + "The Quantity may not be blank : ";
             }
-            //if the town is too long
+            //if the Quantity is too long
             if (Quantity.Length > 50)
             {
                 //record the error
-                Error = Error + "The town must be less than 50 characters : ";
+                Error = Error + "The Quantity must be less than 50 characters : ";
             }
 
 
-            //is the town blank
+            //is the Barcode blank
             if (Barcode.Length == 0)
             {
                 //record the error
-                Error = Error + "The town may not be blank : ";
+                Error = Error + "The Barcode may not be blank : ";
             }
-            //if the town is too long
+            //if the Barcode is too long
             if (Barcode.Length > 50)
             {
                 //record the error
-                Error = Error + "The town must be less than 50 characters : ";
+                Error = Error + "The Barcode must be less than 50 characters : ";
             }
             //return any error messages
             return Error;
