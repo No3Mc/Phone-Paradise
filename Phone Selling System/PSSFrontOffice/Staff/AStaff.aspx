@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <style>            body {
+        <style>         body {
                 background-image: url(http://localhost:56842/Staff/Images/Background.jpg);
             }</style>
         <div>
