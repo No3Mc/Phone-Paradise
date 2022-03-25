@@ -8,6 +8,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <title></title>
             <link href ="~/Stock/Styles/StyStockViewer.css" rel ="stylesheet"/>
     <style type="text/css">
+          body {
+  background-image: url('/Images/Backgrounds/Stock/1.jpg');
+}
+
         .auto-style1 {
             position: absolute;
             left: 571px;
