@@ -13,22 +13,32 @@ public partial class Staff_AStaff : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         StaffNo = Convert.ToInt32(Session["StaffNo"]);
+            DisplayStaff();
+    }
+
+    void DisplayStaff()
+    {
+        //create an instance of the Stock collection
+        PSSClasses.clsStaffCollection AStaff = new PSSClasses.clsStaffCollection();
+        //set the data source to the find the staff
+        lstStaff.DataSource = AStaff.StaffList;
+        //set the name of the primary key
+        lstStaff.DataValueField = "StaffNo";
+        //set the data field to display
+        lstStaff.DataTextField = "StaffName";
+        //bind the data to the list
+        lstStaff.DataBind();
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-        if (StaffNo == -1)
-        {
-            //add the new record
-            Add();
-            //all done so redirect back to main page
-            Response.Redirect("AddStaff.aspx");
-        }
-        else
-        {
-            //update the record
-            Update();
-        }
+        //update the record
+        Update();
+/*        //add the new record
+        Add();
+        //all done so redirect back to main page
+        //Response.Redirect("AddStaff.aspx");*/
+
     }
 
     //function for adding new records
@@ -90,12 +100,12 @@ public partial class Staff_AStaff : System.Web.UI.Page
         }
     }
 
-        protected void btnAdd_Click(object sender, EventArgs e)
+    protected void btnAdd_Click(object sender, EventArgs e)
     {
-        //Store the data as -1 for a new box record
-        Session["StaffNo"] = -1;
-        //redirect to the add page
-        Response.Redirect("AddStaff.aspx");
+        //add the new record
+        Add();
+        //all done so redirect back to main page
+        //Response.Redirect("AddStaff.aspx");
     }
 
     protected void btnFind_Click(object sender, EventArgs e)
@@ -127,5 +137,33 @@ public partial class Staff_AStaff : System.Web.UI.Page
             //display the error msg
             lblError.Text = "Not found";
         }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/AdminPanel.aspx");
+    }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        //if a record has been selected from the list
+        if (lstStaff.SelectedIndex != -1)
+        {
+            //get the key vaule of the record being deleted
+            StaffNo = Convert.ToInt32(lstStaff.SelectedValue);
+            //store the data
+            Session["StaffNo"] = StaffNo;
+            //redirect to delete page
+            Response.Redirect("DeleteStaff.aspx");
+        }
+        else
+        {
+            lblError.Text = "Please select an option from the box";
+        }
+    }
+
+    protected void lstStaff_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }
