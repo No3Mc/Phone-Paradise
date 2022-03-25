@@ -1,7 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PhoneDelete.aspx.cs" Inherits="Phone_PhoneDelete" %>
 
 <!DOCTYPE html>
+<!-- Written by Ethan Frizzell P2596393 -->
 
+Read more: https://html.com/tags/comment-tag/#ixzz7OXSPpwU9
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
