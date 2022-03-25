@@ -18,7 +18,7 @@ public partial class Staff_StaffViewer : System.Web.UI.Page
         Response.Write(AStaff.StaffName);
         Response.Write(AStaff.StaffTelephoneNo);
         Response.Write(AStaff.StaffPassword);
-        Response.Write(AStaff.StaffEmailAddress);
+        Response.Write(AStaff.StaffEmail);
         Response.Write(AStaff.StaffPosition);
     }
 }
