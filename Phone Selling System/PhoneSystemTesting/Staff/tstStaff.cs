@@ -7,6 +7,12 @@ namespace PhoneSystemTesting.Staff
     [TestClass]
     public class tstStaff
     {
+        String StaffName = "cf";
+        String StaffEmailAddress = "cf";
+        String StaffPassword = "cf";
+        String StaffPosition = "cf";
+        String StaffTelephoneNo = "cf";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -14,6 +20,20 @@ namespace PhoneSystemTesting.Staff
             clsStaff AStaff = new clsStaff();
             //test to see if it exsists
             Assert.IsNotNull(AStaff);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //create some test data to assign to the property
+            String Error = "";
+            //invoke the method
+            Error = AStaff.Valid(StaffEmailAddress, StaffName, StaffPassword, StaffPosition, StaffTelephoneNo);
+            //test to see that the two values are the same
+            Assert.AreEqual(Error, "");
+
         }
 
         [TestMethod]
@@ -50,9 +70,9 @@ namespace PhoneSystemTesting.Staff
             //create some test data to assign to the staff
             string TestData = "SteveGreggers@Gmail.com";
             //assign the data to the staff
-            AStaff.StaffEmailAddress = TestData;
+            AStaff.StaffEmail = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AStaff.StaffEmailAddress, TestData);
+            Assert.AreEqual(AStaff.StaffEmail, TestData);
         }
 
         [TestMethod]
@@ -99,13 +119,13 @@ namespace PhoneSystemTesting.Staff
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
-            //Boolean to store the results of the validation
+            //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            String StaffName = "Luke Lydiatt";
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = AStaff.Find(StaffName);
-            //test to see if the test is true
+            Found = AStaff.Find(StaffNo);
+            //test to see that the result is correct
             Assert.IsTrue(Found);
         }
 
@@ -145,7 +165,7 @@ namespace PhoneSystemTesting.Staff
             //invoke the method
             Found = AStaff.Find(StaffNo);
             //check the staff
-            if (AStaff.StaffEmailAddress != "SteveGreggers@Gmail.com")
+            if (AStaff.StaffEmail != "SteveGreggers@Gmail.com")
             {
                 OK = false;
             }
@@ -240,6 +260,5 @@ namespace PhoneSystemTesting.Staff
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
-
     }
 }
