@@ -15,11 +15,11 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
   background-image: url('/Images/Backgrounds/Stock/1.jpg');
 }
         
-        .auto-style1 {
+        .auto-style2 {
             position: absolute;
-            left: 302px;
-            top: 111px;
-            bottom: 253px;
+            left: 301px;
+            top: 120px;
+            bottom: 235px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
@@ -36,7 +36,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <%--For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode--%>
       
         
-                        <asp:Label ID="lblStockName" runat="server" Text="StockName" CssClass ="lblStockName"></asp:Label>
+                        <asp:Label ID="lblStockName" runat="server" Text="StockName" CssClass ="auto-style2"></asp:Label>
                         <asp:Label ID="lblWarehouseNo" runat="server" Text="WarehouseNo" CssClass ="lblWarehouseNo"></asp:Label>
                         <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass ="lblLocation"></asp:Label>
                         <asp:Label ID="lblQuantity" runat="server" Text="Quantity" CssClass ="lblQuantity"></asp:Label>
