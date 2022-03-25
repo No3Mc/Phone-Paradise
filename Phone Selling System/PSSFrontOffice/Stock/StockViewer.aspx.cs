@@ -37,28 +37,6 @@ public partial class StockViewer : System.Web.UI.Page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     protected void Button1_Click(object sender, EventArgs e)
     {
         Response.Redirect("AdmLogin.aspx");
@@ -66,4 +44,9 @@ public partial class StockViewer : System.Web.UI.Page
     }
 
 
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("/AdminPanel.aspx");
+    }
 }

@@ -8,12 +8,33 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <title></title>
         <link href ="~/Stock/Styles/StyAStock.css" rel ="stylesheet"/>
     <style type="text/css">
-        
+                            body {
+  background-image: url('/Images/Backgrounds/Stock/1.jpg');
+}
         .auto-style1 {
             position: absolute;
             left: 587px;
             top: 76px;
-            right: 286px;
+            right: 1162px;
+        }
+        
+        .auto-style2 {
+            position: absolute;
+            left: 240px;
+            top: 69px;
+            width: 303px;
+            height: 284px;
+        }
+        
+        .auto-style3 {
+            position: absolute;
+            left: 244px;
+            top: 43px;
+            right: 1505px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: wheat;
+            text-shadow: 1px 1px;
         }
         
     </style>
@@ -22,7 +43,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
     <form id="form1" runat="server">
 
         <%--labels--%>
-                    <asp:Label ID="lblStockID" runat="server" Text="Stock ID"  CssClass ="auto-style1"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Stock ID"  CssClass ="auto-style3"></asp:Label>
+
+
+                    <asp:Label ID="lblStockID" runat="server" Text="Stock ID"  CssClass ="lblStockID"></asp:Label>
                     <asp:Label ID="lblWarehouseNo" runat="server" Text="Warehouse No" CssClass ="lblWarehouseNo" ></asp:Label>
                     <asp:Label ID="lblStockName" runat="server" Text="Stock Name" CssClass ="lblStockName"></asp:Label>
                     <asp:Label ID="lblLocation" runat="server" Text="Location" CssClass ="lblLocation"></asp:Label>

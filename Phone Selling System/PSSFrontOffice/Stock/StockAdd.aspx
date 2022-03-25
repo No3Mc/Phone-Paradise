@@ -11,7 +11,21 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
     <style type="text/css">
 
-
+                            body {
+  background-image: url('/Images/Backgrounds/Stock/1.jpg');
+}
+        
+        .auto-style1 {
+            position: absolute;
+            left: 302px;
+            top: 111px;
+            bottom: 253px;
+            margin-top: 3px;
+            border-radius: 16px;
+            text-align: center;
+            background-color: wheat;
+            text-shadow: 1px 1px;
+        }
         
     </style>
 

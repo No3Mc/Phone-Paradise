@@ -58,32 +58,63 @@ body {
     position: absolute;
     left: 587px;
     top: 76px;
+    right: 1162px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 .lblStockName {
     position: absolute;
     left: 574px;
     top: 114px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 .lblWarehouseNo {
     position: absolute;
     left: 564px;
     top: 152px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 .lblLocation {
     position: absolute;
     left: 590px;
     top: 192px;
     right: 1159px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 .lblQuantity {
     position: absolute;
     left: 592px;
     top: 231px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 .lblBarcode {
     position: absolute;
     left: 592px;
     top: 271px;
+    margin-top: 3px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 /*label error*/
@@ -92,6 +123,10 @@ body {
     position: absolute;
     left: 934px;
     top: 232px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: wheat;
+    text-shadow: 1px 1px;
 }
 
 
@@ -119,10 +154,10 @@ body {
 
 .lstStocks {
     position: absolute;
-    left: 29px;
-    top: 50px;
+    left: 240px;
+    top: 69px;
     width: 303px;
-    height: 157px;
+    height: 284px;
 }
 
 
