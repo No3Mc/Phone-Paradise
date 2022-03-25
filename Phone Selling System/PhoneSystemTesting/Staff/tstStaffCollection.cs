@@ -105,22 +105,22 @@ namespace PhoneSystemTesting.Staff
             clsStaffCollection AllStaff = new clsStaffCollection();
             clsStaff TestItem = new clsStaff();
             Int32 PrimaryKey = 0;
-            TestItem.StaffEmail = "1";
-            TestItem.StaffName = "1";
-            TestItem.StaffPassword = "1";
-            TestItem.StaffPosition = "1";
-            TestItem.StaffTelephoneNo = "1";
+            TestItem.StaffEmail = "3";
+            TestItem.StaffName = "3";
+            TestItem.StaffPassword = "3";
+            TestItem.StaffPosition = "3";   
+            TestItem.StaffTelephoneNo = "3";
             AllStaff.ThisStaff = TestItem;
             //add the record
             PrimaryKey = AllStaff.Add();
             //set the primary key of the test data
             TestItem.StaffNo = PrimaryKey;
             //modify the test data
-            TestItem.StaffEmail = "1111";
-            TestItem.StaffName = "11111";
-            TestItem.StaffPassword = "11111";
-            TestItem.StaffPosition = "1111";
-            TestItem.StaffTelephoneNo = "11111";
+            TestItem.StaffEmail = "33";
+            TestItem.StaffName = "33";
+            TestItem.StaffPassword = "33";
+            TestItem.StaffPosition = "33";
+            TestItem.StaffTelephoneNo = "33";
             //set the record based on the new test data
             Assert.AreEqual(AllStaff.ThisStaff, TestItem);
         }
