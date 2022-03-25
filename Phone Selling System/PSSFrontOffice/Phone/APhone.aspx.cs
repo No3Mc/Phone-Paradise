@@ -97,7 +97,7 @@ public partial class Phone_APhone : System.Web.UI.Page
         clsPhoneCollection Phones = new clsPhoneCollection();
 
         //validate the data in the form
-        String Error = Phones.ThisPhone.Valid(txtPhoneName.Text, txtPhoneManufacturer.Text, txtBatteryCapacity.Text, txtCameraQuality.Text, txtStorageCapacity.Text, txtDisplaySize.Text, txtDateReleased.Text);
+        String Error = Phones.ThisPhone.Valid(txtPhoneName.Text, txtPhoneManufacturer.Text, txtBatteryCapacity.Text, txtCameraQuality.Text, txtStorageCapacity.Text, txtDisplaySize.Text, Convert.ToDateTime(txtDateReleased.Text));
        //get the data entered by the user
         if (Error == "")
         {
@@ -129,7 +129,7 @@ public partial class Phone_APhone : System.Web.UI.Page
         clsPhoneCollection Phones = new clsPhoneCollection();
 
         //validate the data in the form
-        String Error = Phones.ThisPhone.Valid(txtPhoneName.Text, txtPhoneManufacturer.Text, txtBatteryCapacity.Text, txtCameraQuality.Text, txtStorageCapacity.Text, txtDisplaySize.Text, txtDateReleased.Text);
+        String Error = Phones.ThisPhone.Valid(txtPhoneName.Text, txtPhoneManufacturer.Text, txtBatteryCapacity.Text, txtCameraQuality.Text, txtStorageCapacity.Text, txtDisplaySize.Text, Convert.ToDateTime(txtDateReleased.Text));
         //if there are no errors
         if (Error == "")
         {
