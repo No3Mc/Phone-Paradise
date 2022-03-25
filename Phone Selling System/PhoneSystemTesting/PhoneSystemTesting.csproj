@@ -54,6 +54,8 @@
     <Compile Include="Stock\tstStock.cs" />
     <Compile Include="Stock\tstStockCollection.cs" />
     <Compile Include="Customer\tstCustomer.cs" />
+    <Compile Include="Supplier\tstSupplier.cs" />
+    <Compile Include="Supplier\tstSupplierCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,6 +66,7 @@
       <Name>PSSClasses</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

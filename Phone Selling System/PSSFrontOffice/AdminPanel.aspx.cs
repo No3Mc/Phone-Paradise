@@ -22,4 +22,13 @@ public partial class AdminPanel : System.Web.UI.Page
         Response.Redirect("Default.aspx");
 
     }
+
+
+
+    
+
+    protected void Button11_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SupplierMain.aspx");
+    }
 }
