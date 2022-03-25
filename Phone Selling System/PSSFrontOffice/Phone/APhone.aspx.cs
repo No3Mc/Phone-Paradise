@@ -151,7 +151,7 @@ public partial class Phone_APhone : System.Web.UI.Page
         else //if not
         {
             //inform the user of the occurring errors
-            lblError.Text = "The follwoing issues occurred..." + Error;
+            lblError.Text = "The following issues occurred..." + Error;
         }
     }
 

@@ -114,4 +114,9 @@ public partial class Phone_PhoneMain : System.Web.UI.Page
     {
 
     }
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AdminPanel.aspx");
+    }
 }
