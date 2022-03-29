@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustAdd.aspx.cs" Inherits="Customer_CustAdd" %>
-
+<%--Done by Memon--%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,8 +8,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
 
         <div>
 
@@ -41,6 +39,11 @@
         <p>
         <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
         <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
+
+        </p>
+        <p>
+
+        <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
 
         </p>
     </form>

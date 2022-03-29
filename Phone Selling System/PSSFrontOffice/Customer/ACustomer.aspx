@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ACustomer.aspx.cs" Inherits="ACustomer" %>
-
+<%--Done by Memon--%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -45,20 +45,15 @@
         </div>
 
 
-        <div>
+                <div>
 
         </div>
 
                 <div>
+
                     <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
 
         </div>
-
-                <div>
-
-        </div>
-
-
         <p>
             <asp:Button ID="btnOK" runat="server" Text="OK" OnClick="btnOK_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />

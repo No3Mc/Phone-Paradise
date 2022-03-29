@@ -5,24 +5,24 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PSSClasses;
+//Done by Memon
 public partial class Customer_CustAdd : System.Web.UI.Page
 {
     Int32 CustID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //get the number of the book to be proccessed
+        //get the number of the Customer to be proccessed
         CustID = Convert.ToInt32(Session["StockID"]);
         if (IsPostBack == false)
         {
-            //populate the list of book
+            //populate the list of Customer
             DisplayCustomers();
 
         }
     }
-
     void DisplayCustomers()
     {
-        //craete an instance of the book list
+        //craete an instance of the Customer list
         clsCustomerCollection CustList = new clsCustomerCollection();
         //display the data for this record
         CustList.ThisCust.Find(CustID);
@@ -32,16 +32,11 @@ public partial class Customer_CustAdd : System.Web.UI.Page
         txtName.Text = CustList.ThisCust.Name;
         txtEmail.Text = CustList.ThisCust.Email;
         txtPhoneNo.Text = CustList.ThisCust.PhoneNo;
-
-
-
     }
     protected void btnNo_Click(object sender, EventArgs e)
     {
         Response.Redirect("Custpg.aspx");
     }
-
-
     protected void btnYes_Click(object sender, EventArgs e)
     {
         if (CustID == -1)
@@ -55,18 +50,17 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             Update();
         }
     }
-
-
     void Add()
     {
-        //create an instance of the book list
+        //create an instance of the Customer list
         PSSClasses.clsCustomerCollection CustList = new PSSClasses.clsCustomerCollection();
         //validate the data on the web form
-        String Error = CustList.ThisCust.Valid(txtDOB.Text, txtAddress.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
+        String Error = CustList.ThisCust.Valid(Convert.ToInt32(txtCustID.Text), txtDOB.Text, txtAddress.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
         //if the data is OK then add it to the objcet
         if (Error == "")
         {
             //get the data entered by the user
+            CustList.ThisCust.CustID = Convert.ToInt32(txtCustID.Text);
             CustList.ThisCust.Address = txtName.Text;
             CustList.ThisCust.DOB = txtDOB.Text;
             CustList.ThisCust.Name = txtName.Text;
@@ -77,9 +71,6 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             //all done so redirect back to the main page
             Response.Redirect("Custpg.aspx");
         }
-
-
-
         else
         {
             //report an error
@@ -87,16 +78,12 @@ public partial class Customer_CustAdd : System.Web.UI.Page
         }
 
     }
-
-
-
-
     void Update()
     {
         //create an instance of the Cust list
         clsCustomerCollection CustList = new clsCustomerCollection();
         //validate the data on the web form
-        String Error = CustList.ThisCust.Valid(txtDOB.Text, txtAddress.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
+        String Error = CustList.ThisCust.Valid(Convert.ToInt32(txtCustID.Text), txtDOB.Text, txtAddress.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
         //if the data is OK then add it to the objcet
         if (Error == "")
         {
@@ -104,6 +91,7 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             CustList.ThisCust.Find(CustID);
             //get the data entered by the user
             //get the data entered by the user
+            CustList.ThisCust.CustID = Convert.ToInt32(txtCustID.Text);
             CustList.ThisCust.DOB = txtDOB.Text;
             CustList.ThisCust.Address = txtAddress.Text;
             CustList.ThisCust.Name = txtName.Text;
@@ -111,10 +99,9 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             CustList.ThisCust.PhoneNo = txtPhoneNo.Text;
             //add the record
             CustList.Update();
+
             //all done so redirect back to the main page
             Response.Redirect("Custpg.aspx");
-
-
         }
         else
         {
@@ -122,9 +109,6 @@ public partial class Customer_CustAdd : System.Web.UI.Page
             lblError.Text = "There were problems with the data entered " + Error;
         }
     }
-
-
-
 
 }
 
