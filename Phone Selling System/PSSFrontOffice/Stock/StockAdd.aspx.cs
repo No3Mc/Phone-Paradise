@@ -24,8 +24,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         }
     }
 
-
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
     void DisplayStocks()
     {
         //craete an instance of the stock list
@@ -39,17 +37,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         txtQuantity.Text= StocksList.ThisStock.Quantity;
         txtBarcode.Text = StocksList.ThisStock.Barcode;
     }
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
-
-
-
-
-
-
-
-
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
@@ -72,11 +59,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
 
         //Response.Redirect("StockMain.aspx");
     }
-
-
-
-
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
     //function for updating new record
     void Update()
@@ -106,16 +88,11 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         {
             //report an error
             lblError.Visible = true;
-            lblError.Text = "There were problems with the data entered " + Error;
+            lblError.Text = "System was unable to proceed with your request. Please check your entries       " + Error;
         }
     }
 
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
     //function for adding new record
-
-
     void Add()
     {
         //create an instance of the Stock list
@@ -137,32 +114,12 @@ public partial class Stock_StockAdd : System.Web.UI.Page
             Response.Redirect("StockMain.aspx");
         }
 
-
-
         else
         {
             //report an error
             lblError.Visible = true;
-            lblError.Text = "problems with entries" + Error;
+            lblError.Text = "System was unable to proceed with your request. Please check your entries       " + Error;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
 
 }
