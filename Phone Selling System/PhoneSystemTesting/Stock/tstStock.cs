@@ -96,6 +96,7 @@ namespace PhoneSystemTesting
             //test to see that the two values are the same
             Assert.AreEqual(AStock.StockName, TestData);
         }
+
         //WarehouseNoPropertyOK
         [TestMethod]
         public void WarehouseNoPropertyOK()
