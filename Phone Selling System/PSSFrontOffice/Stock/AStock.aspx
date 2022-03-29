@@ -27,33 +27,32 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         
         .auto-style4 {
             position: absolute;
-            left: 587px;
-            top: 50px;
-            right: 1122px;
+            left: 578px;
+            top: 72px;
+            right: 670px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
             background-color: wheat;
             text-shadow: 1px 1px;
-            height: 37px;
-            width: 109px;
+            height: 248px;
+            width: 127px;
         }
         .auto-style5 {
             position: absolute;
-            left: 574px;
-            top: 114px;
+            left: 584px;
+            top: 109px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
             background-color: wheat;
             text-shadow: 1px 1px;
-            height: 27px;
-            bottom: 240px;
-        }
+            height: 31px;
+            }
         .auto-style6 {
             position: absolute;
-            left: 563px;
-            top: 163px;
+            left: 582px;
+            top: 155px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
@@ -62,9 +61,8 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .auto-style7 {
             position: absolute;
-            left: 589px;
-            top: 197px;
-            right: 1160px;
+            left: 601px;
+            top: 195px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
@@ -74,8 +72,8 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .auto-style8 {
             position: absolute;
-            left: 592px;
-            top: 234px;
+            left: 600px;
+            top: 232px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
@@ -85,8 +83,8 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .auto-style9 {
             position: absolute;
-            left: 592px;
-            top: 278px;
+            left: 601px;
+            top: 280px;
             margin-top: 3px;
             border-radius: 16px;
             text-align: center;
