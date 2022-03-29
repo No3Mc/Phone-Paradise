@@ -5,15 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PSSClasses;
-
-
-//[CustID]
-//[Address]
-//[DOB]     
-//[Name]  
-//[Email] 
-//[PhoneNo]
-
+//Done by Memon
 public partial class ACustomer : System.Web.UI.Page
 {
     Int32 CustID;
@@ -27,7 +19,6 @@ public partial class ACustomer : System.Web.UI.Page
             DisplayCusts();
         }
     }
-
     protected void btnOK_Click(object sender, EventArgs e)
     {
         //create a new instance of clsCustomer
@@ -36,14 +27,13 @@ public partial class ACustomer : System.Web.UI.Page
         ACustomer.Name = txtName.Text;
         //store the name in the session object
         Session["ACustomer"] = ACustomer;
-        //redirect to the viwer page
+        //redirect to the Main customer page
         Response.Redirect("Custpg.aspx");
 
     }
-
     void DisplayCusts()
     {
-        //create an instance of the county collection
+        //create an instance of the Customer collection
         PSSClasses.clsCustomerCollection Custs = new PSSClasses.clsCustomerCollection();
         //find the record to update
         Custs.ThisCust.Find(CustID);
@@ -53,20 +43,19 @@ public partial class ACustomer : System.Web.UI.Page
         txtName.Text = Custs.ThisCust.Name;
         txtEmail.Text = Custs.ThisCust.Email;
         txtPhoneNo.Text = Custs.ThisCust.PhoneNo;
-
     }
-
     void Add()
     {
         //create an instance of the holidays
         PSSClasses.clsCustomerCollection Custs = new PSSClasses.clsCustomerCollection();
 
         //validate the data on the web form
-        String Error = Custs.ThisCust.Valid(txtAddress.Text, txtDOB.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
+        String Error = Custs.ThisCust.Valid(Convert.ToInt32(txtCustID.Text), txtAddress.Text, txtDOB.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
         //if the data is Ok then add it to the object
         if (Error == "")
         {
             //get the data entered by the user
+            Custs.ThisCust.CustID = Convert.ToInt32(txtCustID.Text);
             Custs.ThisCust.Address = txtAddress.Text;
             Custs.ThisCust.DOB = txtDOB.Text;
             Custs.ThisCust.Name = txtName.Text;
@@ -74,23 +63,19 @@ public partial class ACustomer : System.Web.UI.Page
             Custs.ThisCust.PhoneNo = txtPhoneNo.Text;
             //add the record
             Custs.Add();
-            //all done so redirect back to the main page
+            //all done so redirect back to the custmain page
             Response.Redirect("CustMain.aspx");
         }
         else
         {
             //report an error
-            lblError.Text = "There were problems " + Error;
+            lblError.Text = "There were problems with the entries " + Error;
         }
     }
-
-
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         Response.Redirect("Custpg.aspx");
-
     }
-
     protected void btnFind_Click(object sender, EventArgs e)
     {
         //create an instance of the Cust class
@@ -106,14 +91,13 @@ public partial class ACustomer : System.Web.UI.Page
         //if found
         if (found == true)
         {
-
             //display the values of the properties in the form
             txtAddress.Text = ACustomer.Address;
             txtDOB.Text = ACustomer.DOB;
             txtName.Text = ACustomer.Name;
             txtEmail.Text = ACustomer.Email;
             txtPhoneNo.Text = ACustomer.PhoneNo;
-
+            //error label
             lblError.Text = " found";
         }
         else
@@ -123,21 +107,13 @@ public partial class ACustomer : System.Web.UI.Page
         }
 
     }
-
-    //[CustID]
-    //[Address]
-    //[DOB]     
-    //[Name]  
-    //[Email] 
-    //[PhoneNo]
-
     void Update()
     {
-        //create an instance of the holiday book
+        //create an instance of the Customer from collection
         PSSClasses.clsCustomerCollection Customers = new PSSClasses.clsCustomerCollection();
 
         //validate the data on the web form
-        String Error = Customers.ThisCust.Valid(txtAddress.Text, txtDOB.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
+        String Error = Customers.ThisCust.Valid(Convert.ToInt32(txtCustID.Text), txtAddress.Text, txtDOB.Text, txtName.Text, txtEmail.Text, txtPhoneNo.Text);
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -146,6 +122,8 @@ public partial class ACustomer : System.Web.UI.Page
             //find the record to update
             Customers.ThisCust.Find(CustID);
             //get the data entered by the user
+
+            Customers.ThisCust.CustID = Convert.ToInt32(txtCustID.Text);
             Customers.ThisCust.Address = txtAddress.Text;
             Customers.ThisCust.DOB = txtDOB.Text;
             Customers.ThisCust.Name = txtName.Text;
@@ -153,29 +131,14 @@ public partial class ACustomer : System.Web.UI.Page
             Customers.ThisCust.PhoneNo = (txtPhoneNo.Text);
             //update the record
             Customers.Update();
-            //all done so redirect back to main page
-            Response.Redirect("StockMain.aspx");
+            //all done so redirect back to main customer page
+            Response.Redirect("Custpg.aspx");
         }
         else
         {
             //report an error
-            lblError.Text = "There were problems" + Error;
+            lblError.Text = "There were problems with the entries" + Error;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
