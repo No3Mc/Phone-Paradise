@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Custpg.aspx.cs" Inherits="Customer_Custpg" %>
-
+<%--Done by Memon--%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -39,7 +39,6 @@
                 <div>
 
                     <asp:Button ID="btnApply" runat="server" Text="Apply" OnClick="btnApply_Click" />
-                    <asp:Button ID="btnDisplayAll" runat="server" Text="Display All" />
         </div>
 
 

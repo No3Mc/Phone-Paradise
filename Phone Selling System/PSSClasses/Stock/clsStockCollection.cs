@@ -91,7 +91,7 @@ namespace PSSClasses
             //while there are records to process
             while (Index < RecordsCount)
             {
-                //create a blank book
+                //create a blank Stock
                 clsStock AStock = new clsStock();
                 //read in the fields from the current records
                 AStock.StockID = Convert.ToInt32(DB.DataTable.Rows[Index]["StockID"]);

@@ -40,7 +40,7 @@ namespace PSSClasses
         {
             //create an instance of the data connectin
             clsDataConnection DB = new clsDataConnection();
-            //add the parametrs for the book to search for it
+            //add the parametrs for the Stock to search for it
             DB.AddParameter("@StockID", StockID);
             //execute the stored procedure
             DB.Execute("sproc_tblStock_FilterByStockID");
@@ -76,22 +76,18 @@ namespace PSSClasses
         //    //{
         //    //    throw new ArgumentException($"'{nameof(StockName)}' cannot be null or empty.", nameof(StockName));
         //    //}
-
         //    //if (string.IsNullOrEmpty(WarehouseNo))
         //    //{
         //    //    throw new ArgumentException($"'{nameof(WarehouseNo)}' cannot be null or empty.", nameof(WarehouseNo));
         //    //}
-
         //    //if (string.IsNullOrEmpty(Location))
         //    //{
         //    //    throw new ArgumentException($"'{nameof(Location)}' cannot be null or empty.", nameof(Location));
         //    //}
-
         //    //if (string.IsNullOrEmpty(Quantity))
         //    //{
         //    //    throw new ArgumentException($"'{nameof(Quantity)}' cannot be null or empty.", nameof(Quantity));
         //    //}
-
         //    //if (string.IsNullOrEmpty(Barcode))
         //    //{
         //    //    throw new ArgumentException($"'{nameof(Barcode)}' cannot be null or empty.", nameof(Barcode));
@@ -110,68 +106,186 @@ namespace PSSClasses
             if (StockName.Length == 0)
             {
                 //record the error
-                Error = Error + "The StockName may not be blank : ";
+                Error += "The StockName may not be blank    ";
+
             }
             //if the StockName is greater than 6 characters
             if (StockName.Length > 50)
             {
                 //record the error
-                Error = Error + "The StockName must be less than 6 characters : ";
+                Error += "The StockName must be less than 6 characters    ";
+
             }
             //is the WarehouseNo blank
             if (WarehouseNo.Length == 0)
             {
                 //record the error
-                Error = Error + "The WarehouseNo may not be blank : ";
+                Error += "The WarehouseNo may not be blank    ";
+
             }
             //if the WarehouseNo is too long
             if (WarehouseNo.Length > 50)
             {
                 //record the error
-                Error = Error + "The WarehouseNo must be less than 9 characters : ";
+                Error += "The WarehouseNo must be less than 9 characters    ";
+
             }
             //is the Location blank
             if (Location.Length == 0)
             {
                 //record the error
-                Error = Error + "The Location may not be blank : ";
+                Error += "The Location may not be blank    ";
+
             }
             //if the Location is too long
             if (Location.Length > 50)
             {
                 //record the error
-                Error = Error + "The Location must be less than 50 characters : ";
+                Error += "The Location must be less than 50 characters    ";
+
             }
             //is the Quantity blank
             if (Quantity.Length == 0)
             {
                 //record the error
-                Error = Error + "The Quantity may not be blank : ";
+                Error += "The Quantity may not be blank    ";
+
             }
             //if the Quantity is too long
             if (Quantity.Length > 50)
             {
                 //record the error
-                Error = Error + "The Quantity must be less than 50 characters : ";
+                Error += "The Quantity must be less than 50 characters    ";
+
             }
-
-
             //is the Barcode blank
             if (Barcode.Length == 0)
             {
                 //record the error
-                Error = Error + "The Barcode may not be blank : ";
+                Error += "The Barcode may not be blank    ";
+
             }
             //if the Barcode is too long
             if (Barcode.Length > 50)
             {
                 //record the error
-                Error = Error + "The Barcode must be less than 50 characters : ";
+                Error += "The Barcode may not be blank    ";
+
             }
             //return any error messages
             return Error;
+
         }
 
+        public string ValidStocknmlbl(string StockName)
+        {
+            String Stocknmlbl = "";
+
+            //if the StockName is blank
+            if (StockName.Length == 0)
+            {
+                //record the error
+                Stocknmlbl += "The StockName may not be blank    ";
+
+            }
+            //if the StockName is greater than 6 characters
+            if (StockName.Length > 50)
+            {
+                //record the error
+                Stocknmlbl += "The StockName must be less than 6 characters    ";
+
+            }
+            return Stocknmlbl;
+
+        }
+
+        public string Validwarehnolbl(string WarehouseNo)
+            {
+                String warehnolbl = "";
+
+                //is the WarehouseNo blank
+                if (WarehouseNo.Length == 0)
+            {
+                //record the error
+                warehnolbl += "The WarehouseNo may not be blank    ";
+
+            }
+            //if the WarehouseNo is too long
+            if (WarehouseNo.Length > 50)
+            {
+                //record the error
+                warehnolbl += "The WarehouseNo must be less than 9 characters    ";
+
+            }
+
+            return warehnolbl;
+
+        }
+        public string Validlocalbl(string Location)
+            {
+            String localbl = "";
+
+            //is the Location blank
+            if (Location.Length == 0)
+            {
+                //record the error
+                localbl += "The Location may not be blank    ";
+
+            }
+            //if the Location is too long
+            if (Location.Length > 50)
+            {
+                //record the error
+                localbl += "The Location must be less than 50 characters    ";
+
+            }
+
+            return localbl;
+
+        }
+        public string Validqualilbl(string Quantity)
+            {
+            String qualilbl = "";
+
+            //is the Quantity blank
+            if (Quantity.Length == 0)
+            {
+                //record the error
+                qualilbl += "The Quantity may not be blank    ";
+
+            }
+            //if the Quantity is too long
+            if (Quantity.Length > 50)
+            {
+                //record the error
+                qualilbl += "The Quantity must be less than 50 characters    ";
+
+            }
+
+            return qualilbl;
+
+        }
+        public string Validbarclbl(string Barcode)
+            {
+            String barclbl = "";
+            //is the Barcode blank
+            if (Barcode.Length == 0)
+            {
+                //record the error
+                barclbl += "The Barcode may not be blank    ";
+
+            }
+            //if the Barcode is too long
+            if (Barcode.Length > 50)
+            {
+                //record the error
+                barclbl += "The Barcode may not be blank    ";
+
+            }
+            //return any error messages
+
+            return barclbl;
+        }
 
 
         public string StockName
@@ -264,7 +378,23 @@ namespace PSSClasses
 
 
 
-
+        //public string Valid(string StockName)
+        //{
+        //    String Stocknmlbl = "";
+        //    if (StockName.Length == 0)
+        //    {
+        //        //record the error
+        //        Stocknmlbl += "The StockName may not be blank    ";
+        //    }
+        //    //if the StockName is greater than 6 characters
+        //    if (StockName.Length > 50)
+        //    {
+        //        //record the error
+        //        Stocknmlbl += "The StockName must be less than 6 characters    ";
+        //    }
+        //    //return any error messages
+        //    return Stocknmlbl;
+        //}
 
 
 

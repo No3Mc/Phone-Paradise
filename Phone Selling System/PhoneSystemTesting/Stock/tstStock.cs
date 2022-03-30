@@ -47,7 +47,7 @@ namespace PhoneSystemTesting
             //create an instance of the class we want to create
             clsStock AStock = new clsStock();
             Boolean Found = false;
-            int TestData = 1;
+            int TestData = 68;
             Found = AStock.Find(TestData);
             Assert.IsTrue(Found);
         }
@@ -96,6 +96,7 @@ namespace PhoneSystemTesting
             //test to see that the two values are the same
             Assert.AreEqual(AStock.StockName, TestData);
         }
+
         //WarehouseNoPropertyOK
         [TestMethod]
         public void WarehouseNoPropertyOK()
@@ -163,7 +164,7 @@ namespace PhoneSystemTesting
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //test to see that the result is correct
@@ -180,11 +181,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.StockID != 1)
+            if (AStock.StockID != 68)
             {
                 OK = false;
             }
@@ -204,11 +205,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.StockName != "1")
+            if (AStock.StockName != "Apple")
             {
                 OK = false;
             }
@@ -227,11 +228,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.WarehouseNo != "1")
+            if (AStock.WarehouseNo != "Mul-725")
             {
                 OK = false;
             }
@@ -251,11 +252,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Quantity != "1")
+            if (AStock.Quantity != "89.94 metric tonnes")
             {
                 OK = false;
             }
@@ -276,11 +277,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Barcode != "1")
+            if (AStock.Barcode != "FE570FB3A3E81FF3EC45AF7FE429020C")
             {
                 OK = false;
             }
@@ -301,11 +302,11 @@ namespace PhoneSystemTesting
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 StockID = 1;
+            Int32 StockID = 68;
             //invoke the method
             Found = AStock.Find(StockID);
             //check the property
-            if (AStock.Location != "1")
+            if (AStock.Location != "Multan")
             {
                 OK = false;
             }

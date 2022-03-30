@@ -24,8 +24,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         }
     }
 
-
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
     void DisplayStocks()
     {
         //craete an instance of the stock list
@@ -39,17 +37,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         txtQuantity.Text= StocksList.ThisStock.Quantity;
         txtBarcode.Text = StocksList.ThisStock.Barcode;
     }
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
-
-
-
-
-
-
-
-
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
@@ -72,11 +59,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
 
         //Response.Redirect("StockMain.aspx");
     }
-
-
-
-
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
 
     //function for updating new record
     void Update()
@@ -106,16 +88,11 @@ public partial class Stock_StockAdd : System.Web.UI.Page
         {
             //report an error
             lblError.Visible = true;
-            lblError.Text = "There were problems with the data entered " + Error;
+            lblError.Text = "System was unable to proceed with your request. Please check your entries       " + Error;
         }
     }
 
-    //For quick copy paste StockName, WarehouseNo, Location, Quantity, Barcode
-
-
     //function for adding new record
-
-
     void Add()
     {
         //create an instance of the Stock list
@@ -137,13 +114,118 @@ public partial class Stock_StockAdd : System.Web.UI.Page
             Response.Redirect("StockMain.aspx");
         }
 
-
-
         else
         {
             //report an error
             lblError.Visible = true;
-            lblError.Text = "problems with entries" + Error;
+            lblError.Text = "System was unable to proceed with your request. Please check your entries       " + Error;
+        }
+
+
+        String barclbl = StocksList.ThisStock.Validbarclbl(txtBarcode.Text);
+        //if the data is OK then add it to the object
+        if (barclbl == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.Barcode = txtBarcode.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+
+        else
+        {
+            //report an error
+            barclblError.Visible = true;
+            barclblError.Text = "System was unable to proceed with your request. Please check your entries       " + barclbl;
+        }
+
+
+        String qualilbl = StocksList.ThisStock.Validqualilbl(txtQuantity.Text);
+        //if the data is OK then add it to the object
+        if (qualilbl == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.Quantity = txtQuantity.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+
+        else
+        {
+            //report an error
+            qualilblError.Visible = true;
+            qualilblError.Text = "System was unable to proceed with your request. Please check your entries       " + qualilbl;
+        }
+
+
+
+
+
+        String localbl = StocksList.ThisStock.Validlocalbl(txtLocation.Text);
+        //if the data is OK then add it to the object
+        if (localbl == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.Location = txtLocation.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+
+        else
+        {
+            //report an error
+            localblError.Visible = true;
+            localblError.Text = "System was unable to proceed with your request. Please check your entries       " + localbl;
+        }
+
+
+
+
+        String Stocknmlbl = StocksList.ThisStock.ValidStocknmlbl(txtStockName.Text);
+        //if the data is OK then add it to the object
+        if (Stocknmlbl == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.StockName = txtStockName.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+
+        else
+        {
+            //report an error
+            StocklblError.Visible = true;
+            StocklblError.Text = "System was unable to proceed with your request. Please check your entries       " + Stocknmlbl;
+        }
+
+
+
+
+        String warehnolbl = StocksList.ThisStock.Validwarehnolbl(txtWarehouseNo.Text);
+        //if the data is OK then add it to the object
+        if (warehnolbl == "")
+        {
+            //get the data entered by the user
+            StocksList.ThisStock.WarehouseNo = txtWarehouseNo.Text;
+            //add the record
+            StocksList.Add();
+            //all done so redirect back to the main page
+            Response.Redirect("StockMain.aspx");
+        }
+
+        else
+        {
+            //report an error
+            warehnolblError.Visible = true;
+            warehnolblError.Text = "System was unable to proceed with your request. Please check your entries       " + warehnolbl;
         }
 
 
@@ -157,12 +239,6 @@ public partial class Stock_StockAdd : System.Web.UI.Page
 
 
 
-
     }
-
-
-
-
-
 
 }

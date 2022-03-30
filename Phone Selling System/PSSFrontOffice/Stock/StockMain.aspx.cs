@@ -378,7 +378,7 @@ public partial class Stock_StockMain : System.Web.UI.Page
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("/Default.aspx");
     }
 
     protected void txtWarehouseNo_TextChanged(object sender, EventArgs e)
