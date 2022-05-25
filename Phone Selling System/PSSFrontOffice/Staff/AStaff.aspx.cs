@@ -13,7 +13,10 @@ public partial class Staff_AStaff : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         StaffNo = Convert.ToInt32(Session["StaffNo"]);
+
         DisplayStaff();
+
+            DisplayStaff();
     }
 
     void DisplayStaff()
@@ -28,6 +31,31 @@ public partial class Staff_AStaff : System.Web.UI.Page
         lstStaff.DataTextField = "StaffName";
         //bind the data to the list
         lstStaff.DataBind();
+
+    }
+
+    void DisplayStaff()
+    {
+
+        //create an instance of the Stock collection
+        PSSClasses.clsStaffCollection AStaff = new PSSClasses.clsStaffCollection();
+        //set the data source to the find the staff
+        lstStaff.DataSource = AStaff.StaffList;
+        //set the name of the primary key
+        lstStaff.DataValueField = "StaffNo";
+        //set the data field to display
+        lstStaff.DataTextField = "StaffName";
+        //bind the data to the list
+        lstStaff.DataBind();
+
+        //update the record
+        Update();
+/*        //add the new record
+        Add();
+        //all done so redirect back to main page
+        //Response.Redirect("AddStaff.aspx");*/
+
+
     }
 
     //function for adding new records
@@ -151,5 +179,33 @@ public partial class Staff_AStaff : System.Web.UI.Page
         {
             lblError.Text = "Please select an option from the box";
         }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/AdminPanel.aspx");
+    }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        //if a record has been selected from the list
+        if (lstStaff.SelectedIndex != -1)
+        {
+            //get the key vaule of the record being deleted
+            StaffNo = Convert.ToInt32(lstStaff.SelectedValue);
+            //store the data
+            Session["StaffNo"] = StaffNo;
+            //redirect to delete page
+            Response.Redirect("DeleteStaff.aspx");
+        }
+        else
+        {
+            lblError.Text = "Please select an option from the box";
+        }
+    }
+
+    protected void lstStaff_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }

@@ -108,7 +108,11 @@ namespace PhoneSystemTesting.Staff
             TestItem.StaffEmail = "3";
             TestItem.StaffName = "3";
             TestItem.StaffPassword = "3";
+
             TestItem.StaffPosition = "3";   
+
+            TestItem.StaffPosition = "3";
+
             TestItem.StaffTelephoneNo = "3";
             AllStaff.ThisStaff = TestItem;
             //add the record
