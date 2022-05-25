@@ -33,7 +33,6 @@
   
 | User | Their DB |
 | --- | --- |
-
 | Kye Staples | Order Management |
   
   </details>
