@@ -16,7 +16,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Clean ASP.NET Theme</title>
+    <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="~/DefStyles/DefaultStyleSheet.css" />
     <style type="text/css">
         body {
@@ -27,11 +27,12 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .filter-container {
             position: absolute;
-            left: 230px;
-            top: 100px;
+            left: 50px;
+            top: 210px;
             width: 500px;
-            height: 500px;
+            height: 700px;
             overflow-y: auto;
+
         }
         .main-content {
             margin-left: 210px;
@@ -51,14 +52,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             padding: 10px 0;
         }
 
-        .filters {
-            float: left;
-            width: 250px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-right: 20px;
-        }
+
 
 
         .filter-label {
@@ -67,15 +61,25 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
 
 
-        .filter-dropdown {
-            width: 100%;
-            margin-bottom: 15px;
-        }
+.filter-dropdown {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px; /* Add some padding for better spacing */
+    background-color: #fff; /* White background color */
+    border: 1px solid #ccc; /* Add a border for separation */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Slightly reduce font size for better fit */
+}
+
+.filter-dropdown:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 
         .logo img {
-            max-width: 100%;
+            max-width: 150px; 
             height: auto;
+            border-radius: 10px;
         }
         .menu {
             list-style-type: none;
@@ -102,45 +106,46 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .menu-button {
             padding: 10px 20px;
-            background-color: transparent;
-            border: 2px solid #007bff;
-            color: #007bff;
+            background-color: #007bff; /* Blue background color */
+            color: #fff; /* White text color */
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px; /* Add some spacing between buttons */
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .menu-button:hover {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #0056b3; /* Darker blue on hover */
         }
 
     </style>
 </head>
 <body>
-
-
-
-    <form id="form1" runat="server">
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <img src="~/Images/Logo/Logo.jpg" alt="Company Logo" />
+        <form id="form1" runat="server">
+                    <div class="logo">
+                    <img src="/Images/Logo.png" alt="Company Logo" />
                 </div>
+                <div class="header">
+
                 <ul class="menu">
                     <li>
                         <asp:Button ID="btnSales" runat="server" Text="Sales" CssClass="menu-button" /></li>
                     <li>
-                        <asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" /></li>
-                    <li>
+                        <asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" OnClick="Location" /></li>
+<%--                    <li>
                         <asp:Button ID="btnShopPhones" runat="server" Text="Shop Phones" CssClass="menu-button" /></li>
-                    <li>
+                    <li>--%>
                         <asp:Button ID="btnSignin" runat="server" Text="Signin" CssClass="menu-button" /></li>
                     <li>
                         <asp:Button ID="btnAdmLogin" runat="server" Text="Adm Login" CssClass="menu-button" OnClick="Button10_Click" /></li>
                 </ul>
             </div>
+
+        <div class="container">
+
             <div class="content">
                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/10242696?$l-large$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/10197974_002?$g-small$&fmt=auto" CssClass="product" />
@@ -530,7 +535,6 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <asp:ListItem Text="Dual SIM" Value="Dual SIM" />
                     <asp:ListItem Text="eSIM enabled" Value="eSIM enabled" />
                     <asp:ListItem Text="Single SIM" Value="Single SIM" />
-                    <asp:ListItem Text="Yes" Value="Yes" />
                 </asp:DropDownList>
             </div>
         </div>
