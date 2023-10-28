@@ -56,19 +56,19 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
 
 
-.filter-dropdown {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px; 
-    background-color: #fff;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 14px;
-}
+        .filter-dropdown {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px; 
+            background-color: #fff;
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 14px;
+        }
 
-.filter-dropdown:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+        .filter-dropdown:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
 
 
         .logo img {
@@ -88,35 +88,35 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
 
 
-.header {
-  background-color: #333; 
-  color: #fff; 
-  padding: 10px 0; 
-  text-align: center;
-}
+        .header {
+          background-color: #333; 
+          color: #fff; 
+          padding: 10px 0; 
+          text-align: center;
+        }
 
-.menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+        .menu {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
 
-.menu li {
-  display: inline-block;
-  margin-right: 10px; 
-}
+        .menu li {
+          display: inline-block;
+          margin-right: 10px; 
+        }
 
-.menu-button {
-  background-color: #ff6600; 
-  color: #fff; 
-  padding: 10px 20px; 
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px; 
-  font-weight: bold; 
-  font-size: 16px; 
-}
+        .menu-button {
+          background-color: #ff6600; 
+          color: #fff; 
+          padding: 10px 20px; 
+          text-decoration: none;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px; 
+          font-weight: bold; 
+          font-size: 16px; 
+        }
 
 
 .menu-button:hover {
