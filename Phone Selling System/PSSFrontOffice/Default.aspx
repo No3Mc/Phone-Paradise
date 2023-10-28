@@ -45,12 +45,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
+
 
 
 
@@ -64,11 +59,11 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 .filter-dropdown {
     width: 100%;
     margin-bottom: 15px;
-    padding: 10px; /* Add some padding for better spacing */
-    background-color: #fff; /* White background color */
-    border: 1px solid #ccc; /* Add a border for separation */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Slightly reduce font size for better fit */
+    padding: 10px; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 14px;
 }
 
 .filter-dropdown:hover {
@@ -78,23 +73,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
         .logo img {
             max-width: 150px; 
-            height: auto;
+            height: 100px;
             border-radius: 10px;
         }
-        .menu {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        .menu li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        .menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+
         .content {
             text-align: center;
             margin-top: 20px;
@@ -104,45 +86,65 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             max-width: 200px;
             height: auto;
         }
-        .menu-button {
-            padding: 10px 20px;
-            background-color: #007bff; /* Blue background color */
-            color: #fff; /* White text color */
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px; /* Add some spacing between buttons */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .menu-button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
+
+
+.header {
+  background-color: #333; 
+  color: #fff; 
+  padding: 10px 0; 
+  text-align: center;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+.menu-button {
+  background-color: #ff6600; 
+  color: #fff; 
+  padding: 10px 20px; 
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; 
+  font-weight: bold; 
+  font-size: 16px; 
+}
+
+
+.menu-button:hover {
+  background-color: #ff9900; 
+}
 
     </style>
 </head>
 <body>
-        <form id="form1" runat="server">
-                    <div class="logo">
-                    <img src="/Images/Logo.png" alt="Company Logo" />
-                </div>
-                <div class="header">
+    <form id="form1" runat="server">
 
-                <ul class="menu">
-                    <li>
-                        <asp:Button ID="btnSales" runat="server" Text="Sales" CssClass="menu-button" /></li>
-                    <li>
-                        <asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" OnClick="Location" /></li>
-<%--                    <li>
+        <div class="header">
+            <div class="logo">
+                <img src="/Images/Logo.png" alt="Company Logo" />
+            </div>
+            <ul class="menu">
+                <li>
+                    <asp:Button ID="btnSales" runat="server" Text="Sales" CssClass="menu-button" /></li>
+                <li>
+                    <asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" OnClick="Location" /></li>
+                                    <li>
                         <asp:Button ID="btnShopPhones" runat="server" Text="Shop Phones" CssClass="menu-button" /></li>
-                    <li>--%>
-                        <asp:Button ID="btnSignin" runat="server" Text="Signin" CssClass="menu-button" /></li>
+                    <li>
+                <asp:Button ID="btnSignin" runat="server" Text="Signin" CssClass="menu-button" /></li>
                     <li>
                         <asp:Button ID="btnAdmLogin" runat="server" Text="Adm Login" CssClass="menu-button" OnClick="Button10_Click" /></li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
         <div class="container">
 
