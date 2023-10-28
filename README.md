@@ -1,5 +1,6 @@
 # Project Mangement and Development 2nd Term <br>
 ## PMAD-Phone Selling Store  <br>
+![image](https://github.com/No3Mc/Phone-Paradise/assets/41834061/6eede50c-85d6-40fa-a4f8-9b8df73c8a58)
 
 - [System SPECS](https://docs.google.com/document/d/1Ur4PCUlyhYJOwgS4hZuPDtuZ0oHuWfYwxI5vwbGv5Nw/edit)
 

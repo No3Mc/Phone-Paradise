@@ -37,7 +37,10 @@ public partial class _Default : System.Web.UI.Page
 
 
 
-
+    protected void Location(object sender, EventArgs e)
+    {
+        Response.Redirect("Location.aspx");
+    }
 
 
 

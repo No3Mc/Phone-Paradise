@@ -18,95 +18,81 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        #logo {
+            width: 195px;
+        }
+
+        #navigation {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body style="height: 510px">
+<body>
     <form id="form1" runat="server">
-        <div>
-            <table>
-                <tr>
-                    <td>
-                                <%--Taken from :https://www.renaultgroup.com/--%>
-                                <asp:ImageButton ID="ImageButton15" runat="server" Height="69px" ImageUrl="~/Images/Logo/Logo.jpg" Width="195px" OnClick="ImageButton15_Click" />
-                    </td>
-                    <td class="auto-style1" Height="20px" Width="302px"></td>
-                    <td>
-        <asp:Button ID="Button2" runat="server" Text="Edit Sales" OnClick="Button2_Click" />
-        <asp:Button ID="Button3" runat="server" Text="Edit Location" OnClick="Button3_Click" />
-        <asp:Button ID="Button4" runat="server" Text="Edit Phones" OnClick="Button4_Click" />
-                    </td>
-                </tr>
-            </table>
+        <div id="header">
+            <img id="logo" src="~/Images/Logo/Logo.jpg" alt="Logo" />
+            <div id="navigation">
+                <asp:Button ID="Button2" runat="server" CssClass="button" Text="Edit Sales" OnClick="Button2_Click" />
+                <asp:Button ID="Button3" runat="server" CssClass="button" Text="Edit Location" OnClick="Button3_Click" />
+                <asp:Button ID="Button4" runat="server" CssClass="button" Text="Edit Phones" OnClick="Button4_Click" />
+            </div>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <td Height="20px" Width="302px" >    </td>
-                </tr>
-            </table>
-        </div>
-                <div>
-        <asp:Button ID="Button5" runat="server" Text="Management Panel" Height="63px" Width="302px" />
-        </div>
-                <div>
-                    <table>
-                        <tr>
-                            <td Height="20px" Width="302px">
-
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                        <div>
-        <asp:Button ID="Button6" runat="server" Text="Stock Management" Width="175px" OnClick="Button6_Click" />
-        </div>
-                            <table>
-                        <tr>
-                            <td Height="20px" Width="302px">
-
-                            </td>
-                        </tr>
-                    </table>
-                        <div>
-        <asp:Button ID="Button7" runat="server" Text="Phone Management" Width="175px" OnClick="Button7_Click" />
-        </div>
-                            <table>
-                        <tr>
-                            <td Height="20px" Width="302px">
-
-                            </td>
-                        </tr>
-                    </table>
-                        <div>
-        <asp:Button ID="Button8" runat="server" Text="Staff Management" Width="175px" OnClick="Button8_Click" />
-        </div>
-                            <table>
-                        <tr>
-                            <td Height="20px" Width="302px">
-
-                            </td>
-                        </tr>
-                    </table>
-                        <div>
-        <asp:Button ID="Button9" runat="server" Text="Customer Management"  Width="175px" OnClick="Button9_Click" />
-        </div>
-                            <table>
-                        <tr>
-                            <td Height="20px" Width="302px">
-
-                            </td>
-                        </tr>
-                    </table>
-
-                        <div>
-        <asp:Button ID="Button10" runat="server" Text="Supplier Management" Width="175px" OnClick="Button10_Click"  />
-
-                        <div style="height: 27px">
-                            <br />
-        </div>
-                            <div style="height: 21px; width: 301px">
-
+        <div class="content">
+            <asp:Button ID="Button5" runat="server" CssClass="button" Text="Management Panel" />
+            <div class="button-container">
+                <asp:Button ID="Button6" runat="server" CssClass="button" Text="Stock Management" OnClick="Button6_Click" />
+                <asp:Button ID="Button7" runat="server" CssClass="button" Text="Phone Management" OnClick="Button7_Click" />
+                <asp:Button ID="Button8" runat="server" CssClass="button" Text="Staff Management" OnClick="Button8_Click" />
+                <asp:Button ID="Button9" runat="server" CssClass="button" Text="Customer Management" OnClick="Button9_Click" />
+                <asp:Button ID="Button10" runat="server" CssClass="button" Text="Supplier Management" OnClick="Button10_Click" />
+            </div>
         </div>
     </form>
 </body>
 </html>
+
+
+
