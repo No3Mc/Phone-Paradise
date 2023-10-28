@@ -12,6 +12,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
 
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -24,6 +25,18 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             padding: 0;
             font-family: Arial, sans-serif;
         }
+        .filter-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .main-content {
+            margin-left: 210px;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -37,7 +50,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             align-items: center;
             padding: 10px 0;
         }
-        /* New styles for filters */
+
         .filters {
             float: left;
             width: 250px;
@@ -47,13 +60,13 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
             margin-right: 20px;
         }
 
-        /* Style for filter labels */
+
         .filter-label {
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        /* Style for filter dropdowns */
+
         .filter-dropdown {
             width: 100%;
             margin-bottom: 15px;
@@ -116,11 +129,16 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                     <img src="~/Images/Logo/Logo.jpg" alt="Company Logo" />
                 </div>
                 <ul class="menu">
-                    <li><asp:Button ID="btnSales" runat="server" Text="Sales" CssClass="menu-button" /></li>
-                    <li><asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" /></li>
-                    <li><asp:Button ID="btnShopPhones" runat="server" Text="Shop Phones" CssClass="menu-button" /></li>
-                    <li><asp:Button ID="btnSignin" runat="server" Text="Signin" CssClass="menu-button" /></li>
-                    <li><asp:Button ID="btnAdmLogin" runat="server" Text="Adm Login" CssClass="menu-button" OnClick="Button10_Click" /></li>
+                    <li>
+                        <asp:Button ID="btnSales" runat="server" Text="Sales" CssClass="menu-button" /></li>
+                    <li>
+                        <asp:Button ID="btnLocation" runat="server" Text="Location" CssClass="menu-button" /></li>
+                    <li>
+                        <asp:Button ID="btnShopPhones" runat="server" Text="Shop Phones" CssClass="menu-button" /></li>
+                    <li>
+                        <asp:Button ID="btnSignin" runat="server" Text="Signin" CssClass="menu-button" /></li>
+                    <li>
+                        <asp:Button ID="btnAdmLogin" runat="server" Text="Adm Login" CssClass="menu-button" OnClick="Button10_Click" /></li>
                 </ul>
             </div>
             <div class="content">
@@ -172,7 +190,7 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                 <asp:ImageButton ID="ImageButton29" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10254759_black?$g-small$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton28" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/10242701?$g-small$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton24" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10247675_black?$g-small$&fmt=auto" CssClass="product" />
-                
+
                 <asp:ImageButton ID="ImageButton19" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10254987_black?$g-small$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton50" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10254759_blue?$g-small$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton51" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10254987_pink?$g-small$&fmt=auto" CssClass="product" />
@@ -422,104 +440,106 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
                 <asp:ImageButton ID="ImageButton295" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/M10246998_green?$g-small$&fmt=auto" CssClass="product" />
                 <asp:ImageButton ID="ImageButton296" runat="server" ImageUrl="https://media.currys.biz/i/currysprod/10236208?$g-small$&fmt=auto" CssClass="product" />
             </div>
-
-
-<div class="filters">
-    <asp:DropDownList ID="ddlPrice" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="By Price" Value="" />
-        <asp:ListItem Text="Up to £39.99" Value="39.99" />
-        <asp:ListItem Text="£40 to £59.99" Value="59.99" />
-        <asp:ListItem Text="£60 to £99.99" Value="99.99" />
-        <asp:ListItem Text="£100 to £499" Value="499" />
-        <asp:ListItem Text="£500 to £999" Value="999" />
-        <asp:ListItem Text="£1000 and over" Value="1000" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlRating" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Customer Rating" Value="" />
-        <asp:ListItem Text="5 or more" Value="5" />
-        <asp:ListItem Text="4 or more" Value="4" />
-        <asp:ListItem Text="3 or more" Value="3" />
-        <asp:ListItem Text="2 or more" Value="2" />
-        <asp:ListItem Text="1 or more" Value="1" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlType" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Type" Value="" />
-        <asp:ListItem Text="Android smartphones" Value="Android smartphones" />
-        <asp:ListItem Text="Foldable and flip phones" Value="Foldable and flip phones" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlBrand" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Brand" Value="" />
-        <asp:ListItem Text="APPLE" Value="APPLE" />
-        <asp:ListItem Text="SAMSUNG" Value="SAMSUNG" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlOS" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Operating System" Value="" />
-        <asp:ListItem Text="Android" Value="Android" />
-        <asp:ListItem Text="Android Go" Value="Android Go" />
-        <asp:ListItem Text="iOS" Value="iOS" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlExpandableMemory" CssClass="filter-dropdown" runat="server" AutoPostBack="true">
-        <asp:ListItem Text="Expandable Memory" Value="" />
-        <asp:ListItem Text="No" Value="No" />
-        <asp:ListItem Text="Yes" Value="Yes" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlInternalMemory" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Internal Memory" Value="" />
-        <asp:ListItem Text="128 GB" Value="128" />
-        <asp:ListItem Text="256 GB" Value="256" />
-        <asp:ListItem Text="512 GB" Value="512" />
-        <asp:ListItem Text="64 GB" Value="64" />
-        <asp:ListItem Text="1 TB" Value="1000" />
-        <asp:ListItem Text="32 GB" Value="32" />
-        <asp:ListItem Text="8 GB or less" Value="8" />
-        <asp:ListItem Text="16 GB" Value="16" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlScreenSize" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Screen Size" Value="" />
-        <asp:ListItem Text="6' to 6.9'" Value="6.9" />
-        <asp:ListItem Text="5' and under" Value="5" />
-        <asp:ListItem Text="5' to 5.9'" Value="5.9" />
-        <asp:ListItem Text="Flip phones" Value="Flip phones" />
-        <asp:ListItem Text="Foldable phones" Value="Foldable phones" />
-        <asp:ListItem Text="6' or more" Value="6" />
-        <asp:ListItem Text="7' and over" Value="7" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlColor" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Color" Value="" />
-        <asp:ListItem Text="Black" Value="Black" />
-        <asp:ListItem Text="Blue" Value="Blue" />
-        <asp:ListItem Text="Cream" Value="Cream" />
-        <asp:ListItem Text="Gold" Value="Gold" />
-        <asp:ListItem Text="Green" Value="Green" />
-        <asp:ListItem Text="Pink" Value="Pink" />
-        <asp:ListItem Text="Purple" Value="Purple" />
-        <asp:ListItem Text="Red" Value="Red" />
-        <asp:ListItem Text="Silver/Grey" Value="Silver/Grey" />
-        <asp:ListItem Text="White" Value="White" />
-    </asp:DropDownList>
-
-    <asp:DropDownList ID="ddlOurExpertsLove" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
-        <asp:ListItem Text="Our Experts Love" Value="" />
-        <asp:ListItem Text="Dual SIM" Value="Dual SIM" />
-        <asp:ListItem Text="eSIM enabled" Value="eSIM enabled" />
-        <asp:ListItem Text="Single SIM" Value="Single SIM" />
-        <asp:ListItem Text="Yes" Value="Yes" />
-    </asp:DropDownList>
-</div>
-
-
-
-
-
         </div>
+
+        <div class="filter-container">
+            <div class="filters">
+                <asp:DropDownList ID="ddlPrice" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="By Price" Value="" />
+                    <asp:ListItem Text="Up to £39.99" Value="39.99" />
+                    <asp:ListItem Text="£40 to £59.99" Value="59.99" />
+                    <asp:ListItem Text="£60 to £99.99" Value="99.99" />
+                    <asp:ListItem Text="£100 to £499" Value="499" />
+                    <asp:ListItem Text="£500 to £999" Value="999" />
+                    <asp:ListItem Text="£1000 and over" Value="1000" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlRating" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Customer Rating" Value="" />
+                    <asp:ListItem Text="5 or more" Value="5" />
+                    <asp:ListItem Text="4 or more" Value="4" />
+                    <asp:ListItem Text="3 or more" Value="3" />
+                    <asp:ListItem Text="2 or more" Value="2" />
+                    <asp:ListItem Text="1 or more" Value="1" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlType" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Type" Value="" />
+                    <asp:ListItem Text="Android smartphones" Value="Android smartphones" />
+                    <asp:ListItem Text="Foldable and flip phones" Value="Foldable and flip phones" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlBrand" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Brand" Value="" />
+                    <asp:ListItem Text="APPLE" Value="APPLE" />
+                    <asp:ListItem Text="SAMSUNG" Value="SAMSUNG" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlOS" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Operating System" Value="" />
+                    <asp:ListItem Text="Android" Value="Android" />
+                    <asp:ListItem Text="Android Go" Value="Android Go" />
+                    <asp:ListItem Text="iOS" Value="iOS" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlExpandableMemory" CssClass="filter-dropdown" runat="server" AutoPostBack="true">
+                    <asp:ListItem Text="Expandable Memory" Value="" />
+                    <asp:ListItem Text="No" Value="No" />
+                    <asp:ListItem Text="Yes" Value="Yes" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlInternalMemory" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Internal Memory" Value="" />
+                    <asp:ListItem Text="128 GB" Value="128" />
+                    <asp:ListItem Text="256 GB" Value="256" />
+                    <asp:ListItem Text="512 GB" Value="512" />
+                    <asp:ListItem Text="64 GB" Value="64" />
+                    <asp:ListItem Text="1 TB" Value="1000" />
+                    <asp:ListItem Text="32 GB" Value="32" />
+                    <asp:ListItem Text="8 GB or less" Value="8" />
+                    <asp:ListItem Text="16 GB" Value="16" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlScreenSize" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Screen Size" Value="" />
+                    <asp:ListItem Text="6' to 6.9'" Value="6.9" />
+                    <asp:ListItem Text="5' and under" Value="5" />
+                    <asp:ListItem Text="5' to 5.9'" Value="5.9" />
+                    <asp:ListItem Text="Flip phones" Value="Flip phones" />
+                    <asp:ListItem Text="Foldable phones" Value="Foldable phones" />
+                    <asp:ListItem Text="6' or more" Value="6" />
+                    <asp:ListItem Text="7' and over" Value="7" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlColor" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Color" Value="" />
+                    <asp:ListItem Text="Black" Value="Black" />
+                    <asp:ListItem Text="Blue" Value="Blue" />
+                    <asp:ListItem Text="Cream" Value="Cream" />
+                    <asp:ListItem Text="Gold" Value="Gold" />
+                    <asp:ListItem Text="Green" Value="Green" />
+                    <asp:ListItem Text="Pink" Value="Pink" />
+                    <asp:ListItem Text="Purple" Value="Purple" />
+                    <asp:ListItem Text="Red" Value="Red" />
+                    <asp:ListItem Text="Silver/Grey" Value="Silver/Grey" />
+                    <asp:ListItem Text="White" Value="White" />
+                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlOurExpertsLove" runat="server" CssClass="filter-dropdown" AutoPostBack="true">
+                    <asp:ListItem Text="Our Experts Love" Value="" />
+                    <asp:ListItem Text="Dual SIM" Value="Dual SIM" />
+                    <asp:ListItem Text="eSIM enabled" Value="eSIM enabled" />
+                    <asp:ListItem Text="Single SIM" Value="Single SIM" />
+                    <asp:ListItem Text="Yes" Value="Yes" />
+                </asp:DropDownList>
+            </div>
+        </div>
+
+
+
+
+
+
     </form>
 </body>
 </html>
