@@ -27,10 +27,10 @@ Repository Link : https://github.com/No3Mc/PMAD-Phone-Selling-Store--%>
         }
         .filter-container {
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 200px;
-            height: 100%;
+            left: 230px;
+            top: 100px;
+            width: 500px;
+            height: 500px;
             overflow-y: auto;
         }
         .main-content {
